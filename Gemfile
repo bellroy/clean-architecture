@@ -15,13 +15,8 @@ group :development, :test do
   gem 'rspec'
   gem 'rubocop'
   gem 'rubocop-rspec'
-  gem 'shoulda-matchers', require: false
   gem 'stackprof'
   gem 'timecop'
-end
-
-group :development do
-  gem 'web-console'
 end
 
 group :test do
