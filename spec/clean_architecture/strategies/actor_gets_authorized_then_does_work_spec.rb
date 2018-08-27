@@ -32,7 +32,7 @@ module CleanArchitecture
 
           specify do
             expect(result).to be_a Dry::Monads::Failure
-            expect(result.failure).to eq 'Unauthorized: Invalid API key'
+            expect(result.failure).to eq 'Unauthorized'
           end
         end
       end
