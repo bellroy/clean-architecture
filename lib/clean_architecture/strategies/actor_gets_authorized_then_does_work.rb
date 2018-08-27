@@ -21,7 +21,7 @@ module CleanArchitecture
           if @authorization_check.authorized?
             @sub_strategy.result
           else
-            Dry::Monads::Failure('Unauthorized: Invalid API key')
+            Dry::Monads::Failure('Unauthorized')
           end
         end
       end
