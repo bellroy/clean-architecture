@@ -2,9 +2,9 @@ PATH
   remote: .
   specs:
     clean-architecture (0.1.0)
-      dry-matcher
-      dry-monads
-      duckface-interfaces
+      dry-matcher (~> 0.0)
+      dry-monads (~> 1.0)
+      duckface-interfaces (~> 0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -143,12 +143,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (>= 1.13)
+  bundler (~> 1.13)
   clean-architecture!
   guard-livereload
   guard-rspec
   pry-byebug
-  rake (>= 10.0)
+  rake (~> 12.0)
   rb-fsevent
   rb-readline
   reek
