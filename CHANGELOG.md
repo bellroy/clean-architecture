@@ -1,3 +1,7 @@
+0.0.3
+
+  * Fix require files
+  
 0.0.2
 
   * Add Serializers::SuccessPayload
