@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-require 'dry-monads'
+require 'dry/monads/all'
+require 'clean_architecture/interfaces/strategy'
 
 module CleanArchitecture
   module Strategies
@@ -21,7 +22,7 @@ module CleanArchitecture
           if @authorization_check.authorized?
             @sub_strategy.result
           else
-            Dry::Monads::Failure('Unauthorized: Invalid API key')
+            Dry::Monads::Failure('Unauthorized')
           end
         end
       end

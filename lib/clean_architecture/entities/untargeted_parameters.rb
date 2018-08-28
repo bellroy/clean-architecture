@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'clean_architecture/interfaces/base_parameters'
+
 module CleanArchitecture
   module Entities
     class UntargetedParameters

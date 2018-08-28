@@ -4,6 +4,7 @@ require 'clean_architecture/interfaces/authorization_check'
 require 'clean_architecture/interfaces/command'
 require 'clean_architecture/interfaces/strategy'
 require 'clean_architecture/strategies/actor_gets_authorized_then_does_work'
+require 'dry/monads/all'
 
 module CleanArchitecture
   module Strategies
@@ -32,7 +33,7 @@ module CleanArchitecture
 
           specify do
             expect(result).to be_a Dry::Monads::Failure
-            expect(result.failure).to eq 'Unauthorized: Invalid API key'
+            expect(result.failure).to eq 'Unauthorized'
           end
         end
       end

@@ -2,6 +2,7 @@
 
 require 'clean_architecture/interfaces/success_payload'
 require 'clean_architecture/serializers/json_response_from_result'
+require 'dry/monads/all'
 
 module CleanArchitecture
   module Serializers
