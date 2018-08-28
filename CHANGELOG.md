@@ -1,3 +1,7 @@
+0.1.0
+
+  * Add Adapters::AttributeHashBase
+
 0.0.3 - 0.0.5
 
   * Fix require files

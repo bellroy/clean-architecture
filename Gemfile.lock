@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    clean-architecture (0.0.4)
+    clean-architecture (0.1.0)
       dry-matcher
       dry-monads
       duckface-interfaces
