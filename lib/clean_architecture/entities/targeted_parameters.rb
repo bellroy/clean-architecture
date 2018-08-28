@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require 'clean_architecture/interfaces/targeted_parameters'
+require 'clean_architecture/interfaces/authorization_parameters'
+
 module CleanArchitecture
   module Entities
     class TargetedParameters

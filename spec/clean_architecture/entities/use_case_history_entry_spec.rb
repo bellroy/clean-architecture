@@ -9,6 +9,7 @@ require 'clean_architecture/interfaces/use_case'
 require 'clean_architecture/interfaces/base_parameters'
 require 'clean_architecture/interfaces/use_case_target'
 require 'clean_architecture/strategies/actor_gets_authorized_then_does_work'
+require 'dry/monads/all'
 
 module CleanArchitecture
   module Entities

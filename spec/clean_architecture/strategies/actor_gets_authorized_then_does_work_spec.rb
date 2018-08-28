@@ -4,6 +4,7 @@ require 'clean_architecture/interfaces/authorization_check'
 require 'clean_architecture/interfaces/command'
 require 'clean_architecture/interfaces/strategy'
 require 'clean_architecture/strategies/actor_gets_authorized_then_does_work'
+require 'dry/monads/all'
 
 module CleanArchitecture
   module Strategies

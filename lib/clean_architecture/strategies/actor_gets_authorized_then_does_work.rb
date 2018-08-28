@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'dry-monads'
+require 'dry/monads/all'
 
 module CleanArchitecture
   module Strategies
