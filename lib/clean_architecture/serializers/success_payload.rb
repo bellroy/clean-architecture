@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'duckface'
+require 'clean_architecture/interfaces/success_payload'
 
 module CleanArchitecture
   module Serializers

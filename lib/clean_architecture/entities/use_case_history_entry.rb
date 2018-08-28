@@ -3,6 +3,7 @@
 require 'dry-monads'
 require 'dry/matcher/result_matcher'
 require 'duckface'
+require 'clean_architecture/interfaces/use_case_history_entry'
 
 module CleanArchitecture
   module Entities

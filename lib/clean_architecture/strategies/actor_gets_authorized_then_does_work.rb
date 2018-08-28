@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'dry/monads/all'
+require 'clean_architecture/interfaces/strategy'
 
 module CleanArchitecture
   module Strategies

@@ -1,10 +1,7 @@
-0.0.4
-
-  * Update dependencies and fix load order problems
-
-0.0.3
+0.0.3 - 0.0.5
 
   * Fix require files
+  * Update dependencies and fix load order problems
 
 0.0.2
 

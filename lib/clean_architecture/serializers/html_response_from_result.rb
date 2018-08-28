@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'dry/matcher/result_matcher'
+require 'clean_architecture/queries/http_success_code'
 
 module CleanArchitecture
   module Serializers

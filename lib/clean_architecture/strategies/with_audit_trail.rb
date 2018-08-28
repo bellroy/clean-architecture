@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'clean_architecture/entities/use_case_history_entry'
+require 'clean_architecture/interfaces/strategy'
 require 'duckface'
 
 module CleanArchitecture
