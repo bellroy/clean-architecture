@@ -57,9 +57,11 @@ We satisfy the SRP by following these rules:
 
 ### OCP - The Open/Closed Principle, LSP - The Liskov Substitution Principle and DIP - The Dependency Inversion Principle
 
-> OCP - A software artefact should be open for extension but closed for modification
-> LSP - A caller should not have to know the type of an object to interact with it
-> DIP - Always depend on or derive from a stable abstraction, rather than a volatile concrete class
+> A software artefact should be open for extension but closed for modification
+
+> A caller should not have to know the type of an object to interact with it
+
+> Always depend on or derive from a stable abstraction, rather than a volatile concrete class
 
 We satisfy the OCP, LSP & DIP by following these rules:
 
