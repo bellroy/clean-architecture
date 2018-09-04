@@ -40,6 +40,45 @@ Rails application.
 
 ### Clean architecture principles
 
+#### SRP - The Single Responsibility principle
+
+> A function should do one, and only one, thing
+
+We satisfy the SRP by following these rules:
+
+- An **adapter** is solely responsible for presenting the properties of a business object, or a small number of business objects, in a known interface
+- A **command** is solely responsible for completing an atomic I/O operation
+- An **entity** is solely responsible for representing, in memory, a business object whos properties do not come from a single source
+- An **interface** is a module that represents a contract between two classes
+- A **serializer** is solely responsible for taking a business object and turning it into a representation made up of purely primitive values
+- A **strategy** is an algorithm used by commands to compose atomic I/O operations
+- A **use case** is solely responsible for checking whether an actor has permissions to perform a command, and executing that command if so
+- A **validator** is solely responsible for validating a business object and returning a validation result
+
+#### OCP - The Open/Closed Principle, LSP - The Liskov Substitution Principle and DIP - The Dependency Inversion Principle
+
+> OCP - A software artefact should be open for extension but closed for modification
+> LSP - A caller should not have to know the type of an object to interact with it
+> DIP - Always depend on or derive from a stable abstraction, rather than a volatile concrete class
+
+We satisfy the OCP, LSP & DIP by following these rules:
+
+- We create a clean boundary between our business logic, our persistence layer and our application-specific interfaces using interfaces
+- We use interfaces wherever possible, allowing concrete implementations of those interfaces to be extended without breaking the contract
+- We write unit tests against interfaces if they exist, never against concrete implementations
+
+#### ISP - The Interface Segregation Principle
+
+> Where some actors only use a subset of methods available from an interface, the interface should be split into sub-interfaces supporting each type of caller
+
+We satisfy the ISP by following these rules:
+
+- Each functional area of our code is split into folders (under `lib` in Rails projects)
+- Each functional area defines its own interfaces
+- Interfaces are not shared between functional areas
+
+### Suggestions for implementation
+
 * The code that manages your inputs (e.g. a Rails controller) instantiates a persistence layer
   object
   - Suggest: a class that implements both the `Persistence` interface and your own persistence
