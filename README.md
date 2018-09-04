@@ -38,9 +38,9 @@ Rails application.
       - ...
 ```
 
-### Clean architecture principles
+## Clean architecture principles
 
-#### SRP - The Single Responsibility principle
+### SRP - The Single Responsibility principle
 
 > A function should do one, and only one, thing
 
@@ -55,7 +55,7 @@ We satisfy the SRP by following these rules:
 - A **use case** is solely responsible for checking whether an actor has permissions to perform a command, and executing that command if so
 - A **validator** is solely responsible for validating a business object and returning a validation result
 
-#### OCP - The Open/Closed Principle, LSP - The Liskov Substitution Principle and DIP - The Dependency Inversion Principle
+### OCP - The Open/Closed Principle, LSP - The Liskov Substitution Principle and DIP - The Dependency Inversion Principle
 
 > OCP - A software artefact should be open for extension but closed for modification
 > LSP - A caller should not have to know the type of an object to interact with it
@@ -67,7 +67,7 @@ We satisfy the OCP, LSP & DIP by following these rules:
 - We use interfaces wherever possible, allowing concrete implementations of those interfaces to be extended without breaking the contract
 - We write unit tests against interfaces if they exist, never against concrete implementations
 
-#### ISP - The Interface Segregation Principle
+### ISP - The Interface Segregation Principle
 
 > Where some actors only use a subset of methods available from an interface, the interface should be split into sub-interfaces supporting each type of caller
 
