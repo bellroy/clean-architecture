@@ -79,7 +79,7 @@ We satisfy the ISP by following these rules:
 - Each functional area defines its own interfaces
 - Interfaces are not shared between functional areas
 
-### Suggestions for implementation
+## Suggestions for implementation
 
 * The code that manages your inputs (e.g. a Rails controller) instantiates a persistence layer
   object
