@@ -72,9 +72,9 @@ We satisfy the SRP by following these rules:
 
 We satisfy the OCP, LSP & DIP by following these rules:
 
-- We create a clean boundary between our business logic, our persistence layer and our application-specific interfaces using interfaces
+- We create a clean boundary between our business logic, our persistence layer and our application-specific classes using interfaces
 - We use interfaces wherever possible, allowing concrete implementations of those interfaces to be extended without breaking the contract
-- We write unit tests against interfaces if they exist, never against concrete implementations
+- We write unit tests against interfaces, never against concrete implementations (unless interfaces don't exist)
 
 #### ISP - The Interface Segregation Principle
 
@@ -86,7 +86,7 @@ We satisfy the ISP by following these rules:
 - Each functional area defines its own interfaces
 - Interfaces are not shared between functional areas
 
-### Component principles
+### Component cohesion
 
 #### REP - The Reuse/Release Equivalence Principle, CCP - The Common Closure Principle & CRP - The Common Reuse Principle
 
@@ -102,6 +102,31 @@ We satisfy the REP, CCP and CRP by:
 - Ensuring that none of our functional areas make direct reference back to the parent application
 - Splitting functional areas out into gems when those functional areas change at a different rate than the rest of the codebase
 - Splitting functional areas out into standalone applications when it makes sense to do so
+
+### Component coupling
+
+#### ADP - The Acyclic Dependencies Principle
+
+> Don't create circular dependencies
+
+I don't think I need to explain this. Just don't do it. I like explicitly including dependencies using `require` because it actually prevents you from doing this. Rails, in so many ways, makes one lazy.
+
+#### SDP - The Stable Dependencies Principle
+
+> A component always have less things depending on it than it depends on
+
+We satisfy the SDP by:
+
+- Putting sensible abstractions in place that adhere to the Single Responsibility principle
+- Not sharing abstractions and entities between multiple functional areas
+
+#### SAP - The Stable Abstractions Principle
+
+> A component should be as abstract as it is stable
+
+We satisfy the SAP by:
+
+- Thinking hard about the methods and parameters we specify in our interfaces. Are they solving for a general problem? Are we likely to have to change them when requirements change, and how we can avoid that?
 
 ## Practical suggestions for implementation
 
