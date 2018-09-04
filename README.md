@@ -23,10 +23,11 @@ and decisions about I/O can be deferred until the last possible moment. It relie
 [duckface-interfaces](https://github.com/samuelgiles/duckface) gem to enforce interface
 implementation.
 
-### Use cases as an organisational principle
+## Clean architecture principles
 
-Uncle Bob suggests that your source code organisation should allow developers to easily find a
-listing of all use cases your application provides. Here's an example of how this might look in a
+### Screaming architecture - use cases as an organisational principle
+
+Uncle Bob suggests that your source code organisation should allow developers to easily find a listing of all use cases your application provides. Here's an example of how this might look in a
 Rails application.
 
 ```
@@ -38,9 +39,15 @@ Rails application.
       - ...
 ```
 
-## Clean architecture principles
+Note that the use case name contains:
 
-### SRP - The Single Responsibility principle
+- the user role
+- the action
+- the (sometimes implied) subject
+
+### Design principles
+
+#### SRP - The Single Responsibility principle
 
 > A function should do one, and only one, thing
 
@@ -55,7 +62,7 @@ We satisfy the SRP by following these rules:
 - A **use case** is solely responsible for checking whether an actor has permissions to perform a command, and executing that command if so
 - A **validator** is solely responsible for validating a business object and returning a validation result
 
-### OCP - The Open/Closed Principle, LSP - The Liskov Substitution Principle and DIP - The Dependency Inversion Principle
+#### OCP - The Open/Closed Principle, LSP - The Liskov Substitution Principle and DIP - The Dependency Inversion Principle
 
 > A software artefact should be open for extension but closed for modification
 
@@ -69,7 +76,7 @@ We satisfy the OCP, LSP & DIP by following these rules:
 - We use interfaces wherever possible, allowing concrete implementations of those interfaces to be extended without breaking the contract
 - We write unit tests against interfaces if they exist, never against concrete implementations
 
-### ISP - The Interface Segregation Principle
+#### ISP - The Interface Segregation Principle
 
 > Where some actors only use a subset of methods available from an interface, the interface should be split into sub-interfaces supporting each type of caller
 
@@ -79,7 +86,24 @@ We satisfy the ISP by following these rules:
 - Each functional area defines its own interfaces
 - Interfaces are not shared between functional areas
 
-## Suggestions for implementation
+### Component principles
+
+#### REP - The Reuse/Release Equivalence Principle, CCP - The Common Closure Principle & CRP - The Common Reuse Principle
+
+> Classes and modules that are grouped together into a component should be releasable together
+
+> Gather into components those changes the change for the same reasons and at the same times.
+
+> Classes and modules that tend to be reused together should be placed in the same component
+
+We satisfy the REP, CCP and CRP by:
+
+- Having team discussions whenever we make decisions about what a new functional area should be called and what it should contain
+- Ensuring that none of our functional areas make direct reference back to the parent application
+- Splitting functional areas out into gems when those functional areas change at a different rate than the rest of the codebase
+- Splitting functional areas out into standalone applications when it makes sense to do so
+
+## Practical suggestions for implementation
 
 * The code that manages your inputs (e.g. a Rails controller) instantiates a persistence layer
   object
