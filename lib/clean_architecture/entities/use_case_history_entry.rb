@@ -25,7 +25,7 @@ module CleanArchitecture
       def failure_messages
         Dry::Matcher::ResultMatcher.call(@use_case_result) do |matcher|
           matcher.success { nil }
-          matcher.failure { |value| value }
+          matcher.failure { |value| value.is_a?(FailureDetails) ? value.message : value }
         end
       end
 

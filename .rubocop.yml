@@ -1,29 +1,19 @@
 ---
 Documentation:
   Enabled: false
-Rails:
-  Enabled: true
 AllCops:
   Include:
-  - app/**/*.rb
   - lib/**/*.rb
   - spec/**/*.rb
   Exclude:
-  - app/assets/**/*
   - bin/**/*
-  - client/node_modules/**/*
   - config/**/*
   - coverage/**/*
-  - data/**/*
-  - db/**/*
-  - db_*/**/*
-  - dw/**/*
   - log/**/*
-  - phrase/**/*
   - public/**/*
   - tmp/**/*
   - vendor/**/*
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 2.4
 Metrics/LineLength:
   Max: 100
 Layout/MultilineMethodCallIndentation:
@@ -41,6 +31,8 @@ RSpec/NestedGroups:
   Enabled: false
   Max: 10
 RSpec/MessageExpectation:
+  Enabled: false
+RSpec/MissingExampleGroupArgument:
   Enabled: false
 require:
 - rubocop-rspec

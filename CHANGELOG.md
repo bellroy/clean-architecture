@@ -1,3 +1,9 @@
+0.2.0
+
+  * Add Entities::FailureDetails and support for it in the various Serializers
+  * Strategies::ActorGetsAuthorizedThenDoesWork returns Entities::FailureDetails when authorization
+    fails
+
 0.1.0
 
   * Add Adapters::AttributeHashBase

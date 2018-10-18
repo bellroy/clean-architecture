@@ -9,4 +9,5 @@ require 'clean_architecture/queries/all'
 require 'clean_architecture/serializers/all'
 require 'clean_architecture/strategies/all'
 
+require 'clean_architecture/types'
 require 'clean_architecture/version'
