@@ -4,6 +4,7 @@ require 'dry-monads'
 require 'dry/matcher/result_matcher'
 require 'duckface'
 require 'clean_architecture/interfaces/use_case_history_entry'
+require 'clean_architecture/matchers/use_case_result'
 
 module CleanArchitecture
   module Entities
@@ -23,9 +24,9 @@ module CleanArchitecture
       end
 
       def failure_messages
-        Dry::Matcher::ResultMatcher.call(@use_case_result) do |matcher|
+        Matchers::UseCaseResult.call(@use_case_result) do |matcher|
           matcher.success { nil }
-          matcher.failure { |value| value.is_a?(FailureDetails) ? value.message : value }
+          matcher.failure(&:message)
         end
       end
 

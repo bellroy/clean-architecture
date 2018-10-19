@@ -22,7 +22,7 @@ module CleanArchitecture
         context do
           let(:result) { Dry::Monads::Failure('something') }
 
-          it { is_expected.to eq(error: 'something', status: :expectation_failed) }
+          it { is_expected.to eq(error: 'something', status: :internal_server_error) }
         end
 
         context do
