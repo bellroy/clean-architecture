@@ -1,28 +1,29 @@
 # frozen_string_literal: true
 
+require 'clean_architecture/entities/failure_details'
+require 'clean_architecture/entities/use_case_history_entry'
 require 'clean_architecture/interfaces/authorization_parameters'
+require 'clean_architecture/interfaces/base_parameters'
 require 'clean_architecture/interfaces/use_case_actor'
 require 'clean_architecture/interfaces/use_case_history_entry'
-require 'clean_architecture/entities/use_case_history_entry'
-require 'clean_architecture/interfaces/strategy'
-require 'clean_architecture/interfaces/use_case'
-require 'clean_architecture/interfaces/base_parameters'
 require 'clean_architecture/interfaces/use_case_target'
-require 'clean_architecture/strategies/actor_gets_authorized_then_does_work'
+require 'clean_architecture/interfaces/use_case'
 require 'dry/monads/all'
 
 module CleanArchitecture
   module Entities
     describe UseCaseHistoryEntry do
       let(:use_case_history_entry) do
-        described_class.new(
-          use_case_class,
-          use_case_parameters,
-          use_case_result,
-          use_case_target
-        )
+        described_class.new(use_case, use_case_target)
       end
 
+      let(:use_case) do
+        instance_double(
+          Interfaces::UseCase,
+          parameters: use_case_parameters,
+          result: use_case_result
+        )
+      end
       let(:use_case_parameters) do
         instance_double(
           Interfaces::AuthorizationParameters,
@@ -30,7 +31,6 @@ module CleanArchitecture
           extra_parameters_hash: { extra_parameters: :hash }
         )
       end
-      let(:use_case_class) { Interfaces::UseCase }
       let(:use_case_result) { Dry::Monads::Failure('error!') }
       let(:use_case_target) do
         instance_double(
@@ -96,7 +96,7 @@ module CleanArchitecture
       describe '#use_case_class_name' do
         subject(:use_case_class_name) { use_case_history_entry.use_case_class_name }
 
-        it { is_expected.to eq use_case_class.name }
+        it { is_expected.to eq use_case.class.name }
       end
 
       describe '#user_identifier' do

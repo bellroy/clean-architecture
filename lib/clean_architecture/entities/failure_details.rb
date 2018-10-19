@@ -15,7 +15,7 @@ module CleanArchitecture
 
       attribute :type, FailureTypes
       attribute :message, Types::Strict::String
-      attribute :other_properties, Types::Strict::Hash
+      attribute :other_properties, Types::Strict::Hash.default({})
     end
   end
 end

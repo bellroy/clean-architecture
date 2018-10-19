@@ -12,11 +12,12 @@ module CleanArchitecture
       implements_interface Interfaces::UseCaseHistoryEntry
       extend Forwardable
 
-      def initialize(use_case_class, use_case_parameters, use_case_result, use_case_target)
-        @use_case_class = use_case_class
-        @use_case_parameters = use_case_parameters
-        @use_case_result = use_case_result
+      def initialize(use_case, use_case_target)
+        @use_case = use_case
         @use_case_target = use_case_target
+        @use_case_class = @use_case.class
+        @use_case_parameters = @use_case.parameters
+        @use_case_result = @use_case.result
       end
 
       def extra_parameters_hash

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'clean_architecture/all'
+require 'duckface'
 require_relative '../support/shared_examples/an_interface.rb'
 
 module Duckface

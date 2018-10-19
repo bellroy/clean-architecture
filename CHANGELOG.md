@@ -1,3 +1,11 @@
+1.0.0
+
+  * Remove strategy and command interfaces
+  * Turn Authorization into a virtual class rather than an interface
+  * Remove ActorGetsAuthorizedThenDoesWork in favour of having the Authorization virtual class
+    return a result type (use .bind in the client)
+  * Change WithAuditTrail to WriteUseCaseAuditTrail command with a result
+
 0.2.0
 
   * Add Entities::FailureDetails and support for it in the various Serializers
