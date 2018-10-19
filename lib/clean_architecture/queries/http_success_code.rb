@@ -8,10 +8,11 @@ module CleanArchitecture
       end
 
       def to_sym
-        code = HTTP_METHOD_TO_SUCCESS_CODE[@http_method]
+        code = HTTP_METHOD_TO_SUCCESS_CODE[@http_method.to_s.upcase]
         if code.nil?
           raise NotImplementedError, "cannot determine success code for HTTP method #{@http_method}"
         end
+
         code
       end
 

@@ -34,7 +34,7 @@ module CleanArchitecture
 
           specify do
             expect(to_h).to eq(
-              status: :expectation_failed,
+              status: :internal_server_error,
               json: { jsonapi: { version: '1.0' }, errors: ['fail!'] }
             )
           end
@@ -56,8 +56,26 @@ module CleanArchitecture
 
           specify do
             expect(to_h).to eq(
-              status: :unauthorized,
+              status: :internal_server_error,
               json: { jsonapi: { version: '1.0' }, errors: ['Unauthorized: get out my house'] }
+            )
+          end
+        end
+
+        context do
+          let(:failure_details) do
+            Entities::FailureDetails.new(
+              message: 'Something bad happened!',
+              other_properties: {},
+              type: 'error'
+            )
+          end
+          let(:result) { Dry::Monads::Failure(failure_details) }
+
+          specify do
+            expect(to_h).to eq(
+              status: :internal_server_error,
+              json: { jsonapi: { version: '1.0' }, errors: ['Something bad happened!'] }
             )
           end
         end

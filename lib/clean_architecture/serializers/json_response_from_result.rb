@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
-require 'dry-monads'
-require 'dry/matcher/result_matcher'
+require 'clean_architecture/entities/failure_details'
+require 'clean_architecture/matchers/use_case_result'
+require 'clean_architecture/queries/http_failure_code'
 require 'clean_architecture/queries/http_success_code'
 
 module CleanArchitecture
@@ -23,22 +24,20 @@ module CleanArchitecture
       private
 
       def http_status_code
-        Dry::Matcher::ResultMatcher.call(@result) do |matcher|
+        Matchers::UseCaseResult.call(@result) do |matcher|
           matcher.success { Queries::HttpSuccessCode.new(@http_method).to_sym }
-          matcher.failure do
-            if result_is_authorization_failure?
-              :unauthorized
-            else
-              :expectation_failed
-            end
+          matcher.failure do |failure_value|
+            Queries::HttpFailureCode.new(failure_value.type).to_sym
           end
         end
       end
 
       def json
-        Dry::Matcher::ResultMatcher.call(@result) do |matcher|
+        Matchers::UseCaseResult.call(@result) do |matcher|
           matcher.success { success_payload }
-          matcher.failure { |failure_message| error_payload(failure_message) }
+          matcher.failure do |failure_details|
+            { jsonapi: json_api_version_hash, errors: [failure_details.message] }
+          end
         end
       end
 
@@ -49,19 +48,8 @@ module CleanArchitecture
         }
       end
 
-      def error_payload(failure_message)
-        {
-          jsonapi: json_api_version_hash,
-          errors: [failure_message]
-        }
-      end
-
       def json_api_version_hash
         { version: @success_payload.version }
-      end
-
-      def result_is_authorization_failure?
-        !@result.failure.index('Unauthorized: ').nil?
       end
     end
   end

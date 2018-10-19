@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'dry/monads/all'
+require 'clean_architecture/entities/failure_details'
 require 'clean_architecture/interfaces/strategy'
 
 module CleanArchitecture
@@ -17,12 +18,18 @@ module CleanArchitecture
 
       def_delegator :@sub_strategy, :parameters
 
+      UNAUTHORIZED_FAILURE_DETAILS = Entities::FailureDetails.new(
+        message: 'Unauthorized',
+        other_properties: {},
+        type: 'unauthorized'
+      )
+
       def result
         @result ||= begin
           if @authorization_check.authorized?
             @sub_strategy.result
           else
-            Dry::Monads::Failure('Unauthorized')
+            Dry::Monads::Failure(UNAUTHORIZED_FAILURE_DETAILS)
           end
         end
       end

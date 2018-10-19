@@ -48,6 +48,25 @@ module CleanArchitecture
         subject(:failure_messages) { use_case_history_entry.failure_messages }
 
         it { is_expected.to eq 'error!' }
+
+        context do
+          let(:use_case_result) { Dry::Monads::Success('something') }
+
+          it { is_expected.to be_nil }
+        end
+
+        context do
+          let(:use_case_result) do
+            failure_details = FailureDetails.new(
+              type: 'unauthorized',
+              message: 'Unauthorized',
+              other_properties: {}
+            )
+            Dry::Monads::Failure(failure_details)
+          end
+
+          it { is_expected.to eq 'Unauthorized' }
+        end
       end
 
       describe '#target_identifier' do

@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
-require 'dry/matcher/result_matcher'
+require 'clean_architecture/entities/failure_details'
+require 'clean_architecture/matchers/use_case_result'
 require 'clean_architecture/queries/http_success_code'
+require 'clean_architecture/queries/http_failure_code'
 
 module CleanArchitecture
   module Serializers
@@ -12,12 +14,21 @@ module CleanArchitecture
       end
 
       def to_h
-        Dry::Matcher::ResultMatcher.call(@result) do |matcher|
-          matcher.success do |data|
-            { status: Queries::HttpSuccessCode.new(@http_method).to_sym, data: data }
-          end
-          matcher.failure { |error_message| { status: :error, error: error_message } }
+        Matchers::UseCaseResult.call(@result) do |matcher|
+          matcher.success { |data| success_html_response(data) }
+          matcher.failure { |failure_details| failure_html_response(failure_details) }
         end
+      end
+
+      private
+
+      def success_html_response(data)
+        { status: Queries::HttpSuccessCode.new(@http_method).to_sym, data: data }
+      end
+
+      def failure_html_response(failure_details)
+        status = Queries::HttpFailureCode.new(failure_details.type).to_sym
+        { status: status, error: failure_details.message }
       end
     end
   end
