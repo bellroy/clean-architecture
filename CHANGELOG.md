@@ -1,6 +1,6 @@
-1.0.1
+1.1.0
 
-  * Rename WithAuditTrail command
+  * Remove use case history entry code
 
 1.0.0
 
