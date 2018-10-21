@@ -5,7 +5,7 @@ require 'duckface'
 
 module CleanArchitecture
   module Commands
-    class WriteUseCaseAuditTrail
+    class CreateUseCaseHistoryEntry
       extend Forwardable
 
       def initialize(use_case_target)
