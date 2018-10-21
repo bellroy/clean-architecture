@@ -132,12 +132,6 @@ We satisfy the SAP by:
 
 * The code that manages your inputs (e.g. a Rails controller) instantiates a persistence layer
   object
-  - Suggest: a class that implements both the `Persistence` interface and your own persistence
-    interface
-
-```
-  persistence = ActiveRecordPersistence.new
-```
 
 * The code that manages your inputs (e.g. a Rails controller) instantiates a use case actor
   object
