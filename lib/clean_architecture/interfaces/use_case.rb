@@ -11,10 +11,6 @@ module CleanArchitecture
         raise NotImplementedError
       end
 
-      def parameters
-        raise NotImplementedError
-      end
-
       def result
         raise NotImplementedError
       end

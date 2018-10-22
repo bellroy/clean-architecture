@@ -1,3 +1,7 @@
+1.1.1
+
+  * Remove parameters from use case interface
+
 1.1.0
 
   * Remove use case history entry code
