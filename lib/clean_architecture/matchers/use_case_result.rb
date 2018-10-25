@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
+require 'clean_architecture/entities/failure_details'
 require 'dry-matcher'
+require 'dry/monads/all'
 
 module CleanArchitecture
   module Matchers
@@ -32,12 +34,15 @@ module CleanArchitecture
       def resolve_failure_value(value)
         failure = value.failure
         case failure
+        when Array
+          Entities::FailureDetails.from_array(failure)
         when String
-          Entities::FailureDetails.new(message: failure, other_properties: {}, type: 'error')
+          Entities::FailureDetails.from_string(failure)
         when Entities::FailureDetails
           failure
         else
-          raise 'Unexpected failure value - must be String or Entities::FailureDetails'
+          type_list = [Array, String, Entities::FailureDetails].map(&:to_s).join(' or ')
+          raise ArgumentError, "Unexpected failure value - must be #{type_list}"
         end
       end
     end

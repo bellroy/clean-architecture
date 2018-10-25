@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    clean-architecture (1.1.1)
+    clean-architecture (1.2.0)
       dry-matcher (~> 0.0)
       dry-monads (~> 1.0)
       dry-struct (~> 0.0)
@@ -45,7 +45,7 @@ GEM
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.4, >= 0.4.4)
       dry-equalizer
-    dry-struct (0.5.1)
+    dry-struct (0.6.0)
       dry-core (~> 0.4, >= 0.4.3)
       dry-equalizer (~> 0.2)
       dry-types (~> 0.13)

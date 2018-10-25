@@ -1,3 +1,7 @@
+1.2.0
+
+  * Support arrays being passed as failure value to UseCaseResult matcher
+
 1.1.1
 
   * Remove parameters from use case interface

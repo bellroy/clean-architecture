@@ -16,6 +16,14 @@ module CleanArchitecture
       attribute :type, FailureTypes
       attribute :message, Types::Strict::String
       attribute :other_properties, Types::Strict::Hash.default({})
+
+      def self.from_array(array)
+        new(message: array.map(&:to_s).join(', '), other_properties: {}, type: 'error')
+      end
+
+      def self.from_string(string)
+        new(message: string, other_properties: {}, type: 'error')
+      end
     end
   end
 end
