@@ -3,6 +3,7 @@
 This gem provides helper interfaces and classes to assist in the construction of application with
 Clean Architecture, as described in [Robert Martin's seminal book](https://www.amazon.com/gp/product/0134494164).
 
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -171,4 +172,41 @@ We satisfy the SAP by:
 
 ```
   use_case = MyBankingApplication::UseCases::RetailCustomerMakesADeposit.new(input_port)
+```
+
+## Why are there Monads in my Ruby code?
+
+We make use of the [Dry-Rb](https://dry-rb.org/) collection of Gems to
+provide better control flow instead of relying on `raise` and `rescue`.
+Specifically, we use:
+
+- https://dry-rb.org/gems/dry-matcher/result-matcher/
+- https://dry-rb.org/gems/dry-monads/1.0/result/
+
+### Things to consider for idiomatic FP code
+
+#### Multiple `bind` operations
+
+When you want to bind or chain multiple method calls using the
+previous return value, consider using [Do
+Notation](https://dry-rb.org/gems/dry-monads/1.0/do-notation/)
+
+This is inspired by the Haskell do-notation which lets you go from
+writing this:
+
+```haskell
+action1
+  >>=
+    (\ x1 -> action2
+       >>=
+         (\ x2 -> mk_action3 x1 x2 ))
+```
+
+to this:
+
+```haskell
+do
+  x1 <- action1
+  x2 <- action2
+  mk_action3 x1 x2
 ```
