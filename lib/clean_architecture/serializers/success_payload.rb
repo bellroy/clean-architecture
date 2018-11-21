@@ -5,7 +5,7 @@ require 'clean_architecture/interfaces/success_payload'
 
 module CleanArchitecture
   module Serializers
-    class SuccessObjectPayload
+    class SuccessPayload
       implements_interface CleanArchitecture::Interfaces::SuccessPayload
 
       def initialize(use_case_target)

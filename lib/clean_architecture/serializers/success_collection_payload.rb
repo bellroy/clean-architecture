@@ -2,7 +2,7 @@
 
 require 'duckface'
 require 'clean_architecture/interfaces/success_payload'
-require 'clean_architecture/serializers/success_object_payload'
+require 'clean_architecture/serializers/success_payload'
 
 module CleanArchitecture
   module Serializers
@@ -16,7 +16,7 @@ module CleanArchitecture
 
       def data
         @collection.map do |object|
-          SuccessObjectPayload.new(@use_case_target_class.new(object)).data
+          SuccessPayload.new(@use_case_target_class.new(object)).data
         end
       end
 
