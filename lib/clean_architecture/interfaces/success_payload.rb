@@ -4,10 +4,10 @@ require 'duckface'
 
 module CleanArchitecture
   module Interfaces
-    module SuccessObjectPayload
+    module SuccessPayload
       extend Duckface::ActsAsInterface
 
-      def data_hash
+      def data
         raise NotImplementedError
       end
 

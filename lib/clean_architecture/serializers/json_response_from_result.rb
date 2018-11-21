@@ -44,7 +44,7 @@ module CleanArchitecture
       def success_payload
         {
           jsonapi: json_api_version_hash,
-          data: @success_payload.data_hash
+          data: @success_payload.data
         }
       end
 

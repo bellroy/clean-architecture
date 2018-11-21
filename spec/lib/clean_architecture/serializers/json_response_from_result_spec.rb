@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'clean_architecture/interfaces/success_object_payload'
+require 'clean_architecture/interfaces/success_payload'
 require 'clean_architecture/serializers/json_response_from_result'
 require 'dry/monads/all'
 
@@ -13,8 +13,8 @@ module CleanArchitecture
       let(:http_method) { 'GET' }
       let(:success_object_payload) do
         instance_double(
-          Interfaces::SuccessObjectPayload,
-          data_hash: { some: 'attributes' },
+          Interfaces::SuccessPayload,
+          data: { some: 'attributes' },
           version: '1.0'
         )
       end
