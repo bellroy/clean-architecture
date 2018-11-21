@@ -9,8 +9,6 @@ module CleanArchitecture
     class SuccessCollectionPayload
       implements_interface CleanArchitecture::Interfaces::SuccessPayload
 
-      attr_reader :version
-
       def initialize(collection, use_case_target_class)
         @collection = collection
         @use_case_target_class = use_case_target_class

@@ -8,8 +8,6 @@ module CleanArchitecture
     class SuccessObjectPayload
       implements_interface CleanArchitecture::Interfaces::SuccessPayload
 
-      attr_reader :version
-
       def initialize(use_case_target)
         @use_case_target = use_case_target
       end
