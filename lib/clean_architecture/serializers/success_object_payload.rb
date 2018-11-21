@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 require 'duckface'
-require 'clean_architecture/interfaces/success_payload'
+require 'clean_architecture/interfaces/success_object_payload'
 
 module CleanArchitecture
   module Serializers
-    class SuccessPayload
-      implements_interface CleanArchitecture::Interfaces::SuccessPayload
+    class SuccessObjectPayload
+      implements_interface CleanArchitecture::Interfaces::SuccessObjectPayload
 
       attr_reader :version
 

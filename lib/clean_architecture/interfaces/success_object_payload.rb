@@ -4,7 +4,7 @@ require 'duckface'
 
 module CleanArchitecture
   module Interfaces
-    module SuccessPayload
+    module SuccessObjectPayload
       extend Duckface::ActsAsInterface
 
       def data_hash

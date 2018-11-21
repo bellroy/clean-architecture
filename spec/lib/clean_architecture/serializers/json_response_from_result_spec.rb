@@ -1,19 +1,19 @@
 # frozen_string_literal: true
 
-require 'clean_architecture/interfaces/success_payload'
+require 'clean_architecture/interfaces/success_object_payload'
 require 'clean_architecture/serializers/json_response_from_result'
 require 'dry/monads/all'
 
 module CleanArchitecture
   module Serializers
     describe JsonResponseFromResult do
-      let(:json_response_from_result) { described_class.new(result, http_method, success_payload) }
+      let(:json_response_from_result) { described_class.new(result, http_method, success_object_payload) }
 
       let(:result) { Dry::Monads::Success(nil) }
       let(:http_method) { 'GET' }
-      let(:success_payload) do
+      let(:success_object_payload) do
         instance_double(
-          Interfaces::SuccessPayload,
+          Interfaces::SuccessObjectPayload,
           data_hash: { some: 'attributes' },
           version: '1.0'
         )

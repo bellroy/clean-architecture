@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require 'clean_architecture/interfaces/success_payload'
+require 'clean_architecture/interfaces/success_object_payload'
 require 'clean_architecture/interfaces/use_case_target'
-require 'clean_architecture/serializers/success_payload'
+require 'clean_architecture/serializers/success_object_payload'
 
 module CleanArchitecture
   module Serializers
-    describe SuccessPayload do
-      let(:success_payload) { described_class.new(use_case_target, version) }
+    describe SuccessObjectPayload do
+      let(:success_object_payload) { described_class.new(use_case_target, version) }
 
       let(:use_case_target) do
         instance_double(
@@ -20,7 +20,7 @@ module CleanArchitecture
       let(:version) { '1.0' }
 
       describe '#data_hash' do
-        subject(:data_hash) { success_payload.data_hash }
+        subject(:data_hash) { success_object_payload.data_hash }
 
         specify do
           expect(data_hash).to eq(
