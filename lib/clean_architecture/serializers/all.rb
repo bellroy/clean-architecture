@@ -4,4 +4,5 @@
 
 require 'clean_architecture/serializers/html_response_from_result'
 require 'clean_architecture/serializers/json_response_from_result'
+require 'clean_architecture/serializers/success_collection_payload'
 require 'clean_architecture/serializers/success_payload'

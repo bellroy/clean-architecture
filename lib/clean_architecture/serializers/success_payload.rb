@@ -8,19 +8,20 @@ module CleanArchitecture
     class SuccessPayload
       implements_interface CleanArchitecture::Interfaces::SuccessPayload
 
-      attr_reader :version
-
-      def initialize(use_case_target, version)
+      def initialize(use_case_target)
         @use_case_target = use_case_target
-        @version = version
       end
 
-      def data_hash
+      def data
         {
           type: @use_case_target.type_name,
           id: @use_case_target.identifier,
           attributes: @use_case_target.attribute_hash
         }.compact
+      end
+
+      def version
+        '1.0'
       end
     end
   end

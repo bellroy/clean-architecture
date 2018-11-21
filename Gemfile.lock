@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    clean-architecture (1.2.0)
+    clean-architecture (2.0.0)
       dry-matcher (~> 0.0)
       dry-monads (~> 1.0)
       dry-struct (~> 0.0)
@@ -22,7 +22,7 @@ GEM
     coderay (1.1.2)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
-    concurrent-ruby (1.0.5)
+    concurrent-ruby (1.1.3)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.3)
@@ -184,4 +184,4 @@ DEPENDENCIES
   timecop
 
 BUNDLED WITH
-   1.16.4
+   1.17.1

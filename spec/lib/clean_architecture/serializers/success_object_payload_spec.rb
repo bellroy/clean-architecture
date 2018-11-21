@@ -7,7 +7,7 @@ require 'clean_architecture/serializers/success_payload'
 module CleanArchitecture
   module Serializers
     describe SuccessPayload do
-      let(:success_payload) { described_class.new(use_case_target, version) }
+      let(:success_payload) { described_class.new(use_case_target) }
 
       let(:use_case_target) do
         instance_double(
@@ -17,13 +17,12 @@ module CleanArchitecture
           type_name: 'SalesOrder'
         )
       end
-      let(:version) { '1.0' }
 
-      describe '#data_hash' do
-        subject(:data_hash) { success_payload.data_hash }
+      describe '#data' do
+        subject(:data) { success_payload.data }
 
         specify do
-          expect(data_hash).to eq(
+          expect(data).to eq(
             type: 'SalesOrder',
             id: 'B0000123',
             attributes: { prior: :state_hash }

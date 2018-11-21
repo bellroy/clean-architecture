@@ -1,3 +1,7 @@
+2.0.0
+
+  * Support collections for use case targets and success payloads
+
 1.2.0
 
   * Support arrays being passed as failure value to UseCaseResult matcher

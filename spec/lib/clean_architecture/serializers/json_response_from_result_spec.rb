@@ -7,14 +7,14 @@ require 'dry/monads/all'
 module CleanArchitecture
   module Serializers
     describe JsonResponseFromResult do
-      let(:json_response_from_result) { described_class.new(result, http_method, success_payload) }
+      let(:json_response_from_result) { described_class.new(result, http_method, success_object_payload) }
 
       let(:result) { Dry::Monads::Success(nil) }
       let(:http_method) { 'GET' }
-      let(:success_payload) do
+      let(:success_object_payload) do
         instance_double(
           Interfaces::SuccessPayload,
-          data_hash: { some: 'attributes' },
+          data: { some: 'attributes' },
           version: '1.0'
         )
       end
