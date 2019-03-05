@@ -43,7 +43,7 @@ module CleanArchitecture
       end
 
       def all_attributes_for_entity
-        attributes_for_entity.merge(ar_attributes_for_entity)
+        ar_attributes_for_entity.merge(attributes_for_entity)
       end
     end
   end
