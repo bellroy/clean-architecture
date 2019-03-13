@@ -1,3 +1,7 @@
+2.1.0
+
+  * Added `AbstractActiveRecordEntityBuilder` to help map ActiveRecord instances to `Dry::Struct` based entities.
+
 2.0.0
 
   * Support collections for use case targets and success payloads

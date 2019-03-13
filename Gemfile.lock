@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    clean-architecture (2.0.0)
+    clean-architecture (2.1.0)
       dry-matcher (~> 0.0)
       dry-monads (~> 1.0)
       dry-struct (~> 0.0)
