@@ -29,7 +29,7 @@ module CleanArchitecture
       attr_reader :ar_model_instance
 
       def entity_attribute_names
-        @entity_attributes ||= entity_class.schema.keys
+        @entity_attributes ||= entity_class.schema.keys.map(&:name)
       end
 
       def ar_attributes_for_entity

@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require 'clean_architecture/builders/abstract_active_record_entity_builder'
+require 'clean_architecture/types'
+require 'dry-struct'
 
 module CleanArchitecture
   module Builders
@@ -19,19 +21,13 @@ module CleanArchitecture
         end
       end
 
-      class ExampleEntitySchema
-        def keys
-          [:forename, :surname, :years_on_planet_earth]
-        end
-      end
+      class ExampleEntity < Dry::Struct
+        attribute :forename, Types::Strict::String
+        attribute :surname, Types::Strict::String
+        attribute :years_on_planet_earth, Types::Strict::Integer
 
-      class ExampleEntity
         def initialize(attributes)
           @attributes = attributes
-        end
-
-        def self.schema
-          ExampleEntitySchema.new
         end
       end
 

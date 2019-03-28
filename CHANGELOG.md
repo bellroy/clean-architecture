@@ -1,3 +1,7 @@
+2.2.0
+
+  * Made `AbstractActiveRecordEntityBuilder` work with dry-struct >= 0.0.6.
+
 2.1.0
 
   * Added `AbstractActiveRecordEntityBuilder` to help map ActiveRecord instances to `Dry::Struct` based entities.
