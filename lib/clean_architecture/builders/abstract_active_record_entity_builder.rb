@@ -29,7 +29,17 @@ module CleanArchitecture
       attr_reader :ar_model_instance
 
       def entity_attribute_names
-        @entity_attributes ||= entity_class.schema.keys.map(&:name)
+        @entity_attributes ||= begin
+          schema_keys = entity_class.schema.keys
+          first_key = schema_keys.first
+          if first_key.is_a?(Symbol)
+            entity_class.schema.keys
+          elsif first_key.respond_to?(:name)
+            entity_class.schema.keys.map(&:name)
+          else
+            raise 'Cannot determine schema format'
+          end
+        end
       end
 
       def ar_attributes_for_entity
