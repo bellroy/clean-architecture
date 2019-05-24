@@ -9,15 +9,50 @@ module CleanArchitecture
     describe AbstractActiveRecordEntityBuilder do
       class ExampleModel
         def age
-          25
+          26
+        end
+
+        def main_interest
+          ExampleInterestModel.new('Music')
+        end
+
+        def other_interests
+          [
+            ExampleInterestModel.new('Travel'),
+            ExampleInterestModel.new('Cycling')
+          ]
         end
 
         def attributes
           {
             'forename' => 'Samuel',
             'surname' => 'Giles',
-            'age' => 25
+            'age' => age,
+            'main_interest' => main_interest,
+            'other_interests' => other_interests
           }
+        end
+      end
+
+      class ExampleInterestModel
+        def initialize(label)
+          @label = label
+        end
+
+        attr_reader :label
+
+        def attributes
+          {
+            'label' => label
+          }
+        end
+      end
+
+      class ExampleInterest < Dry::Struct
+        attribute :label, Types::Strict::String
+
+        def initialize(attributes)
+          @attributes = attributes
         end
       end
 
@@ -25,14 +60,23 @@ module CleanArchitecture
         attribute :forename, Types::Strict::String
         attribute :surname, Types::Strict::String
         attribute :years_on_planet_earth, Types::Strict::Integer
+        attribute :main_interest, Types.Instance(ExampleInterest)
+        attribute :other_interests, Types.Array(Types.Instance(ExampleInterest))
 
         def initialize(attributes)
           @attributes = attributes
         end
       end
 
+      class ExampleInterestBuilder < AbstractActiveRecordEntityBuilder
+        acts_as_builder_for_entity ExampleInterest
+      end
+
       class ExampleBuilder < AbstractActiveRecordEntityBuilder
         acts_as_builder_for_entity ExampleEntity
+
+        belongs_to :main_interest, use: ExampleInterestBuilder
+        has_many :other_interests, use: ExampleInterestBuilder
 
         def attributes_for_entity
           {
@@ -45,22 +89,19 @@ module CleanArchitecture
       let(:ar_model_instance) { ExampleModel.new }
 
       describe '#build' do
-        subject(:build) { builder.build }
+        subject(:built_entity) { builder.build }
 
-        let(:example_entity) { instance_double(ExampleEntity) }
-
-        before do
-          expect(ExampleEntity)
-            .to receive(:new)
-            .with(
-              forename: 'Samuel',
-              surname: 'Giles',
-              years_on_planet_earth: 25
-            )
-            .and_return(example_entity)
+        specify do
+          expect(built_entity).to be_an_instance_of(ExampleEntity)
+          expect(built_entity.forename).to eq 'Samuel'
+          expect(built_entity.surname).to eq 'Giles'
+          expect(built_entity.years_on_planet_earth).to eq 26
+          expect(built_entity.main_interest).to eq ExampleInterest.new(label: 'Music')
+          expect(built_entity.other_interests).to eq [
+            ExampleInterest.new(label: 'Travel'),
+            ExampleInterest.new(label: 'Cycling')
+          ]
         end
-
-        it { is_expected.to eq example_entity }
       end
     end
   end
