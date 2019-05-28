@@ -1,3 +1,7 @@
+UNRELEASED
+
+  * `AbstractActiveRecordEntityBuilder` now has a DSL for streamlining the use of builders for `has_many` and `belongs_to` relations.
+
 2.2.0
 
   * Made `AbstractActiveRecordEntityBuilder` work with dry-struct >= 0.0.6.
