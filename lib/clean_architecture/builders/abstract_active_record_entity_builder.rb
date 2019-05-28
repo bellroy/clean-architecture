@@ -79,11 +79,10 @@ module CleanArchitecture
         self.class.belongs_to_builders.map do |belongs_to_builder_config|
           relation_name, builder_class = belongs_to_builder_config
           relation = @ar_model_instance.public_send(relation_name)
-          return [relation_name, nil] unless relation
 
           [
             relation_name,
-            builder_class.new(relation).build
+            relation ? builder_class.new(relation).build : nil
           ]
         end.to_h
       end
