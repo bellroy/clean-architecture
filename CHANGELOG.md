@@ -1,3 +1,7 @@
+2.3.1
+
+  * Fixed an issue with optional belongs_to relations in `AbstractActiveRecordEntityBuilder`
+
 2.3.0
 
   * `AbstractActiveRecordEntityBuilder` now has a DSL for streamlining the use of builders for `has_many` and `belongs_to` relations.

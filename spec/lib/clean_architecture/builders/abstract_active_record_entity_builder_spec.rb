@@ -16,6 +16,10 @@ module CleanArchitecture
           ExampleInterestModel.new('Music')
         end
 
+        def not_interested_in
+          nil
+        end
+
         def other_interests
           [
             ExampleInterestModel.new('Travel'),
@@ -29,6 +33,7 @@ module CleanArchitecture
             'surname' => 'Giles',
             'age' => age,
             'main_interest' => main_interest,
+            'not_interested_in' => not_interested_in,
             'other_interests' => other_interests
           }
         end
@@ -61,6 +66,7 @@ module CleanArchitecture
         attribute :surname, Types::Strict::String
         attribute :years_on_planet_earth, Types::Strict::Integer
         attribute :main_interest, Types.Instance(ExampleInterest)
+        attribute :not_interested_in, Types.Instance(ExampleInterest).optional
         attribute :other_interests, Types.Array(Types.Instance(ExampleInterest))
 
         def initialize(attributes)
@@ -76,6 +82,7 @@ module CleanArchitecture
         acts_as_builder_for_entity ExampleEntity
 
         belongs_to :main_interest, use: ExampleInterestBuilder
+        belongs_to :not_interested_in, use: ExampleInterestBuilder
         has_many :other_interests, use: ExampleInterestBuilder
 
         def attributes_for_entity
@@ -97,6 +104,7 @@ module CleanArchitecture
           expect(built_entity.surname).to eq 'Giles'
           expect(built_entity.years_on_planet_earth).to eq 26
           expect(built_entity.main_interest).to eq ExampleInterest.new(label: 'Music')
+          expect(built_entity.not_interested_in).to be nil
           expect(built_entity.other_interests).to eq [
             ExampleInterest.new(label: 'Travel'),
             ExampleInterest.new(label: 'Cycling')
