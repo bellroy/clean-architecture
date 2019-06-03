@@ -1,3 +1,9 @@
+2.4.0
+
+  * Introduce `UseCases::AbstractUseCase` to make it easier to create use cases with built in
+    validation.
+  * Add `UseCases::Form` to help map HTTP parameters to a use case's parameter object.
+
 2.3.1
 
   * Fixed an issue with optional belongs_to relations in `AbstractActiveRecordEntityBuilder`

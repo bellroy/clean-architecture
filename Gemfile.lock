@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    clean-architecture (2.3.1)
+    clean-architecture (2.4.0)
       activemodel (>= 5)
       activesupport (>= 5)
       dry-matcher (~> 0.0)
