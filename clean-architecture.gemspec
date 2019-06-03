@@ -22,7 +22,10 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'dry-matcher', '~> 0.0'
   spec.add_dependency 'dry-monads', '~> 1.0'
   spec.add_dependency 'dry-struct', '<= 0.6.0'
+  spec.add_dependency 'dry-validation', '<= 1.0.0'
   spec.add_dependency 'dry-types', '<= 0.14.0'
+  spec.add_dependency 'activemodel', '>= 5'
+  spec.add_dependency 'activesupport', '>= 5'
   spec.add_dependency 'duckface-interfaces', '~> 0.0'
 
   spec.add_development_dependency 'bundler', '~> 1.13'
