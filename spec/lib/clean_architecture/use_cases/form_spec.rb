@@ -7,7 +7,7 @@ module CleanArchitecture
   module UseCases
     describe Form do
       class ExampleGateway
-        def example_lookup(value)
+        def example_lookup(_value)
           true
         end
       end

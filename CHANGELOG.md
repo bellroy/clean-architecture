@@ -1,3 +1,7 @@
+2.5.0
+
+  * Remove restrictions on dry-rb gem
+
 2.4.0
 
   * Introduce `UseCases::AbstractUseCase` to make it easier to create use cases with built in
