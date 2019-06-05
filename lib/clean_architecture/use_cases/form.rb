@@ -30,7 +30,7 @@ module CleanArchitecture
       # the parameter object or an exception
       def to_parameter_object
         @to_parameter_object ||= begin
-          use_case_class.params.with(context).call(parameter_object_hash)
+          use_case_class.parameters(parameter_object_hash.merge(context: context))
         end
       end
 
@@ -49,11 +49,11 @@ module CleanArchitecture
       end
 
       def self.acts_as_form_for(use_case_class)
-        attribute_names = use_case_class.params.rules.keys
+        attribute_names = use_case_class.contract.__schema__.rules.keys
 
         attribute_names.each do |attribute_name|
           define_method attribute_name do
-            to_parameter_object.to_h[attribute_name]
+            to_parameter_object[attribute_name]
           end
         end
 

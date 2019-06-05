@@ -1,3 +1,11 @@
+2.6.0
+
+  * Bring `UseCases::AbstractUseCase` into line with dry-validation 1.0 & co.
+    * Use cases now have a 'contract', params act as per normal
+    * Predicates have been replaced with macros, they can still be shared
+    * Context variables passed into the use case parameters are accessible within the use case as `context(:my_context)`
+    * There is no need to redefine `initialize` in use cases, you can access context with `#context` and params via `#result_of_validating_params`
+
 2.5.0
 
   * Remove restrictions on dry-rb gem

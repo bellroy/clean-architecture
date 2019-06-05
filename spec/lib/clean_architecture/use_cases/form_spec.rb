@@ -8,27 +8,35 @@ module CleanArchitecture
     describe Form do
       class ExampleGateway
         def example_lookup(_value)
+          false
+        end
+      end
+
+      class NegativeExampleGateway
+        def example_lookup(_value)
           true
         end
       end
 
-      class ExampleUseCase < AbstractUseCase
-        params do
-          configure do
-            option :some_gateway
+      class ExampleFormUseCase < AbstractUseCase
+        contract do
+          option :some_gateway
 
-            def some_custom_predicate?(value)
-              some_gateway.example_lookup(value)
-            end
+          params do
+            required(:email).filled(:str?)
+            required(:age).filled(:int?, gt?: 18)
           end
 
-          required(:email).filled(:str?, :some_custom_predicate?)
-          required(:age).filled(:int?, gt?: 18)
+          rule(:email).validate(:check_gateway)
+
+          register_macro(:check_gateway) do
+            key.failure('the gateway said the user is banned') if some_gateway.example_lookup(values[key_name])
+          end
         end
       end
 
       class ExampleForm < Form
-        acts_as_form_for ExampleUseCase
+        acts_as_form_for ExampleFormUseCase
       end
 
       describe '.acts_as_form_for' do
@@ -42,7 +50,7 @@ module CleanArchitecture
         specify do
           expect(form.email).to eq 'samuel.giles@bellroy.com'
           expect(form.age).to eq 26
-          expect(form.use_case_class).to eq ExampleUseCase
+          expect(form.use_case_class).to eq ExampleFormUseCase
         end
       end
 
@@ -50,15 +58,26 @@ module CleanArchitecture
         subject(:parameter_object) do
           ExampleForm.new(
             params: { 'email' => 'samuel.giles@bellroy.com', 'age' => 26 },
-            context: { some_gateway: ExampleGateway.new }
+            context: { some_gateway: some_gateway }
           ).to_parameter_object
         end
+        let(:some_gateway) { ExampleGateway.new }
 
         specify do
-          expect(parameter_object).to be_an_instance_of(Dry::Validation::Result)
           expect(parameter_object.errors).to be_empty
           expect(parameter_object[:email]).to eq 'samuel.giles@bellroy.com'
           expect(parameter_object[:age]).to eq 26
+          expect(parameter_object.to_monad).to be_an_instance_of(Dry::Monads::Success)
+        end
+
+        context 'when there are validation errors' do
+          let(:some_gateway) { NegativeExampleGateway.new }
+
+          specify do
+            expect(parameter_object[:email]).to eq 'samuel.giles@bellroy.com'
+            expect(parameter_object[:age]).to eq 26
+            expect(parameter_object.to_monad).to be_an_instance_of(Dry::Monads::Failure)
+          end
         end
       end
 
