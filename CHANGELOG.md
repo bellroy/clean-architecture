@@ -1,3 +1,7 @@
+2.6.1
+
+  * Update dependency on dry-validation
+
 2.6.0
 
   * Bring `UseCases::AbstractUseCase` into line with dry-validation 1.0 & co.
