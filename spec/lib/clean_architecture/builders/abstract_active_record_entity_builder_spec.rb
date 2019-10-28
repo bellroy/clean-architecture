@@ -1,8 +1,10 @@
+# typed: false
 # frozen_string_literal: true
 
 require 'clean_architecture/builders/abstract_active_record_entity_builder'
 require 'clean_architecture/types'
 require 'dry-struct'
+require 'sorbet-runtime'
 
 module CleanArchitecture
   module Builders
@@ -74,12 +76,37 @@ module CleanArchitecture
         end
       end
 
+      class TStructExampleEntity < T::Struct
+        extend T::Sig
+
+        const :forename, String
+        const :surname, String
+        const :years_on_planet_earth, Integer
+        const :main_interest, ExampleInterest
+        const :not_interested_in, T.nilable(ExampleInterest)
+        const :other_interests, T::Array[ExampleInterest]
+      end
+
       class ExampleInterestBuilder < AbstractActiveRecordEntityBuilder
         acts_as_builder_for_entity ExampleInterest
       end
 
       class ExampleBuilder < AbstractActiveRecordEntityBuilder
         acts_as_builder_for_entity ExampleEntity
+
+        belongs_to :main_interest, use: ExampleInterestBuilder
+        belongs_to :not_interested_in, use: ExampleInterestBuilder
+        has_many :other_interests, use: ExampleInterestBuilder
+
+        def attributes_for_entity
+          {
+            years_on_planet_earth: ar_model_instance.age
+          }
+        end
+      end
+
+      class TStructExampleBuilder < AbstractActiveRecordEntityBuilder
+        acts_as_builder_for_entity TStructExampleEntity
 
         belongs_to :main_interest, use: ExampleInterestBuilder
         belongs_to :not_interested_in, use: ExampleInterestBuilder
@@ -109,6 +136,23 @@ module CleanArchitecture
             ExampleInterest.new(label: 'Travel'),
             ExampleInterest.new(label: 'Cycling')
           ]
+        end
+
+        context 'when T::Struct' do
+          let(:builder) { TStructExampleBuilder.new(ar_model_instance) }
+
+          specify do
+            expect(built_entity).to be_an_instance_of(TStructExampleEntity)
+            expect(built_entity.forename).to eq 'Samuel'
+            expect(built_entity.surname).to eq 'Giles'
+            expect(built_entity.years_on_planet_earth).to eq 26
+            expect(built_entity.main_interest).to eq ExampleInterest.new(label: 'Music')
+            expect(built_entity.not_interested_in).to be nil
+            expect(built_entity.other_interests).to eq [
+              ExampleInterest.new(label: 'Travel'),
+              ExampleInterest.new(label: 'Cycling')
+            ]
+          end
         end
       end
     end

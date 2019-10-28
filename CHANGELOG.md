@@ -1,3 +1,7 @@
+3.0.0
+
+  * Add sorbet and support for Sorbet T::Struct
+
 2.6.1
 
   * Update dependency on dry-validation

@@ -27,6 +27,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'dry-types'
   spec.add_dependency 'dry-validation', '>= 1.0.0'
   spec.add_dependency 'duckface-interfaces', '~> 0.0'
+  spec.add_dependency 'sorbet-runtime'
 
   spec.add_development_dependency 'bundler', '~> 1.13'
   spec.add_development_dependency 'rake', '~> 12.0'

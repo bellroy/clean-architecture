@@ -1,3 +1,4 @@
+# typed: false
 # frozen_string_literal: true
 
 module CleanArchitecture
@@ -49,12 +50,18 @@ module CleanArchitecture
 
       def entity_attribute_names
         @entity_attributes ||= begin
-          schema_keys = entity_class.schema.keys
+          if entity_class.respond_to?(:schema) # Dry::Struct
+            schema_keys = entity_class.schema.keys
+          elsif entity_class.respond_to?(:decorator) # T::Struct
+            schema_keys = entity_class.decorator.props.keys
+          else
+            raise 'Cannot determine schema format'
+          end
           first_key = schema_keys.first
           if first_key.is_a?(Symbol)
-            entity_class.schema.keys
+            schema_keys
           elsif first_key.respond_to?(:name)
-            entity_class.schema.keys.map(&:name)
+            schema_keys.map(&:name)
           else
             raise 'Cannot determine schema format'
           end

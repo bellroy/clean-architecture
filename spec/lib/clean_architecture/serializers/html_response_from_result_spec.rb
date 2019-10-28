@@ -1,3 +1,4 @@
+# typed: false
 # frozen_string_literal: true
 
 require 'clean_architecture/serializers/html_response_from_result'

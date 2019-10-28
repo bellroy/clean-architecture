@@ -1,3 +1,4 @@
+# typed: false
 # frozen_string_literal: true
 
 shared_examples_for 'an interface' do

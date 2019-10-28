@@ -1,3 +1,4 @@
+# typed: false
 # frozen_string_literal: true
 
 require 'clean_architecture/adapters/attribute_hash_base'

@@ -1,3 +1,4 @@
+# typed: false
 # frozen_string_literal: true
 
 require 'clean_architecture/use_cases/form'
