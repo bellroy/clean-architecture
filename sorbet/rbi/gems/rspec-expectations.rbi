@@ -344,7 +344,7 @@ end
 module RSpec::Expectations::Configuration::NullBacktraceFormatter
   def self.format_backtrace(backtrace); end
 end
-class InvalidName___Class_0x00___Differ_106
+class InvalidName___Class_0x00___Differ_105
 end
 module RSpec::Expectations::ExpectationHelper
   def self.check_message(msg); end
@@ -394,37 +394,4 @@ end
 class RSpec::Core::ExampleGroup
   include RSpec::Core::MockingAdapters::RSpec
   include RSpec::Matchers
-end
-class RSpec::ExampleGroups::DuckfaceActsAsInterface::CleanArchitectureInterfacesUseCase < RSpec::ExampleGroups::DuckfaceActsAsInterface
-  include RSpec::ExampleGroups::DuckfaceActsAsInterface::CleanArchitectureInterfacesUseCase::LetDefinitions
-end
-class RSpec::ExampleGroups::DuckfaceActsAsInterface::CleanArchitectureInterfacesUseCase::BehavesLikeAnInterface < RSpec::ExampleGroups::DuckfaceActsAsInterface::CleanArchitectureInterfacesUseCase
-  include RSpec::ExampleGroups::DuckfaceActsAsInterface::CleanArchitectureInterfacesUseCase::BehavesLikeAnInterface::LetDefinitions
-end
-class Dummy
-  def initialize; end
-end
-class RSpec::ExampleGroups::DuckfaceActsAsInterface::CleanArchitectureInterfacesUseCase::BehavesLikeAnInterface::WhenAllMethodsRaiseNotImplementedError < RSpec::ExampleGroups::DuckfaceActsAsInterface::CleanArchitectureInterfacesUseCase::BehavesLikeAnInterface
-  def dummy; end
-  include RSpec::ExampleGroups::DuckfaceActsAsInterface::CleanArchitectureInterfacesUseCase::BehavesLikeAnInterface::WhenAllMethodsRaiseNotImplementedError::LetDefinitions
-end
-module RSpec::ExampleGroups::DuckfaceActsAsInterface::CleanArchitectureInterfacesUseCase::BehavesLikeAnInterface::WhenAllMethodsRaiseNotImplementedError::NamedSubjectPreventSuper
-end
-module RSpec::ExampleGroups::DuckfaceActsAsInterface::CleanArchitectureInterfacesUseCase::BehavesLikeAnInterface::WhenAllMethodsRaiseNotImplementedError::LetDefinitions
-  def dummy; end
-  include RSpec::ExampleGroups::DuckfaceActsAsInterface::CleanArchitectureInterfacesUseCase::BehavesLikeAnInterface::WhenAllMethodsRaiseNotImplementedError::NamedSubjectPreventSuper
-end
-module RSpec::ExampleGroups::DuckfaceActsAsInterface::CleanArchitectureInterfacesUseCase::BehavesLikeAnInterface::NamedSubjectPreventSuper
-end
-module RSpec::ExampleGroups::DuckfaceActsAsInterface::CleanArchitectureInterfacesUseCase::BehavesLikeAnInterface::LetDefinitions
-  include RSpec::ExampleGroups::DuckfaceActsAsInterface::CleanArchitectureInterfacesUseCase::BehavesLikeAnInterface::NamedSubjectPreventSuper
-end
-module RSpec::ExampleGroups::DuckfaceActsAsInterface::CleanArchitectureInterfacesUseCase::NamedSubjectPreventSuper
-end
-module RSpec::ExampleGroups::DuckfaceActsAsInterface::CleanArchitectureInterfacesUseCase::LetDefinitions
-  include RSpec::ExampleGroups::DuckfaceActsAsInterface::CleanArchitectureInterfacesUseCase::NamedSubjectPreventSuper
-end
-class RSpec::ExampleGroups::DuckfaceActsAsInterface::CleanArchitectureSerializersSuccessCollectionPayload < RSpec::ExampleGroups::DuckfaceActsAsInterface
-end
-class RSpec::ExampleGroups::DuckfaceActsAsInterface::CleanArchitectureSerializersSuccessCollectionPayload::BehavesLikeItImplements < RSpec::ExampleGroups::DuckfaceActsAsInterface::CleanArchitectureSerializersSuccessCollectionPayload
 end

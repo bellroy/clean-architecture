@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/dry-logic/all/dry-logic.rbi
 #
-# dry-logic-1.0.3
+# dry-logic-1.0.5
 module Dry
 end
 module Dry::Logic
@@ -75,7 +75,7 @@ class Dry::Logic::Operations::And < Dry::Logic::Operations::Binary
   def [](input); end
   def call(input); end
   def hints; end
-  def initialize(*arg0); end
+  def initialize(*arg0, **arg1); end
   def operator; end
   def type; end
 end
@@ -150,7 +150,7 @@ class Dry::Logic::Operations::Key < Dry::Logic::Operations::Unary
   def initialize(*rules, **options); end
   def path; end
   def self.evaluator(name); end
-  def self.new(rules, options); end
+  def self.new(rules, **options); end
   def to_s; end
   def type; end
 end

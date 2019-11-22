@@ -129,37 +129,3 @@ module Anonymous_Module_42
   def inherited(klass); end
   def schema(value = nil); end
 end
-module CleanArchitecture
-end
-module CleanArchitecture::Builders
-end
-class RSpec::ExampleGroups::CleanArchitectureBuildersAbstractActiveRecordEntityBuilder < RSpec::Core::ExampleGroup
-  extend RSpec::Matchers::DSL
-end
-class CleanArchitecture::Builders::ExampleModel
-  def age; end
-  def attributes; end
-  def main_interest; end
-  def not_interested_in; end
-  def other_interests; end
-end
-class CleanArchitecture::Builders::ExampleInterestModel
-  def attributes; end
-  def initialize(label); end
-  def label; end
-end
-class CleanArchitecture::Builders::ExampleInterest < Dry::Struct
-  def initialize(attributes); end
-  def label; end
-  extend Dry::Core::DescendantsTracker
-end
-class CleanArchitecture::Builders::ExampleEntity < Dry::Struct
-  def forename; end
-  def initialize(attributes); end
-  def main_interest; end
-  def not_interested_in; end
-  def other_interests; end
-  def surname; end
-  def years_on_planet_earth; end
-  extend Dry::Core::DescendantsTracker
-end

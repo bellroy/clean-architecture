@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/activesupport/all/activesupport.rbi
 #
-# activesupport-6.0.0
+# activesupport-6.0.1
 class Hash
   def blank?; end
   def deep_merge!(other_hash, &block); end
@@ -404,6 +404,7 @@ class TrueClass
   def blank?; end
 end
 class String
+  def blank?; end
   def camelcase(first_letter = nil); end
   def camelize(first_letter = nil); end
   def classify; end

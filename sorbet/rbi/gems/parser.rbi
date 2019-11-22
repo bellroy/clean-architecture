@@ -9,6 +9,7 @@
 #
 # parser-2.6.5.0
 module Parser
+  def self.warn_syntax_deviation(feature, version); end
 end
 module Parser::Deprecation
   def warn_of_deprecation; end

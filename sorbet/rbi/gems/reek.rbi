@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/reek/all/reek.rbi
 #
-# reek-5.4.0
+# reek-5.5.0
 module Reek
 end
 module Reek::Version
@@ -27,13 +27,11 @@ class Reek::SmellWarning
   def explanatory_link; end
   def hash; end
   def identifying_values; end
-  def initialize(smell_detector, lines:, message:, source:, context: nil, parameters: nil); end
+  def initialize(smell_type, lines:, message:, source:, context: nil, parameters: nil); end
   def lines; end
   def message; end
   def parameters; end
-  def smell_class; end
-  def smell_detector; end
-  def smell_type(*args, &block); end
+  def smell_type; end
   def source; end
   def to_hash; end
   def yaml_hash; end

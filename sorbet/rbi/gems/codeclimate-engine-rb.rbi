@@ -20,8 +20,8 @@ class CCEngine::Issue
   def to_json; end
   extend Virtus::ClassMethods
   extend Virtus::Extensions::AllowedWriterMethods
-  include Anonymous_Module_46
-  include Anonymous_Virtus_AttributeSet_45
+  include Anonymous_Module_99
+  include Anonymous_Virtus_AttributeSet_98
   include Virtus::ClassInclusions::Methods
   include Virtus::InstanceMethods
   include Virtus::InstanceMethods::Constructor
@@ -30,11 +30,11 @@ class CCEngine::Issue
   include Virtus::Model::Core
   include Virtus::Model::MassAssignment
 end
-module Anonymous_Module_46
+module Anonymous_Module_99
   def self.extended(object); end
   def self.included(object); end
 end
-module Anonymous_Virtus_AttributeSet_45
+module Anonymous_Virtus_AttributeSet_98
   def categories; end
   def categories=(value); end
   def check_name; end
@@ -57,8 +57,8 @@ class CCEngine::Location::LineRange
   def to_hash; end
   extend Virtus::ClassMethods
   extend Virtus::Extensions::AllowedWriterMethods
-  include Anonymous_Module_48
-  include Anonymous_Virtus_AttributeSet_47
+  include Anonymous_Module_101
+  include Anonymous_Virtus_AttributeSet_100
   include Virtus::ClassInclusions::Methods
   include Virtus::InstanceMethods
   include Virtus::InstanceMethods::Constructor
@@ -67,11 +67,11 @@ class CCEngine::Location::LineRange
   include Virtus::Model::Core
   include Virtus::Model::MassAssignment
 end
-module Anonymous_Module_48
+module Anonymous_Module_101
   def self.extended(object); end
   def self.included(object); end
 end
-module Anonymous_Virtus_AttributeSet_47
+module Anonymous_Virtus_AttributeSet_100
   def line_range; end
   def line_range=(value); end
   def path; end
@@ -82,8 +82,8 @@ class CCEngine::Location::Position
   def to_hash; end
   extend Virtus::ClassMethods
   extend Virtus::Extensions::AllowedWriterMethods
-  include Anonymous_Module_50
-  include Anonymous_Virtus_AttributeSet_49
+  include Anonymous_Module_103
+  include Anonymous_Virtus_AttributeSet_102
   include Virtus::ClassInclusions::Methods
   include Virtus::InstanceMethods
   include Virtus::InstanceMethods::Constructor
@@ -92,11 +92,11 @@ class CCEngine::Location::Position
   include Virtus::Model::Core
   include Virtus::Model::MassAssignment
 end
-module Anonymous_Module_50
+module Anonymous_Module_103
   def self.extended(object); end
   def self.included(object); end
 end
-module Anonymous_Virtus_AttributeSet_49
+module Anonymous_Virtus_AttributeSet_102
   def end_position; end
   def end_position=(value); end
   def path; end

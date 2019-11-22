@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/dry-configurable/all/dry-configurable.rbi
 #
-# dry-configurable-0.8.3
+# dry-configurable-0.9.0
 module Dry
 end
 module Dry::Configurable
@@ -22,6 +22,7 @@ module Dry::Configurable
   include Dry::Core::Constants
 end
 class Dry::Configurable::Settings
+  def [](name); end
   def add(key, value = nil, options = nil, &block); end
   def config_class; end
   def config_defined?; end
@@ -30,9 +31,12 @@ class Dry::Configurable::Settings
   def each; end
   def empty?; end
   def freeze; end
+  def index; end
   def initialize(settings = nil); end
   def name?(name); end
   def names; end
+  def reserved?(name); end
+  def reserved_names; end
   def self.capture(&block); end
   def settings; end
 end
@@ -47,6 +51,7 @@ class Dry::Configurable::Setting
   def options; end
   def processor; end
   def reader?; end
+  def reserved?; end
   def undefined?; end
   def value; end
 end

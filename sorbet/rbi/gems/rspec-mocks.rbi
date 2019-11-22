@@ -813,3 +813,134 @@ module RSpec::Mocks::Matchers
 end
 module RSpec::Mocks::Matchers::Matcher
 end
+module RSpec::Mocks::AnyInstance
+  def self.error_generator; end
+end
+class RSpec::Mocks::AnyInstance::Chain
+  def constrained_to_any_of?(*constraints); end
+  def expectation_fulfilled!; end
+  def initialize(recorder, *args, &block); end
+  def last_message; end
+  def matches_args?(*args); end
+  def messages; end
+  def negated?; end
+  def never; end
+  def playback!(instance); end
+  def record(rspec_method_name, *args, &block); end
+  def with(*args, &block); end
+  include RSpec::Mocks::AnyInstance::Chain::Customizations
+end
+module RSpec::Mocks::AnyInstance::Chain::Customizations
+  def and_call_original(*args, &block); end
+  def and_raise(*args, &block); end
+  def and_return(*args, &block); end
+  def and_throw(*args, &block); end
+  def and_wrap_original(*args, &block); end
+  def and_yield(*args, &block); end
+  def at_least(*args, &block); end
+  def at_most(*args, &block); end
+  def exactly(*args, &block); end
+  def never(*args, &block); end
+  def once(*args, &block); end
+  def self.record(method_name); end
+  def thrice(*args, &block); end
+  def time(*args, &block); end
+  def times(*args, &block); end
+  def twice(*args, &block); end
+  def with(*args, &block); end
+end
+class RSpec::Mocks::AnyInstance::ErrorGenerator < RSpec::Mocks::ErrorGenerator
+  def raise_does_not_implement_error(klass, method_name); end
+  def raise_message_already_received_by_other_instance_error(method_name, object_inspect, invoked_instance); end
+  def raise_not_supported_with_prepend_error(method_name, problem_mod); end
+  def raise_second_instance_received_message_error(unfulfilled_expectations); end
+end
+class RSpec::Mocks::AnyInstance::StubChain < RSpec::Mocks::AnyInstance::Chain
+  def create_message_expectation_on(instance); end
+  def expectation_fulfilled?; end
+  def invocation_order; end
+  def verify_invocation_order(rspec_method_name, *_args, &_block); end
+end
+class RSpec::Mocks::AnyInstance::StubChainChain < RSpec::Mocks::AnyInstance::StubChain
+  def create_message_expectation_on(instance); end
+  def initialize(*args); end
+  def invocation_order; end
+end
+class RSpec::Mocks::AnyInstance::ExpectChainChain < RSpec::Mocks::AnyInstance::StubChain
+  def create_message_expectation_on(instance); end
+  def expectation_fulfilled?; end
+  def initialize(*args); end
+  def invocation_order; end
+  def playback!(instance); end
+end
+class RSpec::Mocks::AnyInstance::ExpectationChain < RSpec::Mocks::AnyInstance::Chain
+  def expectation_fulfilled?; end
+  def initialize(*args, &block); end
+  def verify_invocation_order(_rspec_method_name, *_args, &_block); end
+end
+class RSpec::Mocks::AnyInstance::PositiveExpectationChain < RSpec::Mocks::AnyInstance::ExpectationChain
+  def create_message_expectation_on(instance); end
+  def invocation_order; end
+end
+class RSpec::Mocks::AnyInstance::MessageChains
+  def [](method_name); end
+  def add(method_name, chain); end
+  def all_expectations_fulfilled?; end
+  def each_unfulfilled_expectation_matching(method_name, *args); end
+  def has_expectation?(method_name); end
+  def initialize; end
+  def playback!(instance, method_name); end
+  def raise_if_second_instance_to_receive_message(instance); end
+  def received_expected_message!(method_name); end
+  def remove_stub_chains_for!(method_name); end
+  def unfulfilled_expectations; end
+end
+class RSpec::Mocks::AnyInstance::Recorder
+  def allow_no_prepended_module_definition_of(method_name); end
+  def already_observing?(method_name); end
+  def ancestor_is_an_observer?(method_name); end
+  def backup_method!(method_name); end
+  def build_alias_method_name(method_name); end
+  def expect_chain(*method_names_and_optional_return_values, &block); end
+  def initialize(klass); end
+  def instance_that_received(method_name); end
+  def klass; end
+  def mark_invoked!(method_name); end
+  def message_chains; end
+  def normalize_chain(*args); end
+  def notify_received_message(_object, message, args, _blk); end
+  def observe!(method_name); end
+  def playback!(instance, method_name); end
+  def public_protected_or_private_method_defined?(method_name); end
+  def received_expected_message!(method_name); end
+  def remove_dummy_method!(method_name); end
+  def restore_method!(method_name); end
+  def restore_original_method!(method_name); end
+  def should_not_receive(method_name, &block); end
+  def should_receive(method_name, &block); end
+  def stop_all_observation!; end
+  def stop_observing!(method_name); end
+  def stub(method_name, &block); end
+  def stub_chain(*method_names_and_optional_return_values, &block); end
+  def stubs; end
+  def super_class_observers_for(method_name); end
+  def super_class_observing?(method_name); end
+  def unstub(method_name); end
+  def verify; end
+end
+class RSpec::Mocks::AnyInstance::Proxy
+  def expect_chain(*chain, &block); end
+  def initialize(recorder, target_proxies); end
+  def klass; end
+  def perform_proxying(method_name, args, block, &target_proxy_block); end
+  def should_not_receive(method_name, &block); end
+  def should_receive(method_name, &block); end
+  def stub(method_name_or_method_map, &block); end
+  def stub_chain(*chain, &block); end
+  def unstub(method_name); end
+end
+class RSpec::Mocks::AnyInstance::FluentInterfaceProxy
+  def initialize(targets); end
+  def method_missing(*args, &block); end
+  def respond_to_missing?(method_name, include_private = nil); end
+end

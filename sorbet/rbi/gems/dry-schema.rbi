@@ -56,11 +56,11 @@ class Dry::Schema::Config
   def method_missing(meth, *args, &block); end
   def respond_to_missing?(meth, include_private = nil); end
   extend Dry::Configurable::ClassMethods
-  include Anonymous_Dry_Equalizer_65
+  include Anonymous_Dry_Equalizer_57
   include Dry::Configurable
   include Dry::Equalizer::Methods
 end
-module Anonymous_Dry_Equalizer_65
+module Anonymous_Dry_Equalizer_57
   def cmp?(comparator, other); end
   def hash; end
 end
@@ -70,8 +70,8 @@ class Dry::Schema::Message
   def eql?(other); end
   def to_s; end
   extend Dry::Initializer
-  include Anonymous_Dry_Equalizer_66
-  include Anonymous_Module_67
+  include Anonymous_Dry_Equalizer_58
+  include Anonymous_Module_59
   include Dry::Equalizer::Methods
   include Dry::Initializer::Mixin::Root
 end
@@ -85,12 +85,12 @@ class Dry::Schema::Message::Or
   def to_a; end
   def to_s; end
 end
-module Anonymous_Dry_Equalizer_66
+module Anonymous_Dry_Equalizer_58
   def cmp?(comparator, other); end
   def hash; end
   def inspect; end
 end
-module Anonymous_Module_67
+module Anonymous_Module_59
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(*arg0, **__dry_initializer_options__); end
   def args; end
@@ -117,11 +117,11 @@ class Dry::Schema::MessageSet
   def self.[](messages, options = nil); end
   def to_h; end
   def to_hash; end
-  include Anonymous_Dry_Equalizer_68
+  include Anonymous_Dry_Equalizer_60
   include Dry::Equalizer::Methods
   include Enumerable
 end
-module Anonymous_Dry_Equalizer_68
+module Anonymous_Dry_Equalizer_60
   def cmp?(comparator, other); end
   def hash; end
   def inspect; end
@@ -141,21 +141,21 @@ class Dry::Schema::Compiler < Dry::Logic::RuleCompiler
   def visit_namespace(node, opts = nil); end
 end
 module Dry::Schema::Types
-  extend Anonymous_Dry_Core_Deprecations_Tagged_69
-  extend Anonymous_Module_70
+  extend Anonymous_Dry_Core_Deprecations_Tagged_61
+  extend Anonymous_Module_62
   extend Dry::Core::Deprecations::Interface
   extend Dry::Types::BuilderMethods
-  include Anonymous_Dry_Types_Module_71
+  include Anonymous_Dry_Types_Module_63
 end
 module Dry::Schema::Types::Definition
 end
-module Anonymous_Dry_Types_Module_71
+module Anonymous_Dry_Types_Module_63
   def self.included(base); end
   extend Dry::Types::BuilderMethods
 end
-module Anonymous_Dry_Core_Deprecations_Tagged_69
+module Anonymous_Dry_Core_Deprecations_Tagged_61
 end
-module Anonymous_Module_70
+module Anonymous_Module_62
   def const_missing(missing); end
 end
 class Dry::Schema::Predicate
@@ -169,7 +169,7 @@ class Dry::Schema::Predicate
   def name; end
   def to_ast(*arg0); end
   def to_rule; end
-  include Anonymous_Dry_Equalizer_72
+  include Anonymous_Dry_Equalizer_64
   include Dry::Equalizer::Methods
   include Dry::Logic::Operators
 end
@@ -179,7 +179,7 @@ class Dry::Schema::Predicate::Negation
   def predicate; end
   def to_ast(*args); end
 end
-module Anonymous_Dry_Equalizer_72
+module Anonymous_Dry_Equalizer_64
   def cmp?(comparator, other); end
   def hash; end
   def inspect; end
@@ -197,10 +197,10 @@ class Dry::Schema::Trace < BasicObject
   def reduced_rule; end
   def to_ast; end
   def to_rule(name = nil); end
-  include Anonymous_Dry_Equalizer_73
+  include Anonymous_Dry_Equalizer_65
   include Dry::Equalizer::Methods
 end
-module Anonymous_Dry_Equalizer_73
+module Anonymous_Dry_Equalizer_65
   def cmp?(comparator, other); end
   def hash; end
   def inspect; end
@@ -214,10 +214,10 @@ class Dry::Schema::Macros::Core
   def to_ast(*arg0); end
   def to_rule; end
   extend Dry::Initializer
-  include Anonymous_Module_74
+  include Anonymous_Module_66
   include Dry::Initializer::Mixin::Root
 end
-module Anonymous_Module_74
+module Anonymous_Module_66
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(*arg0, **__dry_initializer_options__); end
   def compiler; end
@@ -226,7 +226,7 @@ module Anonymous_Module_74
   def trace; end
   extend Dry::Initializer::Mixin::Local
 end
-module Anonymous_Module_75
+module Anonymous_Module_67
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(*arg0, **__dry_initializer_options__); end
   def chain; end
@@ -245,10 +245,10 @@ class Dry::Schema::Macros::DSL < Dry::Schema::Macros::Core
   def schema(*args, &block); end
   def type(spec); end
   def value(*predicates, **opts, &block); end
-  include Anonymous_Module_75
+  include Anonymous_Module_67
   include Dry::Logic::Operators
 end
-module Anonymous_Module_76
+module Anonymous_Module_68
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(*arg0, **__dry_initializer_options__); end
   extend Dry::Initializer::Mixin::Local
@@ -257,9 +257,9 @@ class Dry::Schema::Macros::Array < Dry::Schema::Macros::DSL
   def ast(*arg0); end
   def to_ast(*arg0); end
   def value(*args, **opts, &block); end
-  include Anonymous_Module_76
+  include Anonymous_Module_68
 end
-module Anonymous_Module_77
+module Anonymous_Module_69
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(*arg0, **__dry_initializer_options__); end
   extend Dry::Initializer::Mixin::Local
@@ -268,9 +268,9 @@ class Dry::Schema::Macros::Each < Dry::Schema::Macros::DSL
   def ast(*arg0); end
   def to_ast(*arg0); end
   def value(*args, **opts); end
-  include Anonymous_Module_77
+  include Anonymous_Module_69
 end
-module Anonymous_Module_78
+module Anonymous_Module_70
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(*arg0, **__dry_initializer_options__); end
   extend Dry::Initializer::Mixin::Local
@@ -281,9 +281,9 @@ class Dry::Schema::Macros::Value < Dry::Schema::Macros::DSL
   def call(*predicates, **opts, &block); end
   def method_missing(meth, *args, &block); end
   def respond_to_missing?(meth, include_private = nil); end
-  include Anonymous_Module_78
+  include Anonymous_Module_70
 end
-module Anonymous_Module_79
+module Anonymous_Module_71
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(*arg0, **__dry_initializer_options__); end
   extend Dry::Initializer::Mixin::Local
@@ -295,9 +295,9 @@ class Dry::Schema::Macros::Filled < Dry::Schema::Macros::Value
   def filter_empty_string?; end
   def processor_config; end
   def schema_type; end
-  include Anonymous_Module_79
+  include Anonymous_Module_71
 end
-module Anonymous_Module_80
+module Anonymous_Module_72
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(*arg0, **__dry_initializer_options__); end
   extend Dry::Initializer::Mixin::Local
@@ -309,18 +309,18 @@ class Dry::Schema::Macros::Schema < Dry::Schema::Macros::Value
   def parent_type; end
   def redefined_schema?(args); end
   def schema?; end
-  include Anonymous_Module_80
+  include Anonymous_Module_72
 end
-module Anonymous_Module_81
+module Anonymous_Module_73
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(*arg0, **__dry_initializer_options__); end
   extend Dry::Initializer::Mixin::Local
 end
 class Dry::Schema::Macros::Hash < Dry::Schema::Macros::Schema
   def call(*args, &block); end
-  include Anonymous_Module_81
+  include Anonymous_Module_73
 end
-module Anonymous_Module_82
+module Anonymous_Module_74
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(*arg0, **__dry_initializer_options__); end
   extend Dry::Initializer::Mixin::Local
@@ -328,7 +328,7 @@ end
 class Dry::Schema::Macros::Maybe < Dry::Schema::Macros::DSL
   def call(*args, **opts, &block); end
   def to_ast; end
-  include Anonymous_Module_82
+  include Anonymous_Module_74
 end
 class Dry::Schema::TypeRegistry
   def [](name); end
@@ -348,10 +348,10 @@ class Dry::Schema::ProcessorSteps
   def process_step(step, result); end
   def validate_step_name(name); end
   extend Dry::Initializer
-  include Anonymous_Module_83
+  include Anonymous_Module_75
   include Dry::Initializer::Mixin::Root
 end
-module Anonymous_Module_83
+module Anonymous_Module_75
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(*arg0, **__dry_initializer_options__); end
   def after_steps; end
@@ -374,17 +374,17 @@ class Dry::Schema::Result
   def success?; end
   def to_h; end
   extend Dry::Initializer
-  include Anonymous_Dry_Equalizer_84
-  include Anonymous_Module_85
+  include Anonymous_Dry_Equalizer_76
+  include Anonymous_Module_77
   include Dry::Equalizer::Methods
   include Dry::Initializer::Mixin::Root
 end
-module Anonymous_Dry_Equalizer_84
+module Anonymous_Dry_Equalizer_76
   def cmp?(comparator, other); end
   def hash; end
   def inspect; end
 end
-module Anonymous_Module_85
+module Anonymous_Module_77
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(output, results = nil, *arg2, **__dry_initializer_options__); end
   def message_compiler; end
@@ -406,10 +406,10 @@ class Dry::Schema::Messages::Template
   def self.parse(input); end
   def text; end
   def tokens; end
-  include Anonymous_Dry_Equalizer_86
+  include Anonymous_Dry_Equalizer_78
   include Dry::Equalizer::Methods
 end
-module Anonymous_Dry_Equalizer_86
+module Anonymous_Dry_Equalizer_78
   def cmp?(comparator, other); end
   def hash; end
   def inspect; end
@@ -434,11 +434,11 @@ class Dry::Schema::Messages::Abstract
   def self.cache; end
   def translate(key, locale: nil); end
   extend Dry::Configurable::ClassMethods
-  include Anonymous_Dry_Equalizer_87
+  include Anonymous_Dry_Equalizer_79
   include Dry::Configurable
   include Dry::Equalizer::Methods
 end
-module Anonymous_Dry_Equalizer_87
+module Anonymous_Dry_Equalizer_79
   def cmp?(comparator, other); end
   def hash; end
   def inspect; end
@@ -470,10 +470,10 @@ class Dry::Schema::Messages::YAML < Dry::Schema::Messages::Abstract
   def self.build(options = nil); end
   def self.flat_hash(hash, path = nil, keys = nil); end
   def t; end
-  include Anonymous_Dry_Equalizer_88
+  include Anonymous_Dry_Equalizer_80
   include Dry::Equalizer::Methods
 end
-module Anonymous_Dry_Equalizer_88
+module Anonymous_Dry_Equalizer_80
   def cmp?(comparator, other); end
   def hash; end
   def inspect; end
@@ -501,7 +501,7 @@ class Dry::Schema::MessageCompiler
   def visit_xor(node, opts); end
   def with(new_options); end
   extend Dry::Initializer
-  include Anonymous_Module_89
+  include Anonymous_Module_81
   include Dry::Initializer::Mixin::Root
 end
 class Dry::Schema::MessageCompiler::VisitorOpts < Hash
@@ -514,7 +514,7 @@ class Dry::Schema::MessageCompiler::VisitorOpts < Hash
   def path; end
   def self.new; end
 end
-module Anonymous_Module_89
+module Anonymous_Module_81
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(messages, *arg1, **__dry_initializer_options__); end
   def full; end
@@ -527,10 +527,10 @@ class Dry::Schema::RuleApplier
   def call(input); end
   def to_ast; end
   extend Dry::Initializer
-  include Anonymous_Module_90
+  include Anonymous_Module_82
   include Dry::Initializer::Mixin::Root
 end
-module Anonymous_Module_90
+module Anonymous_Module_82
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(rules, *arg1, **__dry_initializer_options__); end
   def config; end
@@ -547,11 +547,11 @@ class Dry::Schema::KeyCoercer
   def self.new(*args, &coercer); end
   def self.symbolized(*args); end
   extend Dry::Core::Cache
-  include Anonymous_Dry_Equalizer_91
+  include Anonymous_Dry_Equalizer_83
   include Dry::Core::Cache::Methods
   include Dry::Equalizer::Methods
 end
-module Anonymous_Dry_Equalizer_91
+module Anonymous_Dry_Equalizer_83
   def cmp?(comparator, other); end
   def hash; end
   def inspect; end
@@ -559,18 +559,18 @@ end
 class Dry::Schema::ValueCoercer
   def call(input); end
   extend Dry::Initializer
-  include Anonymous_Dry_Equalizer_93
-  include Anonymous_Module_92
+  include Anonymous_Dry_Equalizer_85
+  include Anonymous_Module_84
   include Dry::Equalizer::Methods
   include Dry::Initializer::Mixin::Root
 end
-module Anonymous_Module_92
+module Anonymous_Module_84
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(type_schema, *arg1); end
   def type_schema; end
   extend Dry::Initializer::Mixin::Local
 end
-module Anonymous_Dry_Equalizer_93
+module Anonymous_Dry_Equalizer_85
   def cmp?(comparator, other); end
   def hash; end
   def inspect; end
@@ -596,17 +596,17 @@ class Dry::Schema::Processor
   extend Dry::Configurable
   extend Dry::Configurable::ClassMethods
   extend Dry::Initializer
-  include Anonymous_Module_94
+  include Anonymous_Module_86
   include Dry::Initializer::Mixin::Root
 end
-module Anonymous_Module_94
+module Anonymous_Module_86
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(*arg0, **__dry_initializer_options__); end
   def schema_dsl; end
   def steps; end
   extend Dry::Initializer::Mixin::Local
 end
-module Anonymous_Module_95
+module Anonymous_Module_87
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(*arg0, **__dry_initializer_options__); end
   def filter_schema_dsl; end
@@ -619,9 +619,9 @@ class Dry::Schema::Macros::Key < Dry::Schema::Macros::DSL
   def to_ast; end
   def to_rule; end
   def value(*args, **opts, &block); end
-  include Anonymous_Module_95
+  include Anonymous_Module_87
 end
-module Anonymous_Module_96
+module Anonymous_Module_88
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(*arg0, **__dry_initializer_options__); end
   extend Dry::Initializer::Mixin::Local
@@ -629,16 +629,16 @@ end
 class Dry::Schema::Macros::Optional < Dry::Schema::Macros::Key
   def operation; end
   def to_rule; end
-  include Anonymous_Module_96
+  include Anonymous_Module_88
 end
-module Anonymous_Module_97
+module Anonymous_Module_89
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(*arg0, **__dry_initializer_options__); end
   extend Dry::Initializer::Mixin::Local
 end
 class Dry::Schema::Macros::Required < Dry::Schema::Macros::Key
   def operation; end
-  include Anonymous_Module_97
+  include Anonymous_Module_89
 end
 class Dry::Schema::Key
   def coerced_name; end
@@ -655,11 +655,11 @@ class Dry::Schema::Key
   def stringified; end
   def write(source, target); end
   extend Dry::Core::Cache
-  include Anonymous_Dry_Equalizer_98
+  include Anonymous_Dry_Equalizer_90
   include Dry::Core::Cache::Methods
   include Dry::Equalizer::Methods
 end
-module Anonymous_Dry_Equalizer_98
+module Anonymous_Dry_Equalizer_90
   def cmp?(comparator, other); end
   def hash; end
   def inspect; end
@@ -672,10 +672,10 @@ class Dry::Schema::Key::Hash < Dry::Schema::Key
   def read(source); end
   def stringified; end
   def write(source, target); end
-  include Anonymous_Dry_Equalizer_99
+  include Anonymous_Dry_Equalizer_91
   include Dry::Equalizer::Methods
 end
-module Anonymous_Dry_Equalizer_99
+module Anonymous_Dry_Equalizer_91
   def cmp?(comparator, other); end
   def hash; end
   def inspect; end
@@ -687,10 +687,10 @@ class Dry::Schema::Key::Array < Dry::Schema::Key
   def member; end
   def stringified; end
   def write(source, target); end
-  include Anonymous_Dry_Equalizer_100
+  include Anonymous_Dry_Equalizer_92
   include Dry::Equalizer::Methods
 end
-module Anonymous_Dry_Equalizer_100
+module Anonymous_Dry_Equalizer_92
   def cmp?(comparator, other); end
   def hash; end
   def inspect; end
@@ -708,12 +708,12 @@ class Dry::Schema::KeyMap
   def stringified; end
   def write(source, target = nil); end
   extend Dry::Core::Cache
-  include Anonymous_Dry_Equalizer_101
+  include Anonymous_Dry_Equalizer_93
   include Dry::Core::Cache::Methods
   include Dry::Equalizer::Methods
   include Enumerable
 end
-module Anonymous_Dry_Equalizer_101
+module Anonymous_Dry_Equalizer_93
   def cmp?(comparator, other); end
   def hash; end
   def inspect; end
@@ -750,12 +750,12 @@ class Dry::Schema::DSL
   def type_schema; end
   def value_coercer; end
   extend Dry::Initializer
-  include Anonymous_Dry_Equalizer_103
-  include Anonymous_Module_102
+  include Anonymous_Dry_Equalizer_95
+  include Anonymous_Module_94
   include Dry::Equalizer::Methods
   include Dry::Initializer::Mixin::Root
 end
-module Anonymous_Module_102
+module Anonymous_Module_94
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(*arg0, **__dry_initializer_options__); end
   def compiler; end
@@ -767,24 +767,24 @@ module Anonymous_Module_102
   def types; end
   extend Dry::Initializer::Mixin::Local
 end
-module Anonymous_Dry_Equalizer_103
+module Anonymous_Dry_Equalizer_95
   def cmp?(comparator, other); end
   def hash; end
   def inspect; end
 end
-module Anonymous_Module_104
+module Anonymous_Module_96
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(*arg0, **__dry_initializer_options__); end
   extend Dry::Initializer::Mixin::Local
 end
 class Dry::Schema::Params < Dry::Schema::Processor
-  include Anonymous_Module_104
+  include Anonymous_Module_96
 end
-module Anonymous_Module_105
+module Anonymous_Module_97
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(*arg0, **__dry_initializer_options__); end
   extend Dry::Initializer::Mixin::Local
 end
 class Dry::Schema::JSON < Dry::Schema::Processor
-  include Anonymous_Module_105
+  include Anonymous_Module_97
 end

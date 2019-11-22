@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/dry-types/all/dry-types.rbi
 #
-# dry-types-1.2.0
+# dry-types-1.2.1
 module Dry
   def self.Types(*namespaces, default: nil, **aliases); end
 end
@@ -69,7 +69,7 @@ module Dry::Types::Decorator
   def constrained?; end
   def decorate?(response); end
   def default?; end
-  def initialize(type, *arg1); end
+  def initialize(type, *arg1, **arg2); end
   def method_missing(meth, *args, &block); end
   def optional; end
   def respond_to_missing?(meth, include_private = nil); end
@@ -117,7 +117,7 @@ class Dry::Types::Constrained
   def constrained?; end
   def constructor_type; end
   def decorate?(response); end
-  def initialize(type, options); end
+  def initialize(type, **options); end
   def lax; end
   def rule; end
   def to_ast(meta: nil); end
@@ -143,7 +143,7 @@ class Dry::Types::Enum
   def call_unsafe(input); end
   def default(*arg0); end
   def include?(input = nil); end
-  def initialize(type, options); end
+  def initialize(type, **options); end
   def inspect; end
   def inverted_mapping; end
   def map_value(input); end
@@ -191,7 +191,7 @@ module Dry::Types::Meta
   def initialize(*args, meta: nil, **options); end
   def meta(data = nil); end
   def pristine; end
-  def with(options); end
+  def with(**options); end
 end
 class Dry::Types::Sum
   def call_safe(input, &block); end
@@ -200,7 +200,7 @@ class Dry::Types::Sum
   def constrained?; end
   def default?; end
   def failure(input, _error = nil); end
-  def initialize(left, right, options = nil); end
+  def initialize(left, right, **options); end
   def left; end
   def meta(data = nil); end
   def name; end
@@ -349,7 +349,7 @@ class Dry::Types::Array::Member < Dry::Types::Array
   def call_safe(input); end
   def call_unsafe(input); end
   def constructor_type; end
-  def initialize(primitive, options = nil); end
+  def initialize(primitive, **options); end
   def lax; end
   def member; end
   def to_ast(meta: nil); end
@@ -496,7 +496,7 @@ end
 class Dry::Types::Module < Module
   def check_parameters(*namespaces, default: nil, **aliases); end
   def define_constants(constants, mod = nil); end
-  def initialize(registry, *args); end
+  def initialize(registry, *args, **kwargs); end
   def registry_tree; end
   def type_constants(*namespaces, default: nil, **aliases); end
 end
@@ -542,7 +542,7 @@ class Dry::Types::AnyClass < Dry::Types::Nominal
   def name; end
   def self.name; end
   def to_ast(meta: nil); end
-  def with(new_options); end
+  def with(**new_options); end
 end
 module Dry::Types::Coercions
   def empty_str?(value); end

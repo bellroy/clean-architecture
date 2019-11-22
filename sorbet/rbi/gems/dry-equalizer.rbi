@@ -7,17 +7,17 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/dry-equalizer/all/dry-equalizer.rbi
 #
-# dry-equalizer-0.2.2
+# dry-equalizer-0.3.0
 module Dry
   def self.Equalizer(*keys, **options); end
 end
 class Dry::Equalizer < Module
   def define_cmp_method; end
-  def define_hash_method; end
+  def define_hash_method(immutable:); end
   def define_inspect_method; end
-  def define_methods(inspect: nil); end
+  def define_methods(inspect: nil, immutable: nil); end
   def included(descendant); end
-  def initialize(*keys, inspect: nil); end
+  def initialize(*keys, **options); end
 end
 module Dry::Equalizer::Methods
   def ==(other); end
