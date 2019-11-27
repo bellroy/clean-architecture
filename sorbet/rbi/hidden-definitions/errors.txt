@@ -35,9 +35,6 @@
 # wrong constant name <RESERVED_120>
 # wrong constant name <RESERVED_121>
 # wrong constant name <RESERVED_122>
-# wrong constant name <RESERVED_123>
-# wrong constant name <RESERVED_124>
-# wrong constant name <RESERVED_125>
 # wrong constant name <RESERVED_12>
 # wrong constant name <RESERVED_13>
 # wrong constant name <RESERVED_14>
@@ -212,7 +209,7 @@
 # wrong constant name define_attribute_method
 # wrong constant name define_attribute_methods
 # wrong constant name undefine_attribute_methods
-# undefined method `initialize<defaultArg>1' for class `#<Class:0x00007f93270086d0>'
+# undefined method `initialize<defaultArg>1' for class `#<Class:0x00007fb8900b0590>'
 # Did you mean?  initialize_dup
 # wrong constant name <Class:AttributeMethodMatch>
 # wrong constant name initialize<defaultArg>1
@@ -554,7 +551,6 @@
 # wrong constant name <Class:Dependencies>
 # wrong constant name <Class:DescendantsTracker>
 # wrong constant name <Class:Digest>
-# wrong constant name <Class:Duration>
 # wrong constant name <Class:EachTimeWithZone>
 # wrong constant name <Class:EventedFileUpdateChecker>
 # wrong constant name <Class:ExecutionWrapper>
@@ -1076,7 +1072,6 @@
 # wrong constant name parts=
 # wrong constant name since<defaultArg>1
 # wrong constant name since
-# wrong constant name to_i
 # wrong constant name until<defaultArg>1
 # wrong constant name until
 # wrong constant name value
@@ -1116,7 +1111,6 @@
 # wrong constant name to_i
 # wrong constant name to_s
 # wrong constant name value
-# wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name ===
 # wrong constant name build
@@ -3361,7 +3355,6 @@
 # wrong constant name filter!
 # wrong constant name flatten
 # wrong constant name index
-# wrong constant name merge!
 # wrong constant name nested_under_indifferent_access
 # wrong constant name replace
 # wrong constant name reverse_merge
@@ -7738,6 +7731,11 @@
 # uninitialized constant RuboCop::Cop::RSpec::DescribedClass::DEFAULT_PATTERN_RE
 # uninitialized constant RuboCop::Cop::RSpec::DescribedClass::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::RSpec::DescribedClass::RSPEC
+# uninitialized constant RuboCop::Cop::RSpec::DescribedClassModuleWrapping::ALL
+# uninitialized constant RuboCop::Cop::RSpec::DescribedClassModuleWrapping::DEFAULT_CONFIGURATION
+# uninitialized constant RuboCop::Cop::RSpec::DescribedClassModuleWrapping::DEFAULT_PATTERN_RE
+# uninitialized constant RuboCop::Cop::RSpec::DescribedClassModuleWrapping::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::RSpec::DescribedClassModuleWrapping::RSPEC
 # uninitialized constant RuboCop::Cop::RSpec::Dialect::ALL
 # uninitialized constant RuboCop::Cop::RSpec::Dialect::DEFAULT_CONFIGURATION
 # uninitialized constant RuboCop::Cop::RSpec::Dialect::DEFAULT_PATTERN_RE
@@ -7825,6 +7823,11 @@
 # uninitialized constant RuboCop::Cop::RSpec::FactoryBot::CreateList::DEFAULT_PATTERN_RE
 # uninitialized constant RuboCop::Cop::RSpec::FactoryBot::CreateList::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::RSpec::FactoryBot::CreateList::RSPEC
+# uninitialized constant RuboCop::Cop::RSpec::FactoryBot::FactoryClassName::ALL
+# uninitialized constant RuboCop::Cop::RSpec::FactoryBot::FactoryClassName::DEFAULT_CONFIGURATION
+# uninitialized constant RuboCop::Cop::RSpec::FactoryBot::FactoryClassName::DEFAULT_PATTERN_RE
+# uninitialized constant RuboCop::Cop::RSpec::FactoryBot::FactoryClassName::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::RSpec::FactoryBot::FactoryClassName::RSPEC
 # uninitialized constant RuboCop::Cop::RSpec::FilePath::ALL
 # uninitialized constant RuboCop::Cop::RSpec::FilePath::DEFAULT_CONFIGURATION
 # uninitialized constant RuboCop::Cop::RSpec::FilePath::DEFAULT_PATTERN_RE

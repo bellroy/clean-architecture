@@ -1639,8 +1639,6 @@ class ActiveSupport::Duration
 
   def since(time=T.unsafe(nil)); end
 
-  def to_i(); end
-
   def until(time=T.unsafe(nil)); end
 
   def value(); end
@@ -6132,8 +6130,6 @@ class Hash
   def flatten(*_); end
 
   def index(_); end
-
-  def merge!(*_); end
 
   def nested_under_indifferent_access(); end
 
@@ -14280,6 +14276,10 @@ class RuboCop::Cop::RSpec::DescribedClass
   MSG = ::T.let(nil, ::T.untyped)
 end
 
+class RuboCop::Cop::RSpec::DescribedClassModuleWrapping
+  MSG = ::T.let(nil, ::T.untyped)
+end
+
 class RuboCop::Cop::RSpec::Dialect
   MSG = ::T.let(nil, ::T.untyped)
 end
@@ -14355,6 +14355,10 @@ end
 class RuboCop::Cop::RSpec::FactoryBot::CreateList
   MSG_CREATE_LIST = ::T.let(nil, ::T.untyped)
   MSG_N_TIMES = ::T.let(nil, ::T.untyped)
+end
+
+class RuboCop::Cop::RSpec::FactoryBot::FactoryClassName
+  MSG = ::T.let(nil, ::T.untyped)
 end
 
 class RuboCop::Cop::RSpec::FilePath
