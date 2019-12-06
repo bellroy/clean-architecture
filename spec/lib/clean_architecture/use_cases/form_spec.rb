@@ -65,6 +65,7 @@ module CleanArchitecture
         let(:some_gateway) { ExampleGateway.new }
 
         specify do
+          raise 'problem!'
           expect(parameter_object.errors).to be_empty
           expect(parameter_object[:email]).to eq 'samuel.giles@bellroy.com'
           expect(parameter_object[:age]).to eq 26
