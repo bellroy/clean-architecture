@@ -24,7 +24,8 @@ module CleanArchitecture
         'error' => :internal_server_error,
         'expectation_failed' => :expectation_failed,
         'not_found' => :not_found,
-        'unauthorized' => :unauthorized
+        'unauthorized' => :unauthorized,
+        'unprocessable_entity' => :unprocessable_entity
       }.freeze
     end
   end

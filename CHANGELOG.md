@@ -1,3 +1,7 @@
+3.0.1
+
+  * Add new failure code - unprocessable_entity
+
 3.0.0
 
   * Add sorbet and support for Sorbet T::Struct
