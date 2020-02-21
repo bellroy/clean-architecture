@@ -8,6 +8,7 @@
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/dry-container/all/dry-container.rbi
 #
 # dry-container-0.7.2
+
 module Dry
 end
 class Dry::Container

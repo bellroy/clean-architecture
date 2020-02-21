@@ -7,7 +7,8 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/dry-validation/all/dry-validation.rbi
 #
-# dry-validation-1.3.1
+# dry-validation-1.4.2
+
 module Dry
 end
 module Dry::Validation
@@ -29,17 +30,17 @@ end
 class Dry::Validation::Function
   def map_keywords(block); end
   extend Dry::Initializer
-  include Anonymous_Module_44
+  include Anonymous_Module_48
   include Dry::Initializer::Mixin::Root
 end
-module Anonymous_Module_44
+module Anonymous_Module_48
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(*arg0, **__dry_initializer_options__); end
   def block; end
   def block_options; end
   extend Dry::Initializer::Mixin::Local
 end
-module Anonymous_Module_45
+module Anonymous_Module_49
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(name, *arg1, **__dry_initializer_options__); end
   def args; end
@@ -50,7 +51,7 @@ end
 class Dry::Validation::Macro < Dry::Validation::Function
   def extract_block_options(options); end
   def with(args); end
-  include Anonymous_Module_45
+  include Anonymous_Module_49
 end
 module Dry::Validation::Macros
   def self.[](name); end
@@ -70,7 +71,7 @@ end
 class Dry::Validation::Config < Dry::Schema::Config
   def dup; end
 end
-module Anonymous_Module_46
+module Anonymous_Module_50
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(*arg0, **__dry_initializer_options__); end
   def keys; end
@@ -78,16 +79,17 @@ module Anonymous_Module_46
   extend Dry::Initializer::Mixin::Local
 end
 class Dry::Validation::Rule < Dry::Validation::Function
+  def add_macro_from_hash(macros, spec); end
   def call(contract, result); end
   def each(*macros, &block); end
   def inspect; end
   def parse_macros(*args); end
   def validate(*macros, &block); end
-  include Anonymous_Dry_Equalizer_47
-  include Anonymous_Module_46
+  include Anonymous_Dry_Equalizer_51
+  include Anonymous_Module_50
   include Dry::Equalizer::Methods
 end
-module Anonymous_Dry_Equalizer_47
+module Anonymous_Dry_Equalizer_51
   def cmp?(comparator, other); end
   def hash; end
 end
@@ -102,7 +104,7 @@ class Dry::Validation::Evaluator
   def base; end
   def error?(path); end
   def failures; end
-  def initialize(contract, options, &block); end
+  def initialize(contract, **options, &block); end
   def key(path = nil); end
   def key?; end
   def key_name; end
@@ -111,10 +113,10 @@ class Dry::Validation::Evaluator
   def value; end
   def with(new_opts, &block); end
   extend Dry::Initializer
-  include Anonymous_Module_48
+  include Anonymous_Module_52
   include Dry::Initializer::Mixin::Root
 end
-module Anonymous_Module_48
+module Anonymous_Module_52
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(_contract, *arg1, **__dry_initializer_options__); end
   def _context; end
@@ -127,7 +129,7 @@ module Anonymous_Module_48
   def values; end
   extend Dry::Initializer::Mixin::Local
 end
-module Anonymous_Module_49
+module Anonymous_Module_53
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(*arg0, **__dry_initializer_options__); end
   extend Dry::Initializer::Mixin::Local
@@ -140,23 +142,23 @@ class Dry::Validation::Message < Dry::Schema::Message
   def self.[](text, path, meta); end
   def text; end
   def to_s; end
-  include Anonymous_Dry_Equalizer_50
-  include Anonymous_Module_49
+  include Anonymous_Dry_Equalizer_54
+  include Anonymous_Module_53
   include Dry::Equalizer::Methods
 end
-module Anonymous_Dry_Equalizer_50
+module Anonymous_Dry_Equalizer_54
   def cmp?(comparator, other); end
   def hash; end
   def inspect; end
 end
-module Anonymous_Module_51
+module Anonymous_Module_55
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(*arg0, **__dry_initializer_options__); end
   extend Dry::Initializer::Mixin::Local
 end
 class Dry::Validation::Message::Localized < Dry::Validation::Message
   def evaluate(**opts); end
-  include Anonymous_Module_51
+  include Anonymous_Module_55
 end
 module Dry::Validation::Messages
 end
@@ -166,6 +168,8 @@ class Dry::Validation::Messages::Resolver
   def initialize(messages); end
   def message(rule, path:, tokens: nil, locale: nil, full: nil); end
   def messages; end
+  def parse_token(token); end
+  def parse_tokens(tokens); end
 end
 class Dry::Validation::MessageSet < Dry::Schema::MessageSet
   def add(message); end
@@ -186,11 +190,11 @@ class Dry::Validation::Values
   def key?(key, hash = nil); end
   def method_missing(meth, *args, &block); end
   def respond_to_missing?(meth, include_private = nil); end
-  include Anonymous_Dry_Equalizer_52
+  include Anonymous_Dry_Equalizer_56
   include Dry::Equalizer::Methods
   include Enumerable
 end
-module Anonymous_Dry_Equalizer_52
+module Anonymous_Dry_Equalizer_56
   def cmp?(comparator, other); end
   def hash; end
   def inspect; end
@@ -215,10 +219,10 @@ class Dry::Validation::Result
   def success?; end
   def to_h; end
   def values; end
-  include Anonymous_Dry_Equalizer_53
+  include Anonymous_Dry_Equalizer_57
   include Dry::Equalizer::Methods
 end
-module Anonymous_Dry_Equalizer_53
+module Anonymous_Dry_Equalizer_57
   def cmp?(comparator, other); end
   def hash; end
 end
@@ -245,8 +249,8 @@ class Dry::Validation::Contract
   def messages; end
   extend Dry::Initializer
   extend Dry::Validation::Contract::ClassInterface
-  include Anonymous_Dry_Equalizer_54
-  include Anonymous_Module_55
+  include Anonymous_Dry_Equalizer_58
+  include Anonymous_Module_59
   include Dry::Equalizer::Methods
   include Dry::Initializer::Mixin::Root
 end
@@ -255,24 +259,24 @@ module Dry::Validation::Contract::ClassInterface
   def build(options = nil, &block); end
   def config; end
   def core_schema_opts; end
-  def define(method_name, external_schema, &block); end
+  def define(method_name, external_schemas, &block); end
   def ensure_valid_keys(*keys); end
   def inherited(klass); end
-  def json(external_schema = nil, &block); end
+  def json(*external_schemas, &block); end
   def key_map; end
   def macros; end
   def messages; end
-  def params(external_schema = nil, &block); end
+  def params(*external_schemas, &block); end
   def rule(*keys, &block); end
   def rules; end
-  def schema(external_schema = nil, &block); end
+  def schema(*external_schemas, &block); end
   include Dry::Validation::Macros::Registrar
 end
-module Anonymous_Dry_Equalizer_54
+module Anonymous_Dry_Equalizer_58
   def cmp?(comparator, other); end
   def hash; end
 end
-module Anonymous_Module_55
+module Anonymous_Module_59
   def __dry_initializer_config__; end
   def __dry_initializer_initialize__(*arg0, **__dry_initializer_options__); end
   def config; end

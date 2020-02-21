@@ -8,6 +8,7 @@
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/pry/all/pry.rbi
 #
 # pry-0.12.2
+
 class Pry
   def add_sticky_local(name, &block); end
   def backtrace; end

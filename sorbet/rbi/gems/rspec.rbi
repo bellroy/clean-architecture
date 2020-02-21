@@ -8,6 +8,7 @@
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rspec/all/rspec.rbi
 #
 # rspec-3.9.0
+
 module RSpec
 end
 module RSpec::Version

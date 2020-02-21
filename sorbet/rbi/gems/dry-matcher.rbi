@@ -7,7 +7,8 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/dry-matcher/all/dry-matcher.rbi
 #
-# dry-matcher-0.8.2
+# dry-matcher-0.8.3
+
 module Dry
 end
 class Dry::Matcher

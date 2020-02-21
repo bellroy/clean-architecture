@@ -11,13 +11,11 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'rb-fsevent', require: false
   gem 'rb-readline'
-  gem 'reek'
   gem 'rspec'
   gem 'rubocop'
   gem 'rubocop-rspec'
   gem 'sorbet'
   gem 'stackprof'
-  gem 'timecop'
 end
 
 group :test do

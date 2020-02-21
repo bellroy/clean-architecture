@@ -8,6 +8,7 @@
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rspec-expectations/all/rspec-expectations.rbi
 #
 # rspec-expectations-3.9.0
+
 module RSpec
 end
 module RSpec::Matchers
@@ -344,7 +345,7 @@ end
 module RSpec::Expectations::Configuration::NullBacktraceFormatter
   def self.format_backtrace(backtrace); end
 end
-class InvalidName___Class_0x00___Differ_105
+class InvalidName___Class_0x00___Differ_101
 end
 module RSpec::Expectations::ExpectationHelper
   def self.check_message(msg); end

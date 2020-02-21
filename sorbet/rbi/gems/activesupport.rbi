@@ -7,7 +7,8 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/activesupport/all/activesupport.rbi
 #
-# activesupport-6.0.1
+# activesupport-6.0.2.1
+
 class Hash
   def blank?; end
   def deep_merge!(other_hash, &block); end
@@ -65,7 +66,6 @@ end
 class Module::DelegationError < NoMethodError
 end
 class ActiveSupport::Deprecation
-  def self.allocate; end
   def self.behavior(*args, &block); end
   def self.behavior=(arg); end
   def self.debug(*args, &block); end
@@ -78,7 +78,6 @@ class ActiveSupport::Deprecation
   def self.gem_name=(arg); end
   def self.initialize(*args, &block); end
   def self.instance; end
-  def self.new(*arg0); end
   def self.silence(*args, &block); end
   def self.silenced(*args, &block); end
   def self.silenced=(arg); end

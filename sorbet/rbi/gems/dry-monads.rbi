@@ -7,7 +7,8 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/dry-monads/all/dry-monads.rbi
 #
-# dry-monads-1.3.1
+# dry-monads-1.3.5
+
 module Dry
 end
 module Dry::Monads
@@ -25,6 +26,7 @@ module Dry::Monads
   extend Dry::Monads::Maybe::Mixin::Constructors
   extend Dry::Monads::Result::Mixin::Constructors
   extend Dry::Monads::Validated::Mixin::Constructors
+  include Dry::Core::Constants
 end
 module Dry::Monads::Curry
   def self.call(value); end
@@ -47,6 +49,7 @@ module Dry::Monads::RightBiased::Right
   def bind(*args, **kwargs); end
   def curry; end
   def deconstruct; end
+  def deconstruct_keys(keys); end
   def destructure(*args, **kwargs); end
   def discard; end
   def flatten; end
@@ -57,13 +60,13 @@ module Dry::Monads::RightBiased::Right
   def tee(*args, &block); end
   def value!; end
   def value_or(_val = nil); end
-  include Dry::Core::Constants
 end
 module Dry::Monads::RightBiased::Left
   def and(_); end
   def apply(*arg0); end
   def bind(*arg0); end
   def deconstruct; end
+  def deconstruct_keys(keys); end
   def discard; end
   def flatten; end
   def fmap(*arg0); end
@@ -100,7 +103,7 @@ class Dry::Monads::Maybe::Some < Dry::Monads::Maybe
   def self.[](*value); end
   def self.call(*arg0); end
   def self.to_proc; end
-  def to_result(fail = nil, &block); end
+  def to_result(_fail = nil); end
   def to_s; end
   include Anonymous_Dry_Equalizer_1
   include Dry::Equalizer::Methods
@@ -123,10 +126,9 @@ class Dry::Monads::Maybe::None < Dry::Monads::Maybe
   def or_fmap(*args, &block); end
   def self.instance; end
   def self.method_missing(m, *arg1); end
-  def to_result(fail = nil, &block); end
+  def to_result(fail = nil); end
   def to_s; end
   def trace; end
-  include Dry::Core::Constants
   include Dry::Monads::RightBiased::Left
 end
 module Dry::Monads::Maybe::Mixin
@@ -503,6 +505,6 @@ module Dry::Monads::Lazy::Mixin::Constructors
 end
 class Dry::Monads::Result::Fixed < Module
   def included(base); end
-  def initialize(error, **options); end
+  def initialize(error, **_options); end
   def self.[](error, **options); end
 end

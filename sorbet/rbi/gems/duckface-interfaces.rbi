@@ -8,6 +8,7 @@
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/duckface-interfaces/all/duckface-interfaces.rbi
 #
 # duckface-interfaces-0.0.5
+
 module Duckface
 end
 module Duckface::Constants

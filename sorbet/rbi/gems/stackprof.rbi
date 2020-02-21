@@ -7,7 +7,8 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/stackprof/all/stackprof.rbi
 #
-# stackprof-0.2.13
+# stackprof-0.2.15
+
 module StackProf
   def self.results(*arg0); end
   def self.run(*arg0); end

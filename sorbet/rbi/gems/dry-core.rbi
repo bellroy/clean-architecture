@@ -8,6 +8,7 @@
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/dry-core/all/dry-core.rbi
 #
 # dry-core-0.4.9
+
 module Dry
 end
 module Dry::Core

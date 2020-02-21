@@ -7,7 +7,8 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/dry-logic/all/dry-logic.rbi
 #
-# dry-logic-1.0.5
+# dry-logic-1.0.6
+
 module Dry
 end
 module Dry::Logic
@@ -34,12 +35,12 @@ class Dry::Logic::Operations::Abstract
   def rules; end
   def to_ast; end
   def with(new_options); end
-  include Anonymous_Dry_Equalizer_37
+  include Anonymous_Dry_Equalizer_40
   include Dry::Core::Constants
   include Dry::Equalizer::Methods
   include Dry::Logic::Operators
 end
-module Anonymous_Dry_Equalizer_37
+module Anonymous_Dry_Equalizer_40
   def cmp?(comparator, other); end
   def hash; end
   def inspect; end
@@ -112,10 +113,10 @@ end
 class Dry::Logic::Evaluator
   def initialize(path); end
   def path; end
-  include Anonymous_Dry_Equalizer_38
+  include Anonymous_Dry_Equalizer_41
   include Dry::Equalizer::Methods
 end
-module Anonymous_Dry_Equalizer_38
+module Anonymous_Dry_Equalizer_41
   def cmp?(comparator, other); end
   def hash; end
   def inspect; end
@@ -126,10 +127,10 @@ class Dry::Logic::Evaluator::Set
   def evaluators; end
   def initialize(evaluators); end
   def self.new(paths); end
-  include Anonymous_Dry_Equalizer_39
+  include Anonymous_Dry_Equalizer_42
   include Dry::Equalizer::Methods
 end
-module Anonymous_Dry_Equalizer_39
+module Anonymous_Dry_Equalizer_42
   def cmp?(comparator, other); end
   def hash; end
   def inspect; end
@@ -197,7 +198,7 @@ class Dry::Logic::Rule
   def self.specialize(arity, curried, base = nil); end
   def type; end
   def with(new_opts); end
-  include Anonymous_Dry_Equalizer_40
+  include Anonymous_Dry_Equalizer_43
   include Dry::Core::Constants
   include Dry::Equalizer::Methods
   include Dry::Logic::Operators
@@ -218,7 +219,7 @@ class Dry::Logic::Rule::Interface < Module
   def unapplied_args; end
   def variable_arity?; end
 end
-module Anonymous_Dry_Equalizer_40
+module Anonymous_Dry_Equalizer_43
   def cmp?(comparator, other); end
   def hash; end
   def inspect; end

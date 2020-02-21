@@ -8,6 +8,7 @@
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/dry-equalizer/all/dry-equalizer.rbi
 #
 # dry-equalizer-0.3.0
+
 module Dry
   def self.Equalizer(*keys, **options); end
 end

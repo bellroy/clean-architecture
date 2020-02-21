@@ -8,6 +8,7 @@
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/dry-inflector/all/dry-inflector.rbi
 #
 # dry-inflector-0.2.0
+
 module Dry
 end
 class Dry::Inflector

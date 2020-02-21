@@ -21,20 +21,7 @@
 # wrong constant name <RESERVED_108>
 # wrong constant name <RESERVED_109>
 # wrong constant name <RESERVED_10>
-# wrong constant name <RESERVED_110>
-# wrong constant name <RESERVED_111>
-# wrong constant name <RESERVED_112>
-# wrong constant name <RESERVED_113>
-# wrong constant name <RESERVED_114>
-# wrong constant name <RESERVED_115>
-# wrong constant name <RESERVED_116>
-# wrong constant name <RESERVED_117>
-# wrong constant name <RESERVED_118>
-# wrong constant name <RESERVED_119>
 # wrong constant name <RESERVED_11>
-# wrong constant name <RESERVED_120>
-# wrong constant name <RESERVED_121>
-# wrong constant name <RESERVED_122>
 # wrong constant name <RESERVED_12>
 # wrong constant name <RESERVED_13>
 # wrong constant name <RESERVED_14>
@@ -143,7 +130,6 @@
 # uninitialized constant Abbrev
 # uninitialized constant Abbrev
 # undefined method `initialize<defaultArg>1' for class `ActiveModel::Attribute'
-# Did you mean?  initialize_dup
 # wrong constant name ==
 # wrong constant name <Class:FromUser>
 # wrong constant name <Class:UserProvidedDefault>
@@ -209,8 +195,7 @@
 # wrong constant name define_attribute_method
 # wrong constant name define_attribute_methods
 # wrong constant name undefine_attribute_methods
-# undefined method `initialize<defaultArg>1' for class `#<Class:0x00007fb8900b0590>'
-# Did you mean?  initialize_dup
+# undefined method `initialize<defaultArg>1' for class `#<Class:0x00007fe79b108c88>'
 # wrong constant name <Class:AttributeMethodMatch>
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize
@@ -326,7 +311,6 @@
 # wrong constant name <static-init>
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for module `ActiveModel::Model'
-# Did you mean?  initialize_dup
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize
 # wrong constant name persisted?
@@ -382,7 +366,6 @@
 # wrong constant name <Class:TimeValue>
 # wrong constant name <Class:Timezone>
 # undefined method `initialize<defaultArg>1' for class `ActiveModel::Type::Helpers::AcceptsMultiparameterTime'
-# Did you mean?  initialize_dup
 # uninitialized constant ActiveModel::Type::Helpers::AcceptsMultiparameterTime::DELEGATION_RESERVED_KEYWORDS
 # uninitialized constant ActiveModel::Type::Helpers::AcceptsMultiparameterTime::DELEGATION_RESERVED_METHOD_NAMES
 # uninitialized constant ActiveModel::Type::Helpers::AcceptsMultiparameterTime::RUBY_RESERVED_KEYWORDS
@@ -405,7 +388,6 @@
 # wrong constant name is_utc?
 # wrong constant name <static-init>
 # wrong constant name <static-init>
-# wrong constant name <static-init>
 # wrong constant name initialize
 # wrong constant name <static-init>
 # wrong constant name call
@@ -417,28 +399,16 @@
 # wrong constant name register<defaultArg>1
 # wrong constant name register
 # wrong constant name <static-init>
-# wrong constant name <static-init>
 # uninitialized constant ActiveModel::Type::Time::ISO_DATETIME
 # wrong constant name <static-init>
-# undefined method `initialize<defaultArg>1' for class `ActiveModel::Type::Value'
-# Did you mean?  initialize_dup
-# undefined method `initialize<defaultArg>2' for class `ActiveModel::Type::Value'
-# Did you mean?  initialize_dup
-# undefined method `initialize<defaultArg>3' for class `ActiveModel::Type::Value'
-# Did you mean?  initialize_dup
 # wrong constant name ==
 # wrong constant name assert_valid_value
 # wrong constant name binary?
-# wrong constant name cast
 # wrong constant name changed?
 # wrong constant name changed_in_place?
 # wrong constant name deserialize
 # wrong constant name eql?
 # wrong constant name force_equality?
-# wrong constant name initialize<defaultArg>1
-# wrong constant name initialize<defaultArg>2
-# wrong constant name initialize<defaultArg>3
-# wrong constant name initialize
 # wrong constant name limit
 # wrong constant name map
 # wrong constant name precision
@@ -447,7 +417,6 @@
 # wrong constant name type
 # wrong constant name type_cast_for_schema
 # wrong constant name value_constructed_by_mass_assignment?
-# wrong constant name <static-init>
 # undefined singleton method `register<defaultArg>1' for `ActiveModel::Type'
 # wrong constant name <static-init>
 # wrong constant name default_value
@@ -520,6 +489,16 @@
 # uninitialized constant ActiveModel::Validations::ExclusionValidator::ERROR_MESSAGE
 # wrong constant name <static-init>
 # wrong constant name <static-init>
+# wrong constant name validates_absence_of
+# wrong constant name validates_acceptance_of
+# wrong constant name validates_confirmation_of
+# wrong constant name validates_exclusion_of
+# wrong constant name validates_format_of
+# wrong constant name validates_inclusion_of
+# wrong constant name validates_length_of
+# wrong constant name validates_numericality_of
+# wrong constant name validates_presence_of
+# wrong constant name validates_size_of
 # uninitialized constant ActiveModel::Validations::InclusionValidator::ERROR_MESSAGE
 # wrong constant name <static-init>
 # wrong constant name <static-init>
@@ -530,7 +509,6 @@
 # wrong constant name validate_each
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `ActiveModel::Validator'
-# Did you mean?  initialize_dup
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize
 # wrong constant name kind
@@ -625,13 +603,9 @@
 # wrong constant name <Class:Store>
 # wrong constant name <Class:Strategy>
 # undefined method `initialize<defaultArg>1' for class `ActiveSupport::Cache::Entry'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `ActiveSupport::Cache::Entry'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>3' for class `ActiveSupport::Cache::Entry'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>4' for class `ActiveSupport::Cache::Entry'
-# Did you mean?  initialize_dup
 # wrong constant name dup_value!
 # wrong constant name expired?
 # wrong constant name expires_at
@@ -647,7 +621,6 @@
 # wrong constant name version
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `ActiveSupport::Cache::FileStore'
-# Did you mean?  initialize_dup
 # wrong constant name cache_path
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize
@@ -673,7 +646,6 @@
 # undefined method `increment<defaultArg>1' for class `ActiveSupport::Cache::Store'
 # undefined method `increment<defaultArg>2' for class `ActiveSupport::Cache::Store'
 # undefined method `initialize<defaultArg>1' for class `ActiveSupport::Cache::Store'
-# Did you mean?  initialize_dup
 # undefined method `read<defaultArg>1' for class `ActiveSupport::Cache::Store'
 # undefined method `write<defaultArg>1' for class `ActiveSupport::Cache::Store'
 # undefined method `write_multi<defaultArg>1' for class `ActiveSupport::Cache::Store'
@@ -786,11 +758,8 @@
 # wrong constant name prepend
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `ActiveSupport::Callbacks::CallbackSequence'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `ActiveSupport::Callbacks::CallbackSequence'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>3' for class `ActiveSupport::Callbacks::CallbackSequence'
-# Did you mean?  initialize_dup
 # wrong constant name after
 # wrong constant name around
 # wrong constant name before
@@ -882,9 +851,7 @@
 # undefined method `depend_on<defaultArg>1' for module `ActiveSupport::Dependencies'
 # undefined method `load_file<defaultArg>1' for module `ActiveSupport::Dependencies'
 # undefined method `loadable_constants_for_path<defaultArg>1' for module `ActiveSupport::Dependencies'
-# Did you mean?  loadable_constants_for_path
 # undefined method `require_or_load<defaultArg>1' for module `ActiveSupport::Dependencies'
-# Did you mean?  require_or_load
 # wrong constant name <Class:Blamable>
 # wrong constant name <Class:ClassCache>
 # wrong constant name <Class:Interlock>
@@ -973,7 +940,6 @@
 # wrong constant name unloading
 # wrong constant name <static-init>
 # undefined method `require_dependency<defaultArg>1' for module `ActiveSupport::Dependencies::Loadable'
-# Did you mean?  require_dependency
 # wrong constant name load_dependency
 # wrong constant name require_dependency<defaultArg>1
 # wrong constant name require_dependency
@@ -1003,9 +969,7 @@
 # wrong constant name run_interlock
 # wrong constant name unload_interlock
 # undefined method `initialize<defaultArg>1' for class `ActiveSupport::Deprecation'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `ActiveSupport::Deprecation'
-# Did you mean?  initialize_dup
 # uninitialized constant ActiveSupport::Deprecation::RAILS_GEM_ROOT
 # wrong constant name deprecation_horizon
 # wrong constant name deprecation_horizon=
@@ -1036,17 +1000,9 @@
 # undefined method `ago<defaultArg>1' for class `ActiveSupport::Duration'
 # undefined method `before<defaultArg>1' for class `ActiveSupport::Duration'
 # undefined method `from_now<defaultArg>1' for class `ActiveSupport::Duration'
-# undefined method `iso8601<defaultArg>1' for class `ActiveSupport::Duration'
 # undefined method `since<defaultArg>1' for class `ActiveSupport::Duration'
 # undefined method `until<defaultArg>1' for class `ActiveSupport::Duration'
-# wrong constant name %
-# wrong constant name *
-# wrong constant name +
-# wrong constant name -
 # wrong constant name -@
-# wrong constant name /
-# wrong constant name <=>
-# wrong constant name ==
 # wrong constant name <Class:ISO8601Parser>
 # wrong constant name <Class:ISO8601Serializer>
 # wrong constant name <Class:Scalar>
@@ -1058,15 +1014,12 @@
 # wrong constant name before
 # wrong constant name coerce
 # wrong constant name encode_with
-# wrong constant name eql?
 # wrong constant name from_now<defaultArg>1
 # wrong constant name from_now
 # wrong constant name init_with
 # wrong constant name initialize
 # wrong constant name instance_of?
 # wrong constant name is_a?
-# wrong constant name iso8601<defaultArg>1
-# wrong constant name iso8601
 # wrong constant name kind_of?
 # wrong constant name parts
 # wrong constant name parts=
@@ -1088,7 +1041,6 @@
 # wrong constant name <static-init>
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `ActiveSupport::Duration::ISO8601Serializer'
-# Did you mean?  initialize_dup
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize
 # wrong constant name serialize
@@ -1113,12 +1065,10 @@
 # wrong constant name value
 # wrong constant name <static-init>
 # wrong constant name ===
-# wrong constant name build
 # wrong constant name days
 # wrong constant name hours
 # wrong constant name minutes
 # wrong constant name months
-# wrong constant name parse
 # wrong constant name seconds
 # wrong constant name weeks
 # wrong constant name years
@@ -1128,7 +1078,6 @@
 # wrong constant name step
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `ActiveSupport::EventedFileUpdateChecker'
-# Did you mean?  initialize_dup
 # wrong constant name <Class:PathHelper>
 # wrong constant name execute
 # wrong constant name execute_if_updated
@@ -1191,7 +1140,6 @@
 # uninitialized constant ActiveSupport::Executor::Null
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `ActiveSupport::FileUpdateChecker'
-# Did you mean?  initialize_dup
 # wrong constant name execute
 # wrong constant name execute_if_updated
 # wrong constant name initialize<defaultArg>1
@@ -1209,7 +1157,6 @@
 # wrong constant name compress
 # wrong constant name decompress
 # undefined method `initialize<defaultArg>1' for class `ActiveSupport::HashWithIndifferentAccess'
-# Did you mean?  initialize_dup
 # uninitialized constant ActiveSupport::HashWithIndifferentAccess::Elem
 # uninitialized constant ActiveSupport::HashWithIndifferentAccess::K
 # uninitialized constant ActiveSupport::HashWithIndifferentAccess::V
@@ -1246,7 +1193,6 @@
 # wrong constant name include?
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `ActiveSupport::InheritableOptions'
-# Did you mean?  initialize_dup
 # uninitialized constant ActiveSupport::InheritableOptions::Elem
 # uninitialized constant ActiveSupport::InheritableOptions::K
 # uninitialized constant ActiveSupport::InheritableOptions::V
@@ -1257,7 +1203,6 @@
 # wrong constant name <Class:Encoding>
 # wrong constant name <Class:JSONGemEncoder>
 # undefined method `initialize<defaultArg>1' for class `ActiveSupport::JSON::Encoding::JSONGemEncoder'
-# Did you mean?  initialize_dup
 # wrong constant name encode
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize
@@ -1280,7 +1225,6 @@
 # wrong constant name parse_error
 # undefined method `generate_key<defaultArg>1' for class `ActiveSupport::KeyGenerator'
 # undefined method `initialize<defaultArg>1' for class `ActiveSupport::KeyGenerator'
-# Did you mean?  initialize_dup
 # wrong constant name generate_key<defaultArg>1
 # wrong constant name generate_key
 # wrong constant name initialize<defaultArg>1
@@ -1529,7 +1473,6 @@
 # wrong constant name <static-init>
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `ActiveSupport::SafeBuffer'
-# Did you mean?  initialize_dup
 # wrong constant name %
 # wrong constant name *
 # wrong constant name +
@@ -1769,9 +1712,7 @@
 # undefined method `getlocal<defaultArg>1' for class `ActiveSupport::TimeWithZone'
 # undefined method `in_time_zone<defaultArg>1' for class `ActiveSupport::TimeWithZone'
 # undefined method `initialize<defaultArg>1' for class `ActiveSupport::TimeWithZone'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `ActiveSupport::TimeWithZone'
-# Did you mean?  initialize_dup
 # undefined method `iso8601<defaultArg>1' for class `ActiveSupport::TimeWithZone'
 # undefined method `localtime<defaultArg>1' for class `ActiveSupport::TimeWithZone'
 # undefined method `respond_to?<defaultArg>1' for class `ActiveSupport::TimeWithZone'
@@ -1869,9 +1810,7 @@
 # undefined method `formatted_offset<defaultArg>1' for class `ActiveSupport::TimeZone'
 # undefined method `formatted_offset<defaultArg>2' for class `ActiveSupport::TimeZone'
 # undefined method `initialize<defaultArg>1' for class `ActiveSupport::TimeZone'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `ActiveSupport::TimeZone'
-# Did you mean?  initialize_dup
 # undefined method `local_to_utc<defaultArg>1' for class `ActiveSupport::TimeZone'
 # undefined method `parse<defaultArg>1' for class `ActiveSupport::TimeZone'
 # undefined method `period_for_local<defaultArg>1' for class `ActiveSupport::TimeZone'
@@ -1968,7 +1907,6 @@
 # wrong constant name bsearch_index
 # wrong constant name collect!
 # wrong constant name dig
-# wrong constant name filter!
 # wrong constant name flatten!
 # wrong constant name pack
 # wrong constant name replace
@@ -2066,7 +2004,6 @@
 # wrong constant name specs
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `Bundler::Fetcher::SSLError'
-# Did you mean?  initialize_dup
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize
 # wrong constant name <static-init>
@@ -2080,9 +2017,7 @@
 # wrong constant name redirect_limit=
 # undefined method `git_push<defaultArg>1' for class `Bundler::GemHelper'
 # undefined method `initialize<defaultArg>1' for class `Bundler::GemHelper'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `Bundler::GemHelper'
-# Did you mean?  initialize_dup
 # undefined method `install_gem<defaultArg>1' for class `Bundler::GemHelper'
 # undefined method `install_gem<defaultArg>2' for class `Bundler::GemHelper'
 # undefined method `perform_git_push<defaultArg>1' for class `Bundler::GemHelper'
@@ -2134,9 +2069,7 @@
 # uninitialized constant Bundler::GemRemoteFetcher::BASE64_URI_TRANSLATE
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `Bundler::GemVersionPromoter'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `Bundler::GemVersionPromoter'
-# Did you mean?  initialize_dup
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize<defaultArg>2
 # wrong constant name initialize
@@ -2153,13 +2086,9 @@
 # wrong constant name unlock_gems
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `Bundler::Graph'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `Bundler::Graph'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>3' for class `Bundler::Graph'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>4' for class `Bundler::Graph'
-# Did you mean?  initialize_dup
 # wrong constant name <Class:GraphVizClient>
 # wrong constant name edge_options
 # wrong constant name groups
@@ -2180,7 +2109,6 @@
 # wrong constant name <static-init>
 # uninitialized constant Bundler::Index::Elem
 # undefined method `initialize<defaultArg>1' for class `Bundler::Injector'
-# Did you mean?  initialize_dup
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize
 # wrong constant name inject
@@ -2269,9 +2197,7 @@
 # wrong constant name lock<defaultArg>1
 # wrong constant name lock
 # undefined method `initialize<defaultArg>1' for class `Bundler::Retry'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `Bundler::Retry'
-# Did you mean?  initialize_dup
 # wrong constant name attempt
 # wrong constant name attempts
 # wrong constant name current_run
@@ -2290,9 +2216,7 @@
 # uninitialized constant Bundler::RubyGemsGemInstaller::ENV_PATHS
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `Bundler::Settings::Mirror'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `Bundler::Settings::Mirror'
-# Did you mean?  initialize_dup
 # undefined method `validate!<defaultArg>1' for class `Bundler::Settings::Mirror'
 # wrong constant name ==
 # wrong constant name fallback_timeout
@@ -2307,7 +2231,6 @@
 # wrong constant name validate!
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `Bundler::Settings::Mirrors'
-# Did you mean?  initialize_dup
 # wrong constant name each
 # wrong constant name for
 # wrong constant name initialize<defaultArg>1
@@ -2330,7 +2253,6 @@
 # undefined method `error<defaultArg>1' for class `Bundler::UI::Shell'
 # undefined method `info<defaultArg>1' for class `Bundler::UI::Shell'
 # undefined method `initialize<defaultArg>1' for class `Bundler::UI::Shell'
-# Did you mean?  initialize_dup
 # undefined method `level<defaultArg>1' for class `Bundler::UI::Shell'
 # undefined method `trace<defaultArg>1' for class `Bundler::UI::Shell'
 # undefined method `trace<defaultArg>2' for class `Bundler::UI::Shell'
@@ -2631,11 +2553,8 @@
 # undefined method `encode<defaultArg>1' for class `CodeRay::Duo'
 # undefined method `highlight<defaultArg>1' for class `CodeRay::Duo'
 # undefined method `initialize<defaultArg>1' for class `CodeRay::Duo'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `CodeRay::Duo'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>3' for class `CodeRay::Duo'
-# Did you mean?  initialize_dup
 # wrong constant name call<defaultArg>1
 # wrong constant name call
 # wrong constant name encode<defaultArg>1
@@ -2656,7 +2575,7 @@
 # wrong constant name scanner
 # wrong constant name <static-init>
 # wrong constant name []
-# CodeRay::Encoders could not load plugin "default_options": cannot load such file -- /Users/michaelwebb/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/coderay-1.1.2/lib/coderay/encoders/default_options.rb
+# CodeRay::Encoders could not load plugin "default_options": cannot load such file -- /Users/michaelwebb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/coderay-1.1.2/lib/coderay/encoders/default_options.rb
 # wrong constant name <Class:UnknownFileType>
 # wrong constant name <static-init>
 # undefined singleton method `[]<defaultArg>1' for `CodeRay::FileType'
@@ -2672,9 +2591,7 @@
 # wrong constant name <Class:Scanner>
 # undefined method `column<defaultArg>1' for class `CodeRay::Scanners::Scanner'
 # undefined method `initialize<defaultArg>1' for class `CodeRay::Scanners::Scanner'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `CodeRay::Scanners::Scanner'
-# Did you mean?  initialize_dup
 # undefined method `line<defaultArg>1' for class `CodeRay::Scanners::Scanner'
 # undefined method `raise_inspect<defaultArg>1' for class `CodeRay::Scanners::Scanner'
 # undefined method `raise_inspect<defaultArg>2' for class `CodeRay::Scanners::Scanner'
@@ -2733,7 +2650,6 @@
 # wrong constant name <static-init>
 # undefined method `encode<defaultArg>1' for class `CodeRay::Tokens'
 # undefined method `method_missing<defaultArg>1' for class `CodeRay::Tokens'
-# Did you mean?  method_missing
 # uninitialized constant CodeRay::Tokens::Elem
 # wrong constant name begin_group
 # wrong constant name begin_line
@@ -2753,9 +2669,7 @@
 # wrong constant name <static-init>
 # undefined method `encode<defaultArg>1' for class `CodeRay::TokensProxy'
 # undefined method `initialize<defaultArg>1' for class `CodeRay::TokensProxy'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `CodeRay::TokensProxy'
-# Did you mean?  initialize_dup
 # wrong constant name block
 # wrong constant name block=
 # wrong constant name each
@@ -2774,10 +2688,6 @@
 # wrong constant name scanner
 # wrong constant name tokens
 # wrong constant name <static-init>
-# uninitialized constant Coercible::Coercer::Array::COERCION_METHOD_REGEXP
-# uninitialized constant Coercible::Coercer::Decimal::COERCION_METHOD_REGEXP
-# uninitialized constant Coercible::Coercer::Hash::COERCION_METHOD_REGEXP
-# uninitialized constant Coercible::Coercer::String::COERCION_METHOD_REGEXP
 # wrong constant name polar
 # wrong constant name rect
 # wrong constant name rectangular
@@ -2803,16 +2713,14 @@
 # uninitialized constant Concurrent::TimerTask::WARN
 # uninitialized constant Configatron
 # uninitialized constant Configatron
-# wrong constant name line_stub
-# wrong constant name peek_result
-# wrong constant name running?
+# uninitialized constant Coverage
+# uninitialized constant Coverage
 # undefined method `to_formatted_s<defaultArg>1' for class `Date'
 # undefined method `to_s<defaultArg>1' for class `Date'
 # undefined method `to_time<defaultArg>1' for class `Date'
 # uninitialized constant Date::DAYS_INTO_WEEK
 # uninitialized constant Date::WEEKEND_DAYS
 # wrong constant name acts_like_date?
-# wrong constant name advance
 # wrong constant name ago
 # wrong constant name at_beginning_of_day
 # wrong constant name at_end_of_day
@@ -2843,7 +2751,6 @@
 # wrong constant name to_s<defaultArg>1
 # wrong constant name to_time<defaultArg>1
 # undefined method `initialize<defaultArg>1' for class `Date::Infinity'
-# Did you mean?  initialize_dup
 # uninitialized constant Date::Infinity::EXABYTE
 # uninitialized constant Date::Infinity::GIGABYTE
 # uninitialized constant Date::Infinity::KILOBYTE
@@ -2852,18 +2759,12 @@
 # uninitialized constant Date::Infinity::TERABYTE
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize
-# undefined singleton method `strptime<defaultArg>1' for `Date'
-# undefined singleton method `strptime<defaultArg>2' for `Date'
-# undefined singleton method `strptime<defaultArg>3' for `Date'
 # wrong constant name beginning_of_week
 # wrong constant name beginning_of_week=
 # wrong constant name beginning_of_week_default
 # wrong constant name beginning_of_week_default=
 # wrong constant name current
 # wrong constant name find_beginning_of_week!
-# wrong constant name strptime<defaultArg>1
-# wrong constant name strptime<defaultArg>2
-# wrong constant name strptime<defaultArg>3
 # wrong constant name tomorrow
 # wrong constant name yesterday
 # undefined method `all_week<defaultArg>1' for module `DateAndTime::Calculations'
@@ -3005,9 +2906,7 @@
 # wrong constant name civil_from_format
 # undefined method `methods<defaultArg>1' for class `Delegator'
 # undefined method `protected_methods<defaultArg>1' for class `Delegator'
-# Did you mean?  protected_methods
 # undefined method `public_methods<defaultArg>1' for class `Delegator'
-# Did you mean?  public_methods
 # wrong constant name !=
 # wrong constant name ==
 # wrong constant name __getobj__
@@ -3026,44 +2925,28 @@
 # wrong constant name const_missing
 # wrong constant name delegating_block
 # wrong constant name public_api
-# wrong constant name class_name
-# wrong constant name class_names
-# wrong constant name corrections
-# wrong constant name initialize
-# wrong constant name scopes
-# wrong constant name corrections
-# wrong constant name original_message
-# wrong constant name spell_checker
-# wrong constant name to_s
+# uninitialized constant DidYouMean::ClassNameChecker
+# uninitialized constant DidYouMean::ClassNameChecker
+# uninitialized constant DidYouMean::Correctable
+# uninitialized constant DidYouMean::Correctable
 # uninitialized constant DidYouMean::Formatter
 # uninitialized constant DidYouMean::Formatter
-# wrong constant name distance
-# wrong constant name distance
-# wrong constant name corrections
-# wrong constant name initialize
-# wrong constant name <static-init>
-# wrong constant name distance
-# wrong constant name min3
-# wrong constant name corrections
-# wrong constant name initialize
-# wrong constant name method_name
-# wrong constant name method_names
-# wrong constant name receiver
-# wrong constant name corrections
-# wrong constant name initialize
-# wrong constant name message_for
-# wrong constant name <static-init>
-# wrong constant name correct
-# wrong constant name initialize
-# wrong constant name corrections
-# wrong constant name cvar_names
-# wrong constant name initialize
-# wrong constant name ivar_names
-# wrong constant name lvar_names
-# wrong constant name method_names
-# wrong constant name name
-# wrong constant name formatter
-# wrong constant name formatter=
+# uninitialized constant DidYouMean::Jaro
+# uninitialized constant DidYouMean::Jaro
+# uninitialized constant DidYouMean::JaroWinkler
+# uninitialized constant DidYouMean::JaroWinkler
+# uninitialized constant DidYouMean::Levenshtein
+# uninitialized constant DidYouMean::Levenshtein
+# uninitialized constant DidYouMean::MethodNameChecker
+# uninitialized constant DidYouMean::MethodNameChecker
+# uninitialized constant DidYouMean::NameErrorCheckers
+# uninitialized constant DidYouMean::NameErrorCheckers
+# uninitialized constant DidYouMean::NullChecker
+# uninitialized constant DidYouMean::NullChecker
+# uninitialized constant DidYouMean::SpellChecker
+# uninitialized constant DidYouMean::SpellChecker
+# uninitialized constant DidYouMean::VariableNameChecker
+# uninitialized constant DidYouMean::VariableNameChecker
 # wrong constant name children
 # wrong constant name each_child
 # undefined singleton method `mktmpdir<defaultArg>1' for `Dir'
@@ -3073,6 +2956,9 @@
 # wrong constant name exists?
 # wrong constant name mktmpdir<defaultArg>1
 # wrong constant name tmpdir
+# uninitialized constant Dry::Configurable::Setting::Nested::CLONABLE_VALUE_TYPES
+# uninitialized constant Dry::Configurable::Setting::Nested::DEFAULT_CONSTRUCTOR
+# uninitialized constant Dry::Configurable::Setting::Nested::OPTIONS
 # uninitialized constant Dry::Logic::Rule::Predicate::Predicate1Arity::EMPTY_ARRAY
 # uninitialized constant Dry::Logic::Rule::Predicate::Predicate1Arity::EMPTY_HASH
 # uninitialized constant Dry::Logic::Rule::Predicate::Predicate1Arity::EMPTY_OPTS
@@ -3088,7 +2974,6 @@
 # uninitialized constant Dry::Schema::Messages::YAML::EMPTY_STRING
 # uninitialized constant Dry::Schema::Messages::YAML::Self
 # uninitialized constant Dry::Schema::Messages::YAML::Undefined
-# uninitialized constant Dry::Schema::Messages::YAML::VERSION
 # uninitialized constant Dry::Types::Hash::ALWAYS
 # uninitialized constant Dry::Types::Hash::EMPTY_ARRAY
 # uninitialized constant Dry::Types::Hash::EMPTY_HASH
@@ -3116,9 +3001,7 @@
 # undefined method `def_method<defaultArg>1' for class `ERB'
 # undefined method `def_module<defaultArg>1' for class `ERB'
 # undefined method `initialize<defaultArg>4' for class `ERB'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>5' for class `ERB'
-# Did you mean?  initialize_dup
 # wrong constant name def_method<defaultArg>1
 # wrong constant name def_method
 # wrong constant name def_module<defaultArg>1
@@ -3167,7 +3050,6 @@
 # wrong constant name chunk
 # wrong constant name chunk_while
 # wrong constant name each_entry
-# wrong constant name filter
 # wrong constant name grep_v
 # wrong constant name slice_after
 # wrong constant name slice_before
@@ -3176,7 +3058,6 @@
 # wrong constant name to_set<defaultArg>1
 # wrong constant name to_set
 # wrong constant name uniq
-# wrong constant name zip
 # wrong constant name +
 # wrong constant name <Class:ArithmeticSequence>
 # wrong constant name <Class:Chain>
@@ -3230,23 +3111,17 @@
 # wrong constant name <Class:Group>
 # wrong constant name change
 # wrong constant name change=
-# wrong constant name dir
 # wrong constant name dir=
 # wrong constant name expire
 # wrong constant name expire=
 # wrong constant name gecos
 # wrong constant name gecos=
-# wrong constant name gid
 # wrong constant name gid=
-# wrong constant name name
 # wrong constant name name=
-# wrong constant name passwd
 # wrong constant name passwd=
-# wrong constant name shell
 # wrong constant name shell=
 # wrong constant name uclass
 # wrong constant name uclass=
-# wrong constant name uid
 # wrong constant name uid=
 # wrong constant name []
 # wrong constant name each
@@ -3333,7 +3208,6 @@
 # wrong constant name _valid_method?
 # wrong constant name debug
 # wrong constant name debug=
-# wrong constant name <static-init>
 # wrong constant name garbage_collect
 # wrong constant name latest_gc_info
 # wrong constant name stress=
@@ -3352,7 +3226,6 @@
 # wrong constant name default_proc
 # wrong constant name default_proc=
 # wrong constant name fetch_values
-# wrong constant name filter!
 # wrong constant name flatten
 # wrong constant name index
 # wrong constant name nested_under_indifferent_access
@@ -3386,8 +3259,10 @@
 # wrong constant name <Class:Cache>
 # wrong constant name <Class:CacheFile>
 # wrong constant name <Class:Cascade>
+# wrong constant name <Class:Chain>
 # wrong constant name <Class:Fallbacks>
 # wrong constant name <Class:Flatten>
+# wrong constant name <Class:Gettext>
 # wrong constant name <Class:InterpolationCompiler>
 # wrong constant name <Class:KeyValue>
 # wrong constant name <Class:Memoize>
@@ -3458,6 +3333,33 @@
 # wrong constant name lookup<defaultArg>2
 # wrong constant name lookup
 # wrong constant name <static-init>
+# uninitialized constant I18n::Backend::Chain::DEFAULT_REPLACEMENT_CHAR
+# wrong constant name <Class:Implementation>
+# undefined method `localize<defaultArg>1' for module `I18n::Backend::Chain::Implementation'
+# undefined method `localize<defaultArg>2' for module `I18n::Backend::Chain::Implementation'
+# undefined method `store_translations<defaultArg>1' for module `I18n::Backend::Chain::Implementation'
+# undefined method `translate<defaultArg>1' for module `I18n::Backend::Chain::Implementation'
+# uninitialized constant I18n::Backend::Chain::Implementation::DEFAULT_REPLACEMENT_CHAR
+# wrong constant name available_locales
+# wrong constant name backends
+# wrong constant name backends=
+# wrong constant name eager_load!
+# wrong constant name exists?
+# wrong constant name init_translations
+# wrong constant name initialize
+# wrong constant name initialized?
+# wrong constant name localize<defaultArg>1
+# wrong constant name localize<defaultArg>2
+# wrong constant name localize
+# wrong constant name namespace_lookup?
+# wrong constant name reload!
+# wrong constant name store_translations<defaultArg>1
+# wrong constant name store_translations
+# wrong constant name translate<defaultArg>1
+# wrong constant name translate
+# wrong constant name translations
+# wrong constant name <static-init>
+# wrong constant name <static-init>
 # undefined method `translate<defaultArg>1' for module `I18n::Backend::Fallbacks'
 # wrong constant name exists?
 # wrong constant name extract_non_symbol_default!
@@ -3477,6 +3379,17 @@
 # wrong constant name <static-init>
 # wrong constant name escape_default_separator
 # wrong constant name normalize_flat_keys
+# wrong constant name <Class:PoData>
+# wrong constant name load_po
+# wrong constant name normalize
+# wrong constant name normalize_pluralization
+# wrong constant name parse
+# uninitialized constant I18n::Backend::Gettext::PoData::Elem
+# uninitialized constant I18n::Backend::Gettext::PoData::K
+# uninitialized constant I18n::Backend::Gettext::PoData::V
+# wrong constant name set_comment
+# wrong constant name <static-init>
+# wrong constant name <static-init>
 # undefined method `store_translations<defaultArg>1' for module `I18n::Backend::InterpolationCompiler'
 # wrong constant name <Class:Compiler>
 # wrong constant name compile_all_strings_in
@@ -3505,7 +3418,6 @@
 # uninitialized constant I18n::Backend::KeyValue::SEPARATOR_ESCAPE_CHAR
 # wrong constant name <Class:SubtreeProxy>
 # undefined method `initialize<defaultArg>1' for module `I18n::Backend::KeyValue::Implementation'
-# Did you mean?  initialize_dup
 # undefined method `lookup<defaultArg>1' for module `I18n::Backend::KeyValue::Implementation'
 # undefined method `lookup<defaultArg>2' for module `I18n::Backend::KeyValue::Implementation'
 # undefined method `store_translations<defaultArg>1' for module `I18n::Backend::KeyValue::Implementation'
@@ -3593,7 +3505,6 @@
 # wrong constant name transliterate<defaultArg>1
 # wrong constant name transliterate
 # undefined method `initialize<defaultArg>1' for class `I18n::Backend::Transliterator::HashTransliterator'
-# Did you mean?  initialize_dup
 # undefined method `transliterate<defaultArg>1' for class `I18n::Backend::Transliterator::HashTransliterator'
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize
@@ -3752,9 +3663,7 @@
 # wrong constant name console
 # wrong constant name foreach
 # undefined method `initialize<defaultArg>1' for class `IPAddr'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `IPAddr'
-# Did you mean?  initialize_dup
 # wrong constant name &
 # wrong constant name <<
 # wrong constant name <=>
@@ -3825,11 +3734,8 @@
 # undefined method `evaluate<defaultArg>1' for class `IRB::Context'
 # undefined method `exit<defaultArg>1' for class `IRB::Context'
 # undefined method `initialize<defaultArg>1' for class `IRB::Context'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `IRB::Context'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>3' for class `IRB::Context'
-# Did you mean?  initialize_dup
 # wrong constant name __exit__
 # wrong constant name __inspect__
 # wrong constant name __to_s__
@@ -3951,7 +3857,6 @@
 # wrong constant name initialize
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `IRB::InputMethod'
-# Did you mean?  initialize_dup
 # wrong constant name file_name
 # wrong constant name gets
 # wrong constant name initialize<defaultArg>1
@@ -3961,7 +3866,6 @@
 # wrong constant name readable_after_eof?
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `IRB::Inspector'
-# Did you mean?  initialize_dup
 # wrong constant name init
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize
@@ -3972,11 +3876,8 @@
 # wrong constant name def_inspector
 # wrong constant name keys_with_inspector
 # undefined method `initialize<defaultArg>1' for class `IRB::Irb'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `IRB::Irb'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>3' for class `IRB::Irb'
-# Did you mean?  initialize_dup
 # undefined method `run<defaultArg>1' for class `IRB::Irb'
 # undefined method `suspend_name<defaultArg>1' for class `IRB::Irb'
 # undefined method `suspend_name<defaultArg>2' for class `IRB::Irb'
@@ -4004,10 +3905,8 @@
 # wrong constant name <static-init>
 # undefined method `find<defaultArg>1' for class `IRB::Locale'
 # undefined method `initialize<defaultArg>1' for class `IRB::Locale'
-# Did you mean?  initialize_dup
 # undefined method `load<defaultArg>1' for class `IRB::Locale'
 # undefined method `require<defaultArg>1' for class `IRB::Locale'
-# Did you mean?  require_relative
 # uninitialized constant IRB::Locale::String
 # wrong constant name encoding
 # wrong constant name find<defaultArg>1
@@ -4233,9 +4132,7 @@
 # undefined method `create_subnode<defaultArg>1' for class `IRB::SLex::Node'
 # undefined method `create_subnode<defaultArg>2' for class `IRB::SLex::Node'
 # undefined method `initialize<defaultArg>1' for class `IRB::SLex::Node'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `IRB::SLex::Node'
-# Did you mean?  initialize_dup
 # undefined method `match<defaultArg>1' for class `IRB::SLex::Node'
 # undefined method `match_io<defaultArg>1' for class `IRB::SLex::Node'
 # undefined method `search<defaultArg>1' for class `IRB::SLex::Node'
@@ -4338,16 +4235,12 @@
 # wrong constant name require
 # wrong constant name key
 # wrong constant name receiver
-# wrong constant name []
-# wrong constant name []=
-# wrong constant name each
-# wrong constant name key?
-# wrong constant name <static-init>
-# uninitialized constant Kwalify::Yaml::Parser::CHAR_TABLE
 # wrong constant name is_missing?
 # wrong constant name path
 # wrong constant name exit_value
 # wrong constant name reason
+# uninitialized constant Logger::LogDevice::EXCEPTION_IMMEDIATE
+# uninitialized constant Logger::LogDevice::EXCEPTION_NEVER
 # uninitialized constant Logger::LogDevice::SiD
 # wrong constant name restore
 # uninitialized constant MessagePack
@@ -4509,7 +4402,6 @@
 # wrong constant name time=
 # wrong constant name time_it
 # undefined singleton method `run<defaultArg>1' for `Minitest::Runnable'
-# wrong constant name <static-init>
 # wrong constant name inherited
 # wrong constant name methods_matching
 # wrong constant name on_signal
@@ -4544,6 +4436,8 @@
 # wrong constant name deprecate_constant
 # wrong constant name undef_method
 # wrong constant name used_modules
+# uninitialized constant Monitor::EXCEPTION_IMMEDIATE
+# uninitialized constant Monitor::EXCEPTION_NEVER
 # wrong constant name enter
 # wrong constant name exit
 # wrong constant name try_enter
@@ -4571,7 +4465,6 @@
 # wrong constant name name
 # wrong constant name receiver
 # undefined method `initialize<defaultArg>4' for class `Net::BufferedIO'
-# Did you mean?  initialize_dup
 # wrong constant name initialize<defaultArg>4
 # wrong constant name write_timeout
 # wrong constant name write_timeout=
@@ -4640,7 +4533,6 @@
 # uninitialized constant Net::IMAP
 # uninitialized constant Net::IMAP
 # undefined method `initialize<defaultArg>1' for class `Net::ReadTimeout'
-# Did you mean?  initialize_dup
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize
 # wrong constant name io
@@ -4661,7 +4553,6 @@
 # uninitialized constant Net::SMTPUnsupportedCommand
 # uninitialized constant Net::SMTPUnsupportedCommand
 # undefined method `initialize<defaultArg>1' for class `Net::WriteTimeout'
-# Did you mean?  initialize_dup
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize
 # wrong constant name io
@@ -4670,26 +4561,11 @@
 # wrong constant name to_i
 # wrong constant name args
 # wrong constant name private_call?
-# wrong constant name byte
-# wrong constant name bytes
-# wrong constant name exabyte
-# wrong constant name exabytes
-# wrong constant name gigabyte
-# wrong constant name gigabytes
-# wrong constant name kilobyte
-# wrong constant name kilobytes
-# wrong constant name megabyte
-# wrong constant name megabytes
-# wrong constant name petabyte
-# wrong constant name petabytes
-# wrong constant name terabyte
-# wrong constant name terabytes
 # undefined method `as_json<defaultArg>1' for class `Object'
 # undefined method `to_yaml<defaultArg>1' for class `Object'
 # uninitialized constant RUBYGEMS_ACTIVATION_MONITOR
 # wrong constant name as_json<defaultArg>1
 # wrong constant name as_json
-# wrong constant name dclone
 # wrong constant name html_safe?
 # wrong constant name to_yaml<defaultArg>1
 # wrong constant name to_yaml
@@ -4757,23 +4633,9 @@
 # wrong constant name fips_mode
 # uninitialized constant Opus
 # uninitialized constant Opus
-# uninitialized constant Parser::Ruby26::Racc_Main_Parsing_Routine
-# uninitialized constant Parser::Ruby26::Racc_Runtime_Core_Id_C
-# uninitialized constant Parser::Ruby26::Racc_Runtime_Core_Revision
-# uninitialized constant Parser::Ruby26::Racc_Runtime_Core_Revision_C
-# uninitialized constant Parser::Ruby26::Racc_Runtime_Core_Revision_R
-# uninitialized constant Parser::Ruby26::Racc_Runtime_Core_Version
-# uninitialized constant Parser::Ruby26::Racc_Runtime_Core_Version_C
-# uninitialized constant Parser::Ruby26::Racc_Runtime_Core_Version_R
-# uninitialized constant Parser::Ruby26::Racc_Runtime_Revision
-# uninitialized constant Parser::Ruby26::Racc_Runtime_Type
-# uninitialized constant Parser::Ruby26::Racc_Runtime_Version
-# uninitialized constant Parser::Ruby26::Racc_YY_Parse_Method
 # undefined method `children<defaultArg>1' for class `Pathname'
-# undefined method `each_child<defaultArg>1' for class `Pathname'
 # undefined method `find<defaultArg>1' for class `Pathname'
 # wrong constant name children<defaultArg>1
-# wrong constant name each_child<defaultArg>1
 # wrong constant name empty?
 # wrong constant name find<defaultArg>1
 # wrong constant name fnmatch?
@@ -4999,11 +4861,8 @@
 # wrong constant name initialize
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `Psych::Nodes::Document'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `Psych::Nodes::Document'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>3' for class `Psych::Nodes::Document'
-# Did you mean?  initialize_dup
 # uninitialized constant Psych::Nodes::Document::Elem
 # wrong constant name implicit
 # wrong constant name implicit=
@@ -5020,13 +4879,9 @@
 # wrong constant name version=
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `Psych::Nodes::Mapping'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `Psych::Nodes::Mapping'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>3' for class `Psych::Nodes::Mapping'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>4' for class `Psych::Nodes::Mapping'
-# Did you mean?  initialize_dup
 # uninitialized constant Psych::Nodes::Mapping::Elem
 # wrong constant name anchor
 # wrong constant name anchor=
@@ -5073,15 +4928,10 @@
 # wrong constant name yaml
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `Psych::Nodes::Scalar'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `Psych::Nodes::Scalar'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>3' for class `Psych::Nodes::Scalar'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>4' for class `Psych::Nodes::Scalar'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>5' for class `Psych::Nodes::Scalar'
-# Did you mean?  initialize_dup
 # uninitialized constant Psych::Nodes::Scalar::Elem
 # wrong constant name anchor
 # wrong constant name anchor=
@@ -5102,13 +4952,9 @@
 # wrong constant name value=
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `Psych::Nodes::Sequence'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `Psych::Nodes::Sequence'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>3' for class `Psych::Nodes::Sequence'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>4' for class `Psych::Nodes::Sequence'
-# Did you mean?  initialize_dup
 # uninitialized constant Psych::Nodes::Sequence::Elem
 # wrong constant name anchor
 # wrong constant name anchor=
@@ -5124,7 +4970,6 @@
 # wrong constant name tag=
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `Psych::Nodes::Stream'
-# Did you mean?  initialize_dup
 # uninitialized constant Psych::Nodes::Stream::Elem
 # wrong constant name encoding
 # wrong constant name encoding=
@@ -5137,7 +4982,6 @@
 # uninitialized constant Psych::Omap::V
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `Psych::Parser'
-# Did you mean?  initialize_dup
 # wrong constant name <Class:Mark>
 # wrong constant name external_encoding=
 # wrong constant name handler
@@ -5200,7 +5044,6 @@
 # wrong constant name initialize
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `Psych::Visitors::Emitter'
-# Did you mean?  initialize_dup
 # uninitialized constant Psych::Visitors::Emitter::DISPATCH
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize
@@ -5356,63 +5199,6 @@
 # wrong constant name safe_load<defaultArg>9
 # wrong constant name safe_load
 # wrong constant name to_json
-# wrong constant name <Class:AttlistDecl>
-# wrong constant name <Class:Attribute>
-# wrong constant name <Class:Attributes>
-# wrong constant name <Class:CData>
-# wrong constant name <Class:Child>
-# wrong constant name <Class:Comment>
-# wrong constant name <Class:Declaration>
-# wrong constant name <Class:DocType>
-# wrong constant name <Class:Document>
-# wrong constant name <Class:Element>
-# wrong constant name <Class:ElementDecl>
-# wrong constant name <Class:Elements>
-# wrong constant name <Class:Encoding>
-# wrong constant name <Class:Entity>
-# wrong constant name <Class:EntityConst>
-# wrong constant name <Class:ExternalEntity>
-# wrong constant name <Class:Formatters>
-# wrong constant name <Class:Functions>
-# wrong constant name <Class:IOSource>
-# wrong constant name <Class:Instruction>
-# wrong constant name <Class:Namespace>
-# wrong constant name <Class:Node>
-# wrong constant name <Class:NotationDecl>
-# wrong constant name <Class:Output>
-# wrong constant name <Class:Parent>
-# wrong constant name <Class:ParseException>
-# wrong constant name <Class:Parsers>
-# wrong constant name <Class:Security>
-# wrong constant name <Class:Source>
-# wrong constant name <Class:SourceFactory>
-# wrong constant name <Class:SyncEnumerator>
-# wrong constant name <Class:Text>
-# wrong constant name <Class:UndefinedNamespaceException>
-# wrong constant name <Class:Validation>
-# wrong constant name <Class:XMLDecl>
-# wrong constant name <Class:XMLTokens>
-# wrong constant name <Class:XPath>
-# wrong constant name <Class:XPathNode>
-# wrong constant name <Class:XPathParser>
-# undefined method `write<defaultArg>1' for class `REXML::AttlistDecl'
-# uninitialized constant REXML::AttlistDecl::Elem
-# wrong constant name []
-# wrong constant name each
-# wrong constant name element_name
-# wrong constant name include?
-# wrong constant name initialize
-# wrong constant name node_type
-# wrong constant name write<defaultArg>1
-# wrong constant name write
-# wrong constant name <static-init>
-# undefined method `initialize<defaultArg>1' for class `REXML::Attribute'
-# Did you mean?  initialize_dup
-# undefined method `initialize<defaultArg>2' for class `REXML::Attribute'
-# Did you mean?  initialize_dup
-# undefined method `namespace<defaultArg>1' for class `REXML::Attribute'
-# undefined method `write<defaultArg>1' for class `REXML::Attribute'
-# wrong constant name ==
 # uninitialized constant REXML::Attribute::NAME
 # uninitialized constant REXML::Attribute::NAMECHAR
 # uninitialized constant REXML::Attribute::NAMESPLIT
@@ -5423,49 +5209,6 @@
 # uninitialized constant REXML::Attribute::NMTOKEN
 # uninitialized constant REXML::Attribute::NMTOKENS
 # uninitialized constant REXML::Attribute::REFERENCE
-# wrong constant name clone
-# wrong constant name doctype
-# wrong constant name element
-# wrong constant name element=
-# wrong constant name initialize<defaultArg>1
-# wrong constant name initialize<defaultArg>2
-# wrong constant name initialize
-# wrong constant name namespace<defaultArg>1
-# wrong constant name namespace
-# wrong constant name node_type
-# wrong constant name normalized=
-# wrong constant name remove
-# wrong constant name to_s
-# wrong constant name to_string
-# wrong constant name value
-# wrong constant name write<defaultArg>1
-# wrong constant name write
-# wrong constant name xpath
-# wrong constant name <static-init>
-# wrong constant name <<
-# uninitialized constant REXML::Attributes::Elem
-# uninitialized constant REXML::Attributes::K
-# uninitialized constant REXML::Attributes::V
-# wrong constant name []
-# wrong constant name []=
-# wrong constant name add
-# wrong constant name delete
-# wrong constant name delete_all
-# wrong constant name each_attribute
-# wrong constant name get_attribute
-# wrong constant name get_attribute_ns
-# wrong constant name initialize
-# wrong constant name namespaces
-# wrong constant name prefixes
-# wrong constant name <static-init>
-# undefined method `initialize<defaultArg>1' for class `REXML::CData'
-# Did you mean?  initialize_dup
-# undefined method `initialize<defaultArg>2' for class `REXML::CData'
-# Did you mean?  initialize_dup
-# undefined method `write<defaultArg>1' for class `REXML::CData'
-# undefined method `write<defaultArg>2' for class `REXML::CData'
-# undefined method `write<defaultArg>3' for class `REXML::CData'
-# undefined method `write<defaultArg>4' for class `REXML::CData'
 # uninitialized constant REXML::CData::EREFERENCE
 # uninitialized constant REXML::CData::NEEDS_A_SECOND_CHECK
 # uninitialized constant REXML::CData::NUMERICENTITY
@@ -5476,59 +5219,6 @@
 # uninitialized constant REXML::CData::SUBSTITUTES
 # uninitialized constant REXML::CData::VALID_CHAR
 # uninitialized constant REXML::CData::VALID_XML_CHARS
-# wrong constant name initialize<defaultArg>1
-# wrong constant name initialize<defaultArg>2
-# wrong constant name initialize
-# wrong constant name write<defaultArg>1
-# wrong constant name write<defaultArg>2
-# wrong constant name write<defaultArg>3
-# wrong constant name write<defaultArg>4
-# wrong constant name write
-# wrong constant name <static-init>
-# undefined method `initialize<defaultArg>1' for class `REXML::Child'
-# Did you mean?  initialize_dup
-# wrong constant name bytes
-# wrong constant name document
-# wrong constant name initialize<defaultArg>1
-# wrong constant name initialize
-# wrong constant name next_sibling
-# wrong constant name next_sibling=
-# wrong constant name parent
-# wrong constant name parent=
-# wrong constant name previous_sibling
-# wrong constant name previous_sibling=
-# wrong constant name remove
-# wrong constant name replace_with
-# wrong constant name <static-init>
-# undefined method `initialize<defaultArg>1' for class `REXML::Comment'
-# Did you mean?  initialize_dup
-# undefined method `write<defaultArg>1' for class `REXML::Comment'
-# undefined method `write<defaultArg>2' for class `REXML::Comment'
-# undefined method `write<defaultArg>3' for class `REXML::Comment'
-# wrong constant name <=>
-# wrong constant name ==
-# wrong constant name clone
-# wrong constant name initialize<defaultArg>1
-# wrong constant name initialize
-# wrong constant name node_type
-# wrong constant name string
-# wrong constant name string=
-# wrong constant name to_s
-# wrong constant name write<defaultArg>1
-# wrong constant name write<defaultArg>2
-# wrong constant name write<defaultArg>3
-# wrong constant name write
-# wrong constant name <static-init>
-# wrong constant name initialize
-# wrong constant name to_s
-# wrong constant name write
-# wrong constant name <static-init>
-# undefined method `initialize<defaultArg>1' for class `REXML::DocType'
-# Did you mean?  initialize_dup
-# undefined method `write<defaultArg>1' for class `REXML::DocType'
-# undefined method `write<defaultArg>2' for class `REXML::DocType'
-# undefined method `write<defaultArg>3' for class `REXML::DocType'
-# uninitialized constant REXML::DocType::Elem
 # uninitialized constant REXML::DocType::NAME
 # uninitialized constant REXML::DocType::NAMECHAR
 # uninitialized constant REXML::DocType::NAME_CHAR
@@ -5538,36 +5228,6 @@
 # uninitialized constant REXML::DocType::NMTOKEN
 # uninitialized constant REXML::DocType::NMTOKENS
 # uninitialized constant REXML::DocType::REFERENCE
-# wrong constant name add
-# wrong constant name attribute_of
-# wrong constant name attributes_of
-# wrong constant name clone
-# wrong constant name context
-# wrong constant name entities
-# wrong constant name entity
-# wrong constant name external_id
-# wrong constant name initialize<defaultArg>1
-# wrong constant name initialize
-# wrong constant name name
-# wrong constant name namespaces
-# wrong constant name node_type
-# wrong constant name notation
-# wrong constant name notations
-# wrong constant name public
-# wrong constant name system
-# wrong constant name write<defaultArg>1
-# wrong constant name write<defaultArg>2
-# wrong constant name write<defaultArg>3
-# wrong constant name write
-# wrong constant name <static-init>
-# undefined method `add_element<defaultArg>1' for class `REXML::Document'
-# undefined method `add_element<defaultArg>2' for class `REXML::Document'
-# undefined method `initialize<defaultArg>1' for class `REXML::Document'
-# Did you mean?  initialize_dup
-# undefined method `initialize<defaultArg>2' for class `REXML::Document'
-# Did you mean?  initialize_dup
-# wrong constant name <<
-# uninitialized constant REXML::Document::Elem
 # uninitialized constant REXML::Document::NAME
 # uninitialized constant REXML::Document::NAMECHAR
 # uninitialized constant REXML::Document::NAMESPLIT
@@ -5579,53 +5239,6 @@
 # uninitialized constant REXML::Document::NMTOKENS
 # uninitialized constant REXML::Document::REFERENCE
 # uninitialized constant REXML::Document::UNDEFINED
-# wrong constant name add
-# wrong constant name add_element<defaultArg>1
-# wrong constant name add_element<defaultArg>2
-# wrong constant name add_element
-# wrong constant name doctype
-# wrong constant name encoding
-# wrong constant name entity_expansion_count
-# wrong constant name initialize<defaultArg>1
-# wrong constant name initialize<defaultArg>2
-# wrong constant name initialize
-# wrong constant name record_entity_expansion
-# wrong constant name stand_alone?
-# wrong constant name version
-# wrong constant name write
-# wrong constant name xml_decl
-# wrong constant name <static-init>
-# wrong constant name entity_expansion_limit
-# wrong constant name entity_expansion_limit=
-# wrong constant name entity_expansion_text_limit
-# wrong constant name entity_expansion_text_limit=
-# wrong constant name parse_stream
-# undefined method `add_attribute<defaultArg>1' for class `REXML::Element'
-# undefined method `add_element<defaultArg>1' for class `REXML::Element'
-# undefined method `add_namespace<defaultArg>1' for class `REXML::Element'
-# undefined method `attribute<defaultArg>1' for class `REXML::Element'
-# undefined method `delete_namespace<defaultArg>1' for class `REXML::Element'
-# undefined method `each_element<defaultArg>1' for class `REXML::Element'
-# undefined method `each_element_with_attribute<defaultArg>1' for class `REXML::Element'
-# undefined method `each_element_with_attribute<defaultArg>2' for class `REXML::Element'
-# undefined method `each_element_with_attribute<defaultArg>3' for class `REXML::Element'
-# undefined method `each_element_with_text<defaultArg>1' for class `REXML::Element'
-# undefined method `each_element_with_text<defaultArg>2' for class `REXML::Element'
-# undefined method `each_element_with_text<defaultArg>3' for class `REXML::Element'
-# undefined method `get_text<defaultArg>1' for class `REXML::Element'
-# undefined method `initialize<defaultArg>1' for class `REXML::Element'
-# Did you mean?  initialize_dup
-# undefined method `initialize<defaultArg>2' for class `REXML::Element'
-# Did you mean?  initialize_dup
-# undefined method `initialize<defaultArg>3' for class `REXML::Element'
-# Did you mean?  initialize_dup
-# undefined method `namespace<defaultArg>1' for class `REXML::Element'
-# undefined method `text<defaultArg>1' for class `REXML::Element'
-# undefined method `write<defaultArg>1' for class `REXML::Element'
-# undefined method `write<defaultArg>2' for class `REXML::Element'
-# undefined method `write<defaultArg>3' for class `REXML::Element'
-# undefined method `write<defaultArg>4' for class `REXML::Element'
-# uninitialized constant REXML::Element::Elem
 # uninitialized constant REXML::Element::NAME
 # uninitialized constant REXML::Element::NAMECHAR
 # uninitialized constant REXML::Element::NAMESPLIT
@@ -5636,117 +5249,6 @@
 # uninitialized constant REXML::Element::NMTOKEN
 # uninitialized constant REXML::Element::NMTOKENS
 # uninitialized constant REXML::Element::REFERENCE
-# wrong constant name []
-# wrong constant name add_attribute<defaultArg>1
-# wrong constant name add_attribute
-# wrong constant name add_attributes
-# wrong constant name add_element<defaultArg>1
-# wrong constant name add_element
-# wrong constant name add_namespace<defaultArg>1
-# wrong constant name add_namespace
-# wrong constant name add_text
-# wrong constant name attribute<defaultArg>1
-# wrong constant name attribute
-# wrong constant name attributes
-# wrong constant name cdatas
-# wrong constant name clone
-# wrong constant name comments
-# wrong constant name context
-# wrong constant name context=
-# wrong constant name delete_attribute
-# wrong constant name delete_element
-# wrong constant name delete_namespace<defaultArg>1
-# wrong constant name delete_namespace
-# wrong constant name each_element<defaultArg>1
-# wrong constant name each_element
-# wrong constant name each_element_with_attribute<defaultArg>1
-# wrong constant name each_element_with_attribute<defaultArg>2
-# wrong constant name each_element_with_attribute<defaultArg>3
-# wrong constant name each_element_with_attribute
-# wrong constant name each_element_with_text<defaultArg>1
-# wrong constant name each_element_with_text<defaultArg>2
-# wrong constant name each_element_with_text<defaultArg>3
-# wrong constant name each_element_with_text
-# wrong constant name elements
-# wrong constant name get_elements
-# wrong constant name get_text<defaultArg>1
-# wrong constant name get_text
-# wrong constant name has_attributes?
-# wrong constant name has_elements?
-# wrong constant name has_text?
-# wrong constant name ignore_whitespace_nodes
-# wrong constant name initialize<defaultArg>1
-# wrong constant name initialize<defaultArg>2
-# wrong constant name initialize<defaultArg>3
-# wrong constant name initialize
-# wrong constant name instructions
-# wrong constant name namespace<defaultArg>1
-# wrong constant name namespace
-# wrong constant name namespaces
-# wrong constant name next_element
-# wrong constant name node_type
-# wrong constant name prefixes
-# wrong constant name previous_element
-# wrong constant name raw
-# wrong constant name root
-# wrong constant name root_node
-# wrong constant name text<defaultArg>1
-# wrong constant name text
-# wrong constant name text=
-# wrong constant name texts
-# wrong constant name whitespace
-# wrong constant name write<defaultArg>1
-# wrong constant name write<defaultArg>2
-# wrong constant name write<defaultArg>3
-# wrong constant name write<defaultArg>4
-# wrong constant name write
-# wrong constant name xpath
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# undefined method `<<<defaultArg>1' for class `REXML::Elements'
-# undefined method `[]<defaultArg>1' for class `REXML::Elements'
-# undefined method `add<defaultArg>1' for class `REXML::Elements'
-# undefined method `collect<defaultArg>1' for class `REXML::Elements'
-# undefined method `each<defaultArg>1' for class `REXML::Elements'
-# undefined method `inject<defaultArg>1' for class `REXML::Elements'
-# undefined method `inject<defaultArg>2' for class `REXML::Elements'
-# undefined method `to_a<defaultArg>1' for class `REXML::Elements'
-# wrong constant name <<<defaultArg>1
-# wrong constant name <<
-# uninitialized constant REXML::Elements::Elem
-# wrong constant name []<defaultArg>1
-# wrong constant name []
-# wrong constant name []=
-# wrong constant name add<defaultArg>1
-# wrong constant name add
-# wrong constant name collect<defaultArg>1
-# wrong constant name collect
-# wrong constant name delete
-# wrong constant name delete_all
-# wrong constant name each<defaultArg>1
-# wrong constant name each
-# wrong constant name empty?
-# wrong constant name index
-# wrong constant name initialize
-# wrong constant name inject<defaultArg>1
-# wrong constant name inject<defaultArg>2
-# wrong constant name inject
-# wrong constant name size
-# wrong constant name to_a<defaultArg>1
-# wrong constant name to_a
-# wrong constant name <static-init>
-# wrong constant name decode
-# wrong constant name encode
-# wrong constant name encoding
-# wrong constant name encoding=
-# wrong constant name <static-init>
-# undefined method `initialize<defaultArg>1' for class `REXML::Entity'
-# Did you mean?  initialize_dup
-# undefined method `initialize<defaultArg>2' for class `REXML::Entity'
-# Did you mean?  initialize_dup
-# undefined method `initialize<defaultArg>3' for class `REXML::Entity'
-# Did you mean?  initialize_dup
-# undefined method `write<defaultArg>1' for class `REXML::Entity'
 # uninitialized constant REXML::Entity::NAME
 # uninitialized constant REXML::Entity::NAMECHAR
 # uninitialized constant REXML::Entity::NAME_CHAR
@@ -5756,55 +5258,6 @@
 # uninitialized constant REXML::Entity::NMTOKEN
 # uninitialized constant REXML::Entity::NMTOKENS
 # uninitialized constant REXML::Entity::REFERENCE
-# wrong constant name external
-# wrong constant name initialize<defaultArg>1
-# wrong constant name initialize<defaultArg>2
-# wrong constant name initialize<defaultArg>3
-# wrong constant name initialize
-# wrong constant name name
-# wrong constant name ndata
-# wrong constant name normalized
-# wrong constant name pubid
-# wrong constant name ref
-# wrong constant name to_s
-# wrong constant name unnormalized
-# wrong constant name value
-# wrong constant name write<defaultArg>1
-# wrong constant name write
-# wrong constant name <static-init>
-# wrong constant name matches?
-# wrong constant name <static-init>
-# wrong constant name initialize
-# wrong constant name to_s
-# wrong constant name write
-# wrong constant name <static-init>
-# wrong constant name <Class:Default>
-# wrong constant name <Class:Pretty>
-# undefined method `initialize<defaultArg>1' for class `REXML::Formatters::Default'
-# Did you mean?  initialize_dup
-# wrong constant name initialize<defaultArg>1
-# wrong constant name initialize
-# wrong constant name write
-# wrong constant name write_cdata
-# wrong constant name write_comment
-# wrong constant name write_document
-# wrong constant name write_element
-# wrong constant name write_instruction
-# wrong constant name write_text
-# wrong constant name <static-init>
-# undefined method `initialize<defaultArg>1' for class `REXML::Formatters::Pretty'
-# Did you mean?  initialize_dup
-# undefined method `initialize<defaultArg>2' for class `REXML::Formatters::Pretty'
-# Did you mean?  initialize_dup
-# wrong constant name compact
-# wrong constant name compact=
-# wrong constant name initialize<defaultArg>1
-# wrong constant name initialize<defaultArg>2
-# wrong constant name initialize
-# wrong constant name width
-# wrong constant name width=
-# wrong constant name <static-init>
-# wrong constant name <static-init>
 # undefined singleton method `boolean<defaultArg>1' for `REXML::Functions'
 # undefined singleton method `get_namespace<defaultArg>1' for `REXML::Functions'
 # undefined singleton method `local_name<defaultArg>1' for `REXML::Functions'
@@ -5814,7 +5267,6 @@
 # undefined singleton method `number<defaultArg>1' for `REXML::Functions'
 # undefined singleton method `string<defaultArg>1' for `REXML::Functions'
 # undefined singleton method `substring<defaultArg>1' for `REXML::Functions'
-# wrong constant name <static-init>
 # wrong constant name boolean<defaultArg>1
 # wrong constant name boolean
 # wrong constant name ceiling
@@ -5863,34 +5315,6 @@
 # wrong constant name true
 # wrong constant name variables
 # wrong constant name variables=
-# undefined method `initialize<defaultArg>1' for class `REXML::IOSource'
-# Did you mean?  initialize_dup
-# undefined method `initialize<defaultArg>2' for class `REXML::IOSource'
-# Did you mean?  initialize_dup
-# wrong constant name initialize<defaultArg>1
-# wrong constant name initialize<defaultArg>2
-# wrong constant name initialize
-# wrong constant name <static-init>
-# undefined method `initialize<defaultArg>1' for class `REXML::Instruction'
-# Did you mean?  initialize_dup
-# undefined method `write<defaultArg>1' for class `REXML::Instruction'
-# undefined method `write<defaultArg>2' for class `REXML::Instruction'
-# undefined method `write<defaultArg>3' for class `REXML::Instruction'
-# wrong constant name ==
-# wrong constant name clone
-# wrong constant name content
-# wrong constant name content=
-# wrong constant name initialize<defaultArg>1
-# wrong constant name initialize
-# wrong constant name node_type
-# wrong constant name target
-# wrong constant name target=
-# wrong constant name write<defaultArg>1
-# wrong constant name write<defaultArg>2
-# wrong constant name write<defaultArg>3
-# wrong constant name write
-# wrong constant name <static-init>
-# undefined method `has_name?<defaultArg>1' for module `REXML::Namespace'
 # uninitialized constant REXML::Namespace::NAME
 # uninitialized constant REXML::Namespace::NAMECHAR
 # uninitialized constant REXML::Namespace::NAME_CHAR
@@ -5900,126 +5324,6 @@
 # uninitialized constant REXML::Namespace::NMTOKEN
 # uninitialized constant REXML::Namespace::NMTOKENS
 # uninitialized constant REXML::Namespace::REFERENCE
-# wrong constant name expanded_name
-# wrong constant name fully_expanded_name
-# wrong constant name has_name?<defaultArg>1
-# wrong constant name has_name?
-# wrong constant name local_name
-# wrong constant name name
-# wrong constant name name=
-# wrong constant name prefix
-# wrong constant name prefix=
-# wrong constant name <static-init>
-# undefined method `to_s<defaultArg>1' for module `REXML::Node'
-# wrong constant name each_recursive
-# wrong constant name find_first_recursive
-# wrong constant name indent
-# wrong constant name index_in_parent
-# wrong constant name next_sibling_node
-# wrong constant name parent?
-# wrong constant name previous_sibling_node
-# wrong constant name to_s<defaultArg>1
-# wrong constant name to_s
-# wrong constant name <static-init>
-# undefined method `write<defaultArg>1' for class `REXML::NotationDecl'
-# wrong constant name initialize
-# wrong constant name name
-# wrong constant name public
-# wrong constant name public=
-# wrong constant name system
-# wrong constant name system=
-# wrong constant name to_s
-# wrong constant name write<defaultArg>1
-# wrong constant name write
-# wrong constant name <static-init>
-# undefined method `initialize<defaultArg>1' for class `REXML::Output'
-# Did you mean?  initialize_dup
-# wrong constant name <<
-# wrong constant name initialize<defaultArg>1
-# wrong constant name initialize
-# wrong constant name <static-init>
-# wrong constant name <<
-# uninitialized constant REXML::Parent::Elem
-# wrong constant name []
-# wrong constant name []=
-# wrong constant name add
-# wrong constant name children
-# wrong constant name deep_clone
-# wrong constant name delete
-# wrong constant name delete_at
-# wrong constant name delete_if
-# wrong constant name each
-# wrong constant name each_child
-# wrong constant name each_index
-# wrong constant name index
-# wrong constant name insert_after
-# wrong constant name insert_before
-# wrong constant name length
-# wrong constant name push
-# wrong constant name replace_child
-# wrong constant name size
-# wrong constant name to_a
-# wrong constant name unshift
-# wrong constant name <static-init>
-# undefined method `initialize<defaultArg>1' for class `REXML::ParseException'
-# Did you mean?  initialize_dup
-# undefined method `initialize<defaultArg>2' for class `REXML::ParseException'
-# Did you mean?  initialize_dup
-# undefined method `initialize<defaultArg>3' for class `REXML::ParseException'
-# Did you mean?  initialize_dup
-# wrong constant name context
-# wrong constant name continued_exception
-# wrong constant name continued_exception=
-# wrong constant name initialize<defaultArg>1
-# wrong constant name initialize<defaultArg>2
-# wrong constant name initialize<defaultArg>3
-# wrong constant name initialize
-# wrong constant name line
-# wrong constant name parser
-# wrong constant name parser=
-# wrong constant name position
-# wrong constant name source
-# wrong constant name source=
-# wrong constant name <static-init>
-# wrong constant name <Class:BaseParser>
-# wrong constant name <Class:StreamParser>
-# wrong constant name <Class:TreeParser>
-# wrong constant name <Class:XPathParser>
-# undefined method `normalize<defaultArg>1' for class `REXML::Parsers::BaseParser'
-# undefined method `normalize<defaultArg>2' for class `REXML::Parsers::BaseParser'
-# undefined method `peek<defaultArg>1' for class `REXML::Parsers::BaseParser'
-# undefined method `unnormalize<defaultArg>1' for class `REXML::Parsers::BaseParser'
-# undefined method `unnormalize<defaultArg>2' for class `REXML::Parsers::BaseParser'
-# wrong constant name add_listener
-# wrong constant name empty?
-# wrong constant name entity
-# wrong constant name has_next?
-# wrong constant name initialize
-# wrong constant name normalize<defaultArg>1
-# wrong constant name normalize<defaultArg>2
-# wrong constant name normalize
-# wrong constant name peek<defaultArg>1
-# wrong constant name peek
-# wrong constant name position
-# wrong constant name pull
-# wrong constant name source
-# wrong constant name stream=
-# wrong constant name unnormalize<defaultArg>1
-# wrong constant name unnormalize<defaultArg>2
-# wrong constant name unnormalize
-# wrong constant name unshift
-# wrong constant name <static-init>
-# wrong constant name add_listener
-# wrong constant name initialize
-# wrong constant name parse
-# wrong constant name <static-init>
-# undefined method `initialize<defaultArg>1' for class `REXML::Parsers::TreeParser'
-# Did you mean?  initialize_dup
-# wrong constant name add_listener
-# wrong constant name initialize<defaultArg>1
-# wrong constant name initialize
-# wrong constant name parse
-# wrong constant name <static-init>
 # uninitialized constant REXML::Parsers::XPathParser::NAME
 # uninitialized constant REXML::Parsers::XPathParser::NAMECHAR
 # uninitialized constant REXML::Parsers::XPathParser::NAME_CHAR
@@ -6029,195 +5333,7 @@
 # uninitialized constant REXML::Parsers::XPathParser::NMTOKEN
 # uninitialized constant REXML::Parsers::XPathParser::NMTOKENS
 # uninitialized constant REXML::Parsers::XPathParser::REFERENCE
-# wrong constant name abbreviate
-# wrong constant name expand
-# wrong constant name namespaces=
-# wrong constant name parse
-# wrong constant name predicate
-# wrong constant name predicate_to_string
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name entity_expansion_limit
-# wrong constant name entity_expansion_limit=
-# wrong constant name entity_expansion_text_limit
-# wrong constant name entity_expansion_text_limit=
-# undefined method `initialize<defaultArg>1' for class `REXML::Source'
-# Did you mean?  initialize_dup
-# undefined method `match<defaultArg>1' for class `REXML::Source'
-# undefined method `scan<defaultArg>1' for class `REXML::Source'
-# wrong constant name buffer
-# wrong constant name consume
-# wrong constant name current_line
-# wrong constant name empty?
-# wrong constant name encoding=
-# wrong constant name initialize<defaultArg>1
-# wrong constant name initialize
-# wrong constant name line
-# wrong constant name match<defaultArg>1
-# wrong constant name match
-# wrong constant name match_to
-# wrong constant name match_to_consume
-# wrong constant name position
-# wrong constant name read
-# wrong constant name scan<defaultArg>1
-# wrong constant name scan
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name create_from
-# uninitialized constant REXML::SyncEnumerator::Elem
-# wrong constant name each
-# wrong constant name initialize
-# wrong constant name length
-# wrong constant name size
-# wrong constant name <static-init>
-# undefined method `indent_text<defaultArg>1' for class `REXML::Text'
-# undefined method `indent_text<defaultArg>2' for class `REXML::Text'
-# undefined method `indent_text<defaultArg>3' for class `REXML::Text'
-# undefined method `initialize<defaultArg>1' for class `REXML::Text'
-# Did you mean?  initialize_dup
-# undefined method `initialize<defaultArg>2' for class `REXML::Text'
-# Did you mean?  initialize_dup
-# undefined method `initialize<defaultArg>3' for class `REXML::Text'
-# Did you mean?  initialize_dup
-# undefined method `initialize<defaultArg>4' for class `REXML::Text'
-# Did you mean?  initialize_dup
-# undefined method `initialize<defaultArg>5' for class `REXML::Text'
-# Did you mean?  initialize_dup
-# undefined method `wrap<defaultArg>1' for class `REXML::Text'
-# undefined method `write<defaultArg>1' for class `REXML::Text'
-# undefined method `write<defaultArg>2' for class `REXML::Text'
-# undefined method `write<defaultArg>3' for class `REXML::Text'
-# wrong constant name <<
-# wrong constant name <=>
-# wrong constant name clone
-# wrong constant name doctype
-# wrong constant name empty?
-# wrong constant name indent_text<defaultArg>1
-# wrong constant name indent_text<defaultArg>2
-# wrong constant name indent_text<defaultArg>3
-# wrong constant name indent_text
-# wrong constant name initialize<defaultArg>1
-# wrong constant name initialize<defaultArg>2
-# wrong constant name initialize<defaultArg>3
-# wrong constant name initialize<defaultArg>4
-# wrong constant name initialize<defaultArg>5
-# wrong constant name initialize
-# wrong constant name node_type
-# wrong constant name parent=
-# wrong constant name raw
-# wrong constant name raw=
-# wrong constant name to_s
-# wrong constant name value
-# wrong constant name value=
-# wrong constant name wrap<defaultArg>1
-# wrong constant name wrap
-# wrong constant name write<defaultArg>1
-# wrong constant name write<defaultArg>2
-# wrong constant name write<defaultArg>3
-# wrong constant name write
-# wrong constant name write_with_substitution
-# wrong constant name xpath
-# undefined singleton method `normalize<defaultArg>1' for `REXML::Text'
-# undefined singleton method `normalize<defaultArg>2' for `REXML::Text'
-# undefined singleton method `read_with_substitution<defaultArg>1' for `REXML::Text'
-# undefined singleton method `unnormalize<defaultArg>1' for `REXML::Text'
-# undefined singleton method `unnormalize<defaultArg>2' for `REXML::Text'
-# undefined singleton method `unnormalize<defaultArg>3' for `REXML::Text'
-# wrong constant name <static-init>
-# wrong constant name check
-# wrong constant name expand
-# wrong constant name normalize<defaultArg>1
-# wrong constant name normalize<defaultArg>2
-# wrong constant name normalize
-# wrong constant name read_with_substitution<defaultArg>1
-# wrong constant name read_with_substitution
-# wrong constant name unnormalize<defaultArg>1
-# wrong constant name unnormalize<defaultArg>2
-# wrong constant name unnormalize<defaultArg>3
-# wrong constant name unnormalize
-# wrong constant name initialize
-# wrong constant name <static-init>
-# wrong constant name <Class:ValidationException>
-# wrong constant name initialize
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# undefined method `initialize<defaultArg>1' for class `REXML::XMLDecl'
-# Did you mean?  initialize_dup
-# undefined method `initialize<defaultArg>2' for class `REXML::XMLDecl'
-# Did you mean?  initialize_dup
-# undefined method `initialize<defaultArg>3' for class `REXML::XMLDecl'
-# Did you mean?  initialize_dup
-# undefined method `write<defaultArg>1' for class `REXML::XMLDecl'
-# undefined method `write<defaultArg>2' for class `REXML::XMLDecl'
-# undefined method `write<defaultArg>3' for class `REXML::XMLDecl'
-# wrong constant name ==
-# wrong constant name clone
-# wrong constant name dowrite
-# wrong constant name encoding=
-# wrong constant name initialize<defaultArg>1
-# wrong constant name initialize<defaultArg>2
-# wrong constant name initialize<defaultArg>3
-# wrong constant name initialize
-# wrong constant name node_type
-# wrong constant name nowrite
-# wrong constant name old_enc=
-# wrong constant name stand_alone?
-# wrong constant name standalone
-# wrong constant name standalone=
-# wrong constant name version
-# wrong constant name version=
-# wrong constant name write<defaultArg>1
-# wrong constant name write<defaultArg>2
-# wrong constant name write<defaultArg>3
-# wrong constant name write
-# wrong constant name writeencoding
-# wrong constant name writethis
-# wrong constant name xmldecl
-# wrong constant name <static-init>
-# wrong constant name default
-# wrong constant name <static-init>
 # uninitialized constant REXML::XPath::INTERNAL_METHODS
-# undefined singleton method `each<defaultArg>1' for `REXML::XPath'
-# undefined singleton method `each<defaultArg>2' for `REXML::XPath'
-# undefined singleton method `each<defaultArg>3' for `REXML::XPath'
-# undefined singleton method `each<defaultArg>4' for `REXML::XPath'
-# undefined singleton method `first<defaultArg>1' for `REXML::XPath'
-# undefined singleton method `first<defaultArg>2' for `REXML::XPath'
-# undefined singleton method `first<defaultArg>3' for `REXML::XPath'
-# undefined singleton method `first<defaultArg>4' for `REXML::XPath'
-# undefined singleton method `match<defaultArg>1' for `REXML::XPath'
-# undefined singleton method `match<defaultArg>2' for `REXML::XPath'
-# undefined singleton method `match<defaultArg>3' for `REXML::XPath'
-# undefined singleton method `match<defaultArg>4' for `REXML::XPath'
-# wrong constant name <static-init>
-# wrong constant name each<defaultArg>1
-# wrong constant name each<defaultArg>2
-# wrong constant name each<defaultArg>3
-# wrong constant name each<defaultArg>4
-# wrong constant name each
-# wrong constant name first<defaultArg>1
-# wrong constant name first<defaultArg>2
-# wrong constant name first<defaultArg>3
-# wrong constant name first<defaultArg>4
-# wrong constant name first
-# wrong constant name match<defaultArg>1
-# wrong constant name match<defaultArg>2
-# wrong constant name match<defaultArg>3
-# wrong constant name match<defaultArg>4
-# wrong constant name match
-# undefined method `initialize<defaultArg>1' for class `REXML::XPathNode'
-# Did you mean?  initialize_dup
-# wrong constant name context
-# wrong constant name initialize<defaultArg>1
-# wrong constant name initialize
-# wrong constant name position
-# wrong constant name raw_node
-# wrong constant name <static-init>
-# undefined method `initialize<defaultArg>1' for class `REXML::XPathParser'
-# Did you mean?  initialize_dup
-# undefined method `namespaces=<defaultArg>1' for class `REXML::XPathParser'
-# undefined method `variables=<defaultArg>1' for class `REXML::XPathParser'
 # uninitialized constant REXML::XPathParser::NAME
 # uninitialized constant REXML::XPathParser::NAMECHAR
 # uninitialized constant REXML::XPathParser::NAME_CHAR
@@ -6227,20 +5343,6 @@
 # uninitialized constant REXML::XPathParser::NMTOKEN
 # uninitialized constant REXML::XPathParser::NMTOKENS
 # uninitialized constant REXML::XPathParser::REFERENCE
-# wrong constant name []=
-# wrong constant name first
-# wrong constant name get_first
-# wrong constant name initialize<defaultArg>1
-# wrong constant name initialize
-# wrong constant name match
-# wrong constant name namespaces=<defaultArg>1
-# wrong constant name namespaces=
-# wrong constant name parse
-# wrong constant name predicate
-# wrong constant name variables=<defaultArg>1
-# wrong constant name variables=
-# wrong constant name <static-init>
-# wrong constant name <static-init>
 # wrong constant name call
 # wrong constant name initialize
 # wrong constant name relative_file_name
@@ -6451,9 +5553,7 @@
 # wrong constant name percent_of
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `RSpec::Matchers::BuiltIn::Change'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `RSpec::Matchers::BuiltIn::Change'
-# Did you mean?  initialize_dup
 # uninitialized constant RSpec::Matchers::BuiltIn::Change::UNDEFINED
 # wrong constant name by
 # wrong constant name by_at_least
@@ -6592,9 +5692,7 @@
 # wrong constant name __delegate_operator
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `RSpec::Matchers::BuiltIn::RaiseError'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `RSpec::Matchers::BuiltIn::RaiseError'
-# Did you mean?  initialize_dup
 # undefined method `matches?<defaultArg>1' for class `RSpec::Matchers::BuiltIn::RaiseError'
 # wrong constant name description
 # wrong constant name does_not_match?
@@ -6623,7 +5721,6 @@
 # wrong constant name with_unlimited_arguments
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `RSpec::Matchers::BuiltIn::Satisfy'
-# Did you mean?  initialize_dup
 # uninitialized constant RSpec::Matchers::BuiltIn::Satisfy::UNDEFINED
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize
@@ -6635,9 +5732,7 @@
 # uninitialized constant RSpec::Matchers::BuiltIn::StartWith::UNDEFINED
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `RSpec::Matchers::BuiltIn::ThrowSymbol'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `RSpec::Matchers::BuiltIn::ThrowSymbol'
-# Did you mean?  initialize_dup
 # wrong constant name description
 # wrong constant name does_not_match?
 # wrong constant name expects_call_stack_jump?
@@ -6780,7 +5875,6 @@
 # wrong constant name stub_chain_on
 # wrong constant name <Class:Differ>
 # undefined method `initialize<defaultArg>1' for class `RSpec::Support::Differ'
-# Did you mean?  initialize_dup
 # wrong constant name color?
 # wrong constant name diff
 # wrong constant name diff_as_object
@@ -6935,42 +6029,7 @@
 # uninitialized constant Readline::UpCase
 # uninitialized constant Readline::VISIBLE_BELL
 # uninitialized constant Readline::XOK
-# uninitialized constant Reek::SmellDetectors::DataClump::DEFAULT_EXCLUDE_SET
-# uninitialized constant Reek::SmellDetectors::DataClump::EXCLUDE_KEY
-# uninitialized constant Reek::SmellDetectors::DuplicateMethodCall::DEFAULT_EXCLUDE_SET
-# uninitialized constant Reek::SmellDetectors::DuplicateMethodCall::EXCLUDE_KEY
-# uninitialized constant Reek::SmellDetectors::LongParameterList::DEFAULT_EXCLUDE_SET
-# uninitialized constant Reek::SmellDetectors::LongParameterList::EXCLUDE_KEY
-# uninitialized constant Reek::SmellDetectors::LongYieldList::DEFAULT_EXCLUDE_SET
-# uninitialized constant Reek::SmellDetectors::LongYieldList::EXCLUDE_KEY
-# uninitialized constant Reek::SmellDetectors::ManualDispatch::DEFAULT_EXCLUDE_SET
-# uninitialized constant Reek::SmellDetectors::ManualDispatch::EXCLUDE_KEY
-# uninitialized constant Reek::SmellDetectors::NestedIterators::DEFAULT_EXCLUDE_SET
-# uninitialized constant Reek::SmellDetectors::NestedIterators::EXCLUDE_KEY
-# uninitialized constant Reek::SmellDetectors::RepeatedConditional::DEFAULT_EXCLUDE_SET
-# uninitialized constant Reek::SmellDetectors::RepeatedConditional::EXCLUDE_KEY
-# uninitialized constant Reek::SmellDetectors::SubclassedFromCoreClass::DEFAULT_EXCLUDE_SET
-# uninitialized constant Reek::SmellDetectors::SubclassedFromCoreClass::EXCLUDE_KEY
-# uninitialized constant Reek::SmellDetectors::TooManyConstants::DEFAULT_EXCLUDE_SET
-# uninitialized constant Reek::SmellDetectors::TooManyConstants::EXCLUDE_KEY
-# uninitialized constant Reek::SmellDetectors::TooManyInstanceVariables::DEFAULT_EXCLUDE_SET
-# uninitialized constant Reek::SmellDetectors::TooManyInstanceVariables::EXCLUDE_KEY
-# uninitialized constant Reek::SmellDetectors::TooManyMethods::DEFAULT_EXCLUDE_SET
-# uninitialized constant Reek::SmellDetectors::TooManyMethods::EXCLUDE_KEY
-# uninitialized constant Reek::SmellDetectors::TooManyStatements::DEFAULT_EXCLUDE_SET
-# uninitialized constant Reek::SmellDetectors::TooManyStatements::EXCLUDE_KEY
-# uninitialized constant Reek::SmellDetectors::UncommunicativeMethodName::DEFAULT_EXCLUDE_SET
-# uninitialized constant Reek::SmellDetectors::UncommunicativeMethodName::EXCLUDE_KEY
-# uninitialized constant Reek::SmellDetectors::UncommunicativeModuleName::DEFAULT_EXCLUDE_SET
-# uninitialized constant Reek::SmellDetectors::UncommunicativeModuleName::EXCLUDE_KEY
-# uninitialized constant Reek::SmellDetectors::UncommunicativeParameterName::DEFAULT_EXCLUDE_SET
-# uninitialized constant Reek::SmellDetectors::UncommunicativeParameterName::EXCLUDE_KEY
-# uninitialized constant Reek::SmellDetectors::UncommunicativeVariableName::DEFAULT_EXCLUDE_SET
-# uninitialized constant Reek::SmellDetectors::UncommunicativeVariableName::EXCLUDE_KEY
-# uninitialized constant Reek::SmellDetectors::UtilityFunction::DEFAULT_EXCLUDE_SET
-# uninitialized constant Reek::SmellDetectors::UtilityFunction::EXCLUDE_KEY
 # wrong constant name match?
-# wrong constant name union
 # wrong constant name <Class:Config>
 # wrong constant name <Class:Label>
 # wrong constant name <Class:Message>
@@ -6983,7 +6042,6 @@
 # wrong constant name make_tcp_requester
 # wrong constant name make_udp_requester
 # undefined method `initialize<defaultArg>1' for class `Resolv::DNS::Config'
-# Did you mean?  initialize_dup
 # wrong constant name <Class:NXDomain>
 # wrong constant name <Class:OtherResolvError>
 # wrong constant name generate_candidates
@@ -7012,7 +6070,6 @@
 # wrong constant name <static-init>
 # wrong constant name split
 # undefined method `initialize<defaultArg>1' for class `Resolv::DNS::Message'
-# Did you mean?  initialize_dup
 # wrong constant name ==
 # wrong constant name <Class:MessageDecoder>
 # wrong constant name <Class:MessageEncoder>
@@ -7092,7 +6149,6 @@
 # wrong constant name request
 # wrong constant name sender_for
 # undefined method `initialize<defaultArg>1' for class `Resolv::DNS::Requester::ConnectedUDP'
-# Did you mean?  initialize_dup
 # undefined method `sender<defaultArg>1' for class `Resolv::DNS::Requester::ConnectedUDP'
 # undefined method `sender<defaultArg>2' for class `Resolv::DNS::Requester::ConnectedUDP'
 # wrong constant name <Class:Sender>
@@ -7112,7 +6168,6 @@
 # wrong constant name initialize
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `Resolv::DNS::Requester::TCP'
-# Did you mean?  initialize_dup
 # undefined method `sender<defaultArg>1' for class `Resolv::DNS::Requester::TCP'
 # undefined method `sender<defaultArg>2' for class `Resolv::DNS::Requester::TCP'
 # wrong constant name <Class:Sender>
@@ -7259,6 +6314,7 @@
 # uninitialized constant RuboCop::AST::BlockNode::COMPARISON_OPERATORS
 # uninitialized constant RuboCop::AST::BlockNode::COMPOSITE_LITERALS
 # uninitialized constant RuboCop::AST::BlockNode::CONDITIONALS
+# uninitialized constant RuboCop::AST::BlockNode::ENUMERATOR_METHODS
 # uninitialized constant RuboCop::AST::BlockNode::EQUALS_ASSIGNMENTS
 # uninitialized constant RuboCop::AST::BlockNode::FALSEY_LITERALS
 # uninitialized constant RuboCop::AST::BlockNode::IMMUTABLE_LITERALS
@@ -7266,6 +6322,7 @@
 # uninitialized constant RuboCop::AST::BlockNode::LITERALS
 # uninitialized constant RuboCop::AST::BlockNode::MUTABLE_LITERALS
 # uninitialized constant RuboCop::AST::BlockNode::OPERATOR_KEYWORDS
+# uninitialized constant RuboCop::AST::BlockNode::OPERATOR_METHODS
 # uninitialized constant RuboCop::AST::BlockNode::REFERENCES
 # uninitialized constant RuboCop::AST::BlockNode::SHORTHAND_ASSIGNMENTS
 # uninitialized constant RuboCop::AST::BlockNode::SPECIAL_KEYWORDS
@@ -7343,14 +6400,12 @@
 # uninitialized constant RuboCop::Cop::Layout::AccessModifierIndentation::BYTE_ORDER_MARK
 # uninitialized constant RuboCop::Cop::Layout::AccessModifierIndentation::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Layout::AccessModifierIndentation::SPACE
-# uninitialized constant RuboCop::Cop::Layout::AlignArguments::LITERAL_REGEX
-# uninitialized constant RuboCop::Cop::Layout::AlignArguments::SPACE
-# uninitialized constant RuboCop::Cop::Layout::AlignArray::LITERAL_REGEX
-# uninitialized constant RuboCop::Cop::Layout::AlignArray::SPACE
-# uninitialized constant RuboCop::Cop::Layout::AlignHash::BYTE_ORDER_MARK
-# uninitialized constant RuboCop::Cop::Layout::AlignHash::LITERAL_REGEX
-# uninitialized constant RuboCop::Cop::Layout::AlignParameters::LITERAL_REGEX
-# uninitialized constant RuboCop::Cop::Layout::AlignParameters::SPACE
+# uninitialized constant RuboCop::Cop::Layout::ArgumentAlignment::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Layout::ArgumentAlignment::SPACE
+# uninitialized constant RuboCop::Cop::Layout::ArrayAlignment::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Layout::ArrayAlignment::SPACE
+# uninitialized constant RuboCop::Cop::Layout::AssignmentIndentation::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Layout::AssignmentIndentation::SPACE
 # uninitialized constant RuboCop::Cop::Layout::BlockAlignment::BYTE_ORDER_MARK
 # uninitialized constant RuboCop::Cop::Layout::BlockAlignment::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Layout::BlockEndNewline::LITERAL_REGEX
@@ -7420,25 +6475,25 @@
 # uninitialized constant RuboCop::Cop::Layout::EndOfLine::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Layout::ExtraSpacing::BYTE_ORDER_MARK
 # uninitialized constant RuboCop::Cop::Layout::ExtraSpacing::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Layout::FirstArgumentIndentation::BYTE_ORDER_MARK
+# uninitialized constant RuboCop::Cop::Layout::FirstArgumentIndentation::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Layout::FirstArgumentIndentation::SPACE
+# uninitialized constant RuboCop::Cop::Layout::FirstArrayElementIndentation::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Layout::FirstArrayElementIndentation::SPACE
 # uninitialized constant RuboCop::Cop::Layout::FirstArrayElementLineBreak::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Layout::FirstHashElementIndentation::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Layout::FirstHashElementIndentation::SPACE
 # uninitialized constant RuboCop::Cop::Layout::FirstHashElementLineBreak::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Layout::FirstMethodArgumentLineBreak::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Layout::FirstMethodParameterLineBreak::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Layout::FirstParameterIndentation::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Layout::FirstParameterIndentation::SPACE
+# uninitialized constant RuboCop::Cop::Layout::HashAlignment::BYTE_ORDER_MARK
+# uninitialized constant RuboCop::Cop::Layout::HashAlignment::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Layout::HeredocArgumentClosingParenthesis::BYTE_ORDER_MARK
 # uninitialized constant RuboCop::Cop::Layout::HeredocArgumentClosingParenthesis::LITERAL_REGEX
-# uninitialized constant RuboCop::Cop::Layout::IndentAssignment::LITERAL_REGEX
-# uninitialized constant RuboCop::Cop::Layout::IndentAssignment::SPACE
-# uninitialized constant RuboCop::Cop::Layout::IndentFirstArgument::BYTE_ORDER_MARK
-# uninitialized constant RuboCop::Cop::Layout::IndentFirstArgument::LITERAL_REGEX
-# uninitialized constant RuboCop::Cop::Layout::IndentFirstArgument::SPACE
-# uninitialized constant RuboCop::Cop::Layout::IndentFirstArrayElement::LITERAL_REGEX
-# uninitialized constant RuboCop::Cop::Layout::IndentFirstArrayElement::SPACE
-# uninitialized constant RuboCop::Cop::Layout::IndentFirstHashElement::LITERAL_REGEX
-# uninitialized constant RuboCop::Cop::Layout::IndentFirstHashElement::SPACE
-# uninitialized constant RuboCop::Cop::Layout::IndentFirstParameter::LITERAL_REGEX
-# uninitialized constant RuboCop::Cop::Layout::IndentFirstParameter::SPACE
-# uninitialized constant RuboCop::Cop::Layout::IndentHeredoc::LITERAL_REGEX
-# uninitialized constant RuboCop::Cop::Layout::IndentHeredoc::OPENING_DELIMITER
+# uninitialized constant RuboCop::Cop::Layout::HeredocIndentation::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Layout::HeredocIndentation::OPENING_DELIMITER
 # uninitialized constant RuboCop::Cop::Layout::IndentationConsistency::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Layout::IndentationConsistency::SPACE
 # uninitialized constant RuboCop::Cop::Layout::IndentationWidth::BYTE_ORDER_MARK
@@ -7446,9 +6501,11 @@
 # uninitialized constant RuboCop::Cop::Layout::IndentationWidth::SPACE
 # uninitialized constant RuboCop::Cop::Layout::InitialIndentation::BYTE_ORDER_MARK
 # uninitialized constant RuboCop::Cop::Layout::InitialIndentation::LITERAL_REGEX
-# uninitialized constant RuboCop::Cop::Layout::LeadingBlankLines::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Layout::LeadingCommentSpace::BYTE_ORDER_MARK
 # uninitialized constant RuboCop::Cop::Layout::LeadingCommentSpace::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Layout::LeadingEmptyLines::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Layout::LineLength::BYTE_ORDER_MARK
+# uninitialized constant RuboCop::Cop::Layout::LineLength::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Layout::MultilineArrayBraceLayout::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Layout::MultilineArrayLineBreaks::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Layout::MultilineAssignmentLayout::BYTE_ORDER_MARK
@@ -7460,6 +6517,8 @@
 # uninitialized constant RuboCop::Cop::Layout::MultilineMethodArgumentLineBreaks::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Layout::MultilineMethodCallBraceLayout::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Layout::MultilineMethodDefinitionBraceLayout::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Layout::ParameterAlignment::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Layout::ParameterAlignment::SPACE
 # uninitialized constant RuboCop::Cop::Layout::RescueEnsureAlignment::BYTE_ORDER_MARK
 # uninitialized constant RuboCop::Cop::Layout::RescueEnsureAlignment::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Layout::SpaceAfterColon::LITERAL_REGEX
@@ -7528,8 +6587,8 @@
 # uninitialized constant RuboCop::Cop::Lint::DeprecatedClassMethods::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Lint::DisjunctiveAssignmentInConstructor::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Lint::DuplicateCaseCondition::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Lint::DuplicateHashKey::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Lint::DuplicateMethods::LITERAL_REGEX
-# uninitialized constant RuboCop::Cop::Lint::DuplicatedKey::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Lint::EachWithObjectArgument::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Lint::ElseLayout::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Lint::EmptyEnsure::LITERAL_REGEX
@@ -7543,7 +6602,6 @@
 # uninitialized constant RuboCop::Cop::Lint::FlipFlop::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Lint::FloatOutOfRange::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Lint::FormatParameterMismatch::LITERAL_REGEX
-# uninitialized constant RuboCop::Cop::Lint::HandleExceptions::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Lint::HeredocMethodCallPosition::BYTE_ORDER_MARK
 # uninitialized constant RuboCop::Cop::Lint::HeredocMethodCallPosition::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Lint::ImplicitStringConcatenation::LITERAL_REGEX
@@ -7556,11 +6614,12 @@
 # uninitialized constant RuboCop::Cop::Lint::Loop::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Lint::MissingCopEnableDirective::BYTE_ORDER_MARK
 # uninitialized constant RuboCop::Cop::Lint::MissingCopEnableDirective::LITERAL_REGEX
-# uninitialized constant RuboCop::Cop::Lint::MultipleCompare::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Lint::MultipleComparison::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Lint::NestedMethodDefinition::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Lint::NestedPercentLiteral::BYTE_ORDER_MARK
 # uninitialized constant RuboCop::Cop::Lint::NestedPercentLiteral::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Lint::NextWithoutAccumulator::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Lint::NonDeterministicRequireOrder::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Lint::NonLocalExitFromIterator::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Lint::NumberConversion::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Lint::OrderedMagicComments::FROZEN_STRING_LITERAL
@@ -7585,6 +6644,7 @@
 # uninitialized constant RuboCop::Cop::Lint::RedundantRequireStatement::BYTE_ORDER_MARK
 # uninitialized constant RuboCop::Cop::Lint::RedundantRequireStatement::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Lint::RedundantSplatExpansion::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Lint::RedundantStringCoercion::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Lint::RedundantWithIndex::BYTE_ORDER_MARK
 # uninitialized constant RuboCop::Cop::Lint::RedundantWithIndex::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Lint::RedundantWithObject::BYTE_ORDER_MARK
@@ -7605,7 +6665,7 @@
 # uninitialized constant RuboCop::Cop::Lint::ShadowedException::BYTE_ORDER_MARK
 # uninitialized constant RuboCop::Cop::Lint::ShadowedException::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Lint::ShadowingOuterLocalVariable::LITERAL_REGEX
-# uninitialized constant RuboCop::Cop::Lint::StringConversionInInterpolation::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Lint::SuppressedException::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Lint::Syntax::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Lint::ToJSON::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Lint::UnderscorePrefixedVariableName::LITERAL_REGEX
@@ -7625,8 +6685,6 @@
 # uninitialized constant RuboCop::Cop::Metrics::BlockLength::MSG
 # uninitialized constant RuboCop::Cop::Metrics::BlockNesting::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Metrics::CyclomaticComplexity::LITERAL_REGEX
-# uninitialized constant RuboCop::Cop::Metrics::LineLength::BYTE_ORDER_MARK
-# uninitialized constant RuboCop::Cop::Metrics::LineLength::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Metrics::MethodLength::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Metrics::MethodLength::MSG
 # uninitialized constant RuboCop::Cop::Metrics::ParameterLists::LITERAL_REGEX
@@ -7994,6 +7052,16 @@
 # uninitialized constant RuboCop::Cop::RSpec::RepeatedExample::DEFAULT_PATTERN_RE
 # uninitialized constant RuboCop::Cop::RSpec::RepeatedExample::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::RSpec::RepeatedExample::RSPEC
+# uninitialized constant RuboCop::Cop::RSpec::RepeatedExampleGroupBody::ALL
+# uninitialized constant RuboCop::Cop::RSpec::RepeatedExampleGroupBody::DEFAULT_CONFIGURATION
+# uninitialized constant RuboCop::Cop::RSpec::RepeatedExampleGroupBody::DEFAULT_PATTERN_RE
+# uninitialized constant RuboCop::Cop::RSpec::RepeatedExampleGroupBody::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::RSpec::RepeatedExampleGroupBody::RSPEC
+# uninitialized constant RuboCop::Cop::RSpec::RepeatedExampleGroupDescription::ALL
+# uninitialized constant RuboCop::Cop::RSpec::RepeatedExampleGroupDescription::DEFAULT_CONFIGURATION
+# uninitialized constant RuboCop::Cop::RSpec::RepeatedExampleGroupDescription::DEFAULT_PATTERN_RE
+# uninitialized constant RuboCop::Cop::RSpec::RepeatedExampleGroupDescription::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::RSpec::RepeatedExampleGroupDescription::RSPEC
 # uninitialized constant RuboCop::Cop::RSpec::ReturnFromStub::ALL
 # uninitialized constant RuboCop::Cop::RSpec::ReturnFromStub::DEFAULT_CONFIGURATION
 # uninitialized constant RuboCop::Cop::RSpec::ReturnFromStub::DEFAULT_PATTERN_RE
@@ -8066,8 +7134,6 @@
 # uninitialized constant RuboCop::Cop::Style::BlockComments::BYTE_ORDER_MARK
 # uninitialized constant RuboCop::Cop::Style::BlockComments::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Style::BlockDelimiters::LITERAL_REGEX
-# uninitialized constant RuboCop::Cop::Style::BracesAroundHashParameters::BYTE_ORDER_MARK
-# uninitialized constant RuboCop::Cop::Style::BracesAroundHashParameters::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Style::CaseEquality::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Style::CharacterLiteral::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Style::ClassAndModuleChildren::BYTE_ORDER_MARK
@@ -8132,6 +7198,7 @@
 # uninitialized constant RuboCop::Cop::Style::FrozenStringLiteralComment::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Style::GlobalVars::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Style::GuardClause::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Style::HashEachMethods::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Style::HashSyntax::BYTE_ORDER_MARK
 # uninitialized constant RuboCop::Cop::Style::HashSyntax::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Style::IdenticalConditionalBranches::LITERAL_REGEX
@@ -8148,7 +7215,6 @@
 # uninitialized constant RuboCop::Cop::Style::Lambda::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Style::LineEndConcatenation::BYTE_ORDER_MARK
 # uninitialized constant RuboCop::Cop::Style::LineEndConcatenation::LITERAL_REGEX
-# uninitialized constant RuboCop::Cop::Style::MethodCallWithArgsParentheses::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Style::MethodCallWithoutArgsParentheses::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Style::MethodCalledOnDoEndBlock::BYTE_ORDER_MARK
 # uninitialized constant RuboCop::Cop::Style::MethodCalledOnDoEndBlock::LITERAL_REGEX
@@ -8646,7 +7712,6 @@
 # wrong constant name name
 # wrong constant name <static-init>
 # undefined method `initialize<defaultArg>1' for class `RubyToken::TkVal'
-# Did you mean?  initialize_dup
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize
 # wrong constant name value
@@ -8676,7 +7741,6 @@
 # wrong constant name def_token
 # wrong constant name <Class:Node>
 # undefined method `pretty_print_children<defaultArg>1' for class `RubyVM::AbstractSyntaxTree::Node'
-# Did you mean?  pretty_print_inspect
 # wrong constant name children
 # wrong constant name first_column
 # wrong constant name first_lineno
@@ -8717,18 +7781,15 @@
 # wrong constant name resume
 # wrong constant name resolve_feature_path
 # wrong constant name stat
-# wrong constant name <static-init>
 # wrong constant name bytes
 # undefined method `flatten_merge<defaultArg>1' for class `Set'
 # undefined method `initialize<defaultArg>1' for class `Set'
-# Did you mean?  initialize_dup
 # wrong constant name ==
 # wrong constant name ===
 # wrong constant name compare_by_identity
 # wrong constant name compare_by_identity?
 # wrong constant name divide
 # wrong constant name eql?
-# wrong constant name filter!
 # wrong constant name flatten_merge<defaultArg>1
 # wrong constant name flatten_merge
 # wrong constant name initialize<defaultArg>1
@@ -8908,6 +7969,7 @@
 # wrong constant name real_hash
 # wrong constant name real_instance_methods
 # wrong constant name real_is_a?
+# wrong constant name real_method
 # wrong constant name real_name
 # wrong constant name real_object_id
 # wrong constant name real_private_instance_methods
@@ -8971,7 +8033,6 @@
 # wrong constant name setup
 # wrong constant name <Class:Middleware>
 # undefined method `initialize<defaultArg>1' for class `StackProf::Middleware'
-# Did you mean?  initialize_dup
 # wrong constant name call
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize
@@ -8981,6 +8042,8 @@
 # wrong constant name enabled?
 # wrong constant name interval
 # wrong constant name interval=
+# wrong constant name metadata
+# wrong constant name metadata=
 # wrong constant name mode
 # wrong constant name mode=
 # wrong constant name path
@@ -9075,11 +8138,8 @@
 # wrong constant name T.untyped
 # undefined method `close<defaultArg>1' for class `Tempfile'
 # undefined method `initialize<defaultArg>1' for class `Tempfile'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>2' for class `Tempfile'
-# Did you mean?  initialize_dup
 # undefined method `initialize<defaultArg>3' for class `Tempfile'
-# Did you mean?  initialize_dup
 # wrong constant name <Class:Remover>
 # wrong constant name _close
 # wrong constant name close<defaultArg>1
@@ -9089,125 +8149,6 @@
 # wrong constant name inspect
 # wrong constant name call
 # wrong constant name initialize
-# wrong constant name <static-init>
-# wrong constant name <Class:AtomicReferenceCacheBackend>
-# wrong constant name <Class:SynchronizedCacheBackend>
-# wrong constant name <Class:Util>
-# undefined method `get_or_default<defaultArg>1' for class `ThreadSafe::AtomicReferenceCacheBackend'
-# undefined method `initialize<defaultArg>1' for class `ThreadSafe::AtomicReferenceCacheBackend'
-# Did you mean?  initialize_dup
-# wrong constant name <Class:Node>
-# wrong constant name <Class:Table>
-# wrong constant name []
-# wrong constant name []=
-# wrong constant name clear
-# wrong constant name compute
-# wrong constant name compute_if_absent
-# wrong constant name compute_if_present
-# wrong constant name delete
-# wrong constant name delete_pair
-# wrong constant name each_pair
-# wrong constant name empty?
-# wrong constant name get_and_set
-# wrong constant name get_or_default<defaultArg>1
-# wrong constant name get_or_default
-# wrong constant name initialize<defaultArg>1
-# wrong constant name initialize
-# wrong constant name key?
-# wrong constant name merge_pair
-# wrong constant name replace_if_exists
-# wrong constant name replace_pair
-# wrong constant name size
-# undefined method `initialize<defaultArg>1' for class `ThreadSafe::AtomicReferenceCacheBackend::Node'
-# Did you mean?  initialize_dup
-# undefined method `try_lock_via_hash<defaultArg>1' for class `ThreadSafe::AtomicReferenceCacheBackend::Node'
-# wrong constant name initialize<defaultArg>1
-# wrong constant name initialize
-# wrong constant name key
-# wrong constant name key?
-# wrong constant name locked?
-# wrong constant name matches?
-# wrong constant name pure_hash
-# wrong constant name try_await_lock
-# wrong constant name try_lock_via_hash<defaultArg>1
-# wrong constant name try_lock_via_hash
-# wrong constant name unlock_via_hash
-# wrong constant name <static-init>
-# wrong constant name locked_hash?
-# uninitialized constant ThreadSafe::AtomicReferenceCacheBackend::Table::Elem
-# wrong constant name cas_new_node
-# wrong constant name delete_node_at
-# wrong constant name try_lock_via_hash
-# wrong constant name try_to_cas_in_computed
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# uninitialized constant ThreadSafe::SynchronizedCacheBackend::VERSION
-# wrong constant name lock
-# wrong constant name locked?
-# wrong constant name synchronize
-# wrong constant name try_lock
-# wrong constant name unlock
-# wrong constant name <static-init>
-# wrong constant name <Class:Adder>
-# wrong constant name <Class:AtomicReference>
-# wrong constant name <Class:CheapLockable>
-# wrong constant name <Class:PowerOfTwoTuple>
-# wrong constant name <Class:Striped64>
-# wrong constant name <Class:Volatile>
-# wrong constant name <Class:VolatileTuple>
-# wrong constant name <Class:XorShiftRandom>
-# uninitialized constant ThreadSafe::Util::Adder::THREAD_LOCAL_KEY
-# wrong constant name add
-# wrong constant name decrement
-# wrong constant name increment
-# wrong constant name reset
-# wrong constant name sum
-# wrong constant name <static-init>
-# undefined method `initialize<defaultArg>1' for class `ThreadSafe::Util::FullLockingAtomicReference'
-# Did you mean?  initialize_dup
-# wrong constant name compare_and_set
-# wrong constant name get
-# wrong constant name initialize<defaultArg>1
-# wrong constant name initialize
-# wrong constant name set
-# wrong constant name value
-# wrong constant name value=
-# wrong constant name <static-init>
-# wrong constant name cas_mutex
-# wrong constant name compare_and_set_mutex
-# wrong constant name lazy_set_mutex
-# wrong constant name mutex
-# wrong constant name mutex=
-# wrong constant name <static-init>
-# uninitialized constant ThreadSafe::Util::PowerOfTwoTuple::Elem
-# wrong constant name hash_to_index
-# wrong constant name next_in_size_table
-# wrong constant name volatile_get_by_hash
-# wrong constant name volatile_set_by_hash
-# wrong constant name <static-init>
-# wrong constant name <Class:Cell>
-# wrong constant name busy?
-# wrong constant name initialize
-# wrong constant name retry_update
-# wrong constant name cas
-# wrong constant name cas_computed
-# wrong constant name padding_
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name attr_volatile
-# wrong constant name <static-init>
-# uninitialized constant ThreadSafe::Util::VolatileTuple::Elem
-# wrong constant name cas
-# wrong constant name compare_and_set
-# wrong constant name each
-# wrong constant name initialize
-# wrong constant name size
-# wrong constant name volatile_get
-# wrong constant name volatile_set
-# wrong constant name <static-init>
-# wrong constant name get
-# wrong constant name xorshift
-# wrong constant name <static-init>
 # wrong constant name <static-init>
 # undefined method `formatted_offset<defaultArg>1' for class `Time'
 # undefined method `formatted_offset<defaultArg>2' for class `Time'
@@ -9223,7 +8164,6 @@
 # uninitialized constant Time::DAYS_INTO_WEEK
 # uninitialized constant Time::WEEKEND_DAYS
 # wrong constant name acts_like_time?
-# wrong constant name advance
 # wrong constant name ago
 # wrong constant name at_beginning_of_hour
 # wrong constant name at_beginning_of_minute
@@ -9345,7 +8285,6 @@
 # wrong constant name check_userinfo
 # wrong constant name set_userinfo
 # wrong constant name <static-init>
-# wrong constant name request_uri
 # wrong constant name attributes
 # wrong constant name attributes=
 # wrong constant name dn
@@ -9374,7 +8313,6 @@
 # undefined method `escape<defaultArg>1' for class `URI::RFC2396_Parser'
 # undefined method `extract<defaultArg>1' for class `URI::RFC2396_Parser'
 # undefined method `initialize<defaultArg>1' for class `URI::RFC2396_Parser'
-# Did you mean?  initialize_dup
 # undefined method `make_regexp<defaultArg>1' for class `URI::RFC2396_Parser'
 # undefined method `unescape<defaultArg>1' for class `URI::RFC2396_Parser'
 # wrong constant name escape<defaultArg>1
@@ -9397,23 +8335,8 @@
 # wrong constant name regexp
 # wrong constant name split
 # wrong constant name make_components_hash
-# undefined singleton method `decode_www_form<defaultArg>1' for `URI'
-# undefined singleton method `decode_www_form<defaultArg>2' for `URI'
-# undefined singleton method `decode_www_form<defaultArg>3' for `URI'
-# undefined singleton method `decode_www_form<defaultArg>4' for `URI'
-# undefined singleton method `encode_www_form<defaultArg>1' for `URI'
-# undefined singleton method `encode_www_form_component<defaultArg>1' for `URI'
 # undefined singleton method `extract<defaultArg>1' for `URI'
 # undefined singleton method `regexp<defaultArg>1' for `URI'
-# wrong constant name decode_www_form<defaultArg>1
-# wrong constant name decode_www_form<defaultArg>2
-# wrong constant name decode_www_form<defaultArg>3
-# wrong constant name decode_www_form<defaultArg>4
-# wrong constant name decode_www_form
-# wrong constant name encode_www_form<defaultArg>1
-# wrong constant name encode_www_form
-# wrong constant name encode_www_form_component<defaultArg>1
-# wrong constant name encode_www_form_component
 # wrong constant name extract<defaultArg>1
 # wrong constant name get_encoding
 # wrong constant name regexp<defaultArg>1
@@ -9425,6 +8348,11 @@
 # uninitialized constant WEBrick
 # uninitialized constant WEBrick
 # wrong constant name warn
+# wrong constant name <Class:RefError>
+# wrong constant name initialize
+# wrong constant name weakref_alive?
+# wrong constant name <static-init>
+# wrong constant name <static-init>
 # wrong constant name <Class:BufError>
 # wrong constant name <Class:DataError>
 # wrong constant name <Class:Deflate>

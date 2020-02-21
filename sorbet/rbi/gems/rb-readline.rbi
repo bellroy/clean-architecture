@@ -8,6 +8,7 @@
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rb-readline/all/rb-readline.rbi
 #
 # rb-readline-0.5.5
+
 module RbReadline
   def __rl_fix_point(x); end
   def _extract_last_quote(string, quote_char); end
