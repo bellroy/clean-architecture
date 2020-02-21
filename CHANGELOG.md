@@ -1,4 +1,4 @@
-3.0.1
+3.0.1-3.0.2
 
   * Add new failure code - unprocessable_entity
 

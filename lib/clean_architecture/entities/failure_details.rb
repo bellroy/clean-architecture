@@ -11,7 +11,8 @@ module CleanArchitecture
         'error',
         'expectation_failed',
         'not_found',
-        'unauthorized'
+        'unauthorized',
+        'unprocessable_entity'
       )
 
       attribute :type, FailureTypes
