@@ -195,7 +195,7 @@
 # wrong constant name define_attribute_method
 # wrong constant name define_attribute_methods
 # wrong constant name undefine_attribute_methods
-# undefined method `initialize<defaultArg>1' for class `#<Class:0x00007fe79b108c88>'
+# undefined method `initialize<defaultArg>1' for class `#<Class:0x00007fa870e5a720>'
 # wrong constant name <Class:AttributeMethodMatch>
 # wrong constant name initialize<defaultArg>1
 # wrong constant name initialize
@@ -4227,7 +4227,6 @@
 # wrong constant name itself
 # wrong constant name object_id
 # wrong constant name pretty_inspect
-# wrong constant name respond_to?
 # wrong constant name then
 # wrong constant name yield_self
 # wrong constant name at_exit
