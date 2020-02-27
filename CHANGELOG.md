@@ -1,6 +1,6 @@
 4.0.1
 
-  * CleanArchiecture::Serializers::JsonResponseFromResult: Pass the success value to the proc
+  * CleanArchitecture::Serializers::JsonResponseFromResult: Pass the success value to the proc
 
 4.0.0
 
