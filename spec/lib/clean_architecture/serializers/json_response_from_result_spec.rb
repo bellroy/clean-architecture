@@ -1,23 +1,18 @@
 # typed: false
 # frozen_string_literal: true
 
-require 'clean_architecture/interfaces/success_payload'
 require 'clean_architecture/serializers/json_response_from_result'
 require 'dry/monads/all'
 
 module CleanArchitecture
   module Serializers
     describe JsonResponseFromResult do
-      let(:json_response_from_result) { described_class.new(result, http_method, success_object_payload) }
+      let(:json_response_from_result) { described_class.new(result, http_method, success_payload_proc) }
 
       let(:result) { Dry::Monads::Success(nil) }
       let(:http_method) { 'GET' }
-      let(:success_object_payload) do
-        instance_double(
-          Interfaces::SuccessPayload,
-          data: { some: 'attributes' },
-          version: '1.0'
-        )
+      let(:success_payload_proc) do
+          -> { { some: 'attributes' } }
       end
 
       describe '#to_h' do
@@ -26,7 +21,7 @@ module CleanArchitecture
         specify do
           expect(to_h).to eq(
             status: :ok,
-            json: { jsonapi: { version: '1.0' }, data: { some: 'attributes' } }
+            json: { data: { some: 'attributes' } }
           )
         end
 
@@ -36,7 +31,7 @@ module CleanArchitecture
           specify do
             expect(to_h).to eq(
               status: :internal_server_error,
-              json: { jsonapi: { version: '1.0' }, errors: ['fail!'] }
+              json: { errors: ['fail!'] }
             )
           end
         end
@@ -47,7 +42,7 @@ module CleanArchitecture
           specify do
             expect(to_h).to eq(
               status: :created,
-              json: { jsonapi: { version: '1.0' }, data: { some: 'attributes' } }
+              json: { data: { some: 'attributes' } }
             )
           end
         end
@@ -58,7 +53,7 @@ module CleanArchitecture
           specify do
             expect(to_h).to eq(
               status: :internal_server_error,
-              json: { jsonapi: { version: '1.0' }, errors: ['Unauthorized: get out my house'] }
+              json: { errors: ['Unauthorized: get out my house'] }
             )
           end
         end
@@ -76,7 +71,7 @@ module CleanArchitecture
           specify do
             expect(to_h).to eq(
               status: :internal_server_error,
-              json: { jsonapi: { version: '1.0' }, errors: ['Something bad happened!'] }
+              json: { errors: ['Something bad happened!'] }
             )
           end
         end

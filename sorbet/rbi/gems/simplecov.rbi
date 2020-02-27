@@ -7,15 +7,19 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/simplecov/all/simplecov.rbi
 #
-# simplecov-0.18.2
+# simplecov-0.18.5
 
 module SimpleCov
   def self.adapt_coverage_result; end
   def self.add_not_loaded_files(result); end
+  def self.at_exit_behavior; end
   def self.clear_result; end
   def self.collate(result_filenames, profile = nil, &block); end
   def self.exit_exception; end
   def self.exit_status_from_exception; end
+  def self.external_at_exit; end
+  def self.external_at_exit=(arg0); end
+  def self.external_at_exit?; end
   def self.filtered(files); end
   def self.final_result_process?; end
   def self.grouped(files); end
@@ -135,6 +139,7 @@ class SimpleCov::SourceFile
   def covered_lines; end
   def covered_percent; end
   def covered_strength; end
+  def ensure_remove_undefs(file_lines); end
   def filename; end
   def initialize(filename, coverage_data); end
   def line(number); end
@@ -143,6 +148,7 @@ class SimpleCov::SourceFile
   def lines; end
   def lines_of_code; end
   def lines_strength; end
+  def load_source; end
   def missed_branches; end
   def missed_lines; end
   def never_lines; end
@@ -152,8 +158,11 @@ class SimpleCov::SourceFile
   def process_skipped_branches(branches); end
   def process_skipped_lines(lines); end
   def project_filename; end
+  def read_lines(file, lines, current_line); end
   def relevant_lines; end
   def restore_ruby_data_structure(structure); end
+  def set_encoding_based_on_magic_comment(file, line); end
+  def shebang?(line); end
   def skipped_lines; end
   def source; end
   def source_lines; end

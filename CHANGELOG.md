@@ -1,3 +1,8 @@
+4.0.0
+
+  * Stop trying to be JSON API compliant - we never were and we never will be
+  * Use a proc to generate success payload, so that it can be lazily generated
+
 3.0.1-3.0.2
 
   * Add new failure code - unprocessable_entity
