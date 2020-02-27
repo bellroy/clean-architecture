@@ -12,11 +12,11 @@ module CleanArchitecture
     class JsonResponseFromResult
       extend T::Sig
 
-      sig { params(result: Dry::Monads::Result, http_method: String, success_payload_proc: T.proc.returns(T::Hash[T.untyped, T.untyped])).void }
+      sig { params(result: Dry::Monads::Result, http_method: String, success_payload_proc: T.proc.params(success_value: T.untyped).returns(T::Hash[T.untyped, T.untyped])).void }
       def initialize(result, http_method, success_payload_proc)
         @result = T.let(result, Dry::Monads::Result)
         @http_method = T.let(http_method, String)
-        @success_payload_proc = T.let(success_payload_proc, T.proc.returns(T::Hash[T.untyped, T.untyped]))
+        @success_payload_proc = T.let(success_payload_proc, T.proc.params(success_value: T.untyped).returns(T::Hash[T.untyped, T.untyped]))
       end
 
       sig { returns(T::Hash[Symbol, T.untyped]) }
@@ -42,18 +42,11 @@ module CleanArchitecture
       sig { returns(T::Hash[Symbol, T.untyped]) }
       def json
         Matchers::UseCaseResult.call(@result) do |matcher|
-          matcher.success { success_payload_data }
+          matcher.success { |value| { data: @success_payload_proc.call(value) } }
           matcher.failure do |failure_details|
             { errors: [failure_details.message] }
           end
         end
-      end
-
-      sig {returns(T::Hash[Symbol, T::Hash[T.untyped, T.untyped]])}
-      def success_payload_data
-        {
-          data: @success_payload_proc.call
-        }
       end
     end
   end

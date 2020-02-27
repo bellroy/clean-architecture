@@ -1,3 +1,7 @@
+4.0.1
+
+  * CleanArchiecture::Serializers::JsonResponseFromResult: Pass the success value to the proc
+
 4.0.0
 
   * Stop trying to be JSON API compliant - we never were and we never will be

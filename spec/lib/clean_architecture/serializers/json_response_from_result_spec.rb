@@ -9,10 +9,10 @@ module CleanArchitecture
     describe JsonResponseFromResult do
       let(:json_response_from_result) { described_class.new(result, http_method, success_payload_proc) }
 
-      let(:result) { Dry::Monads::Success(nil) }
+      let(:result) { Dry::Monads::Success('attributes') }
       let(:http_method) { 'GET' }
       let(:success_payload_proc) do
-          -> { { some: 'attributes' } }
+          Proc.new { |value| { some: value } }
       end
 
       describe '#to_h' do
