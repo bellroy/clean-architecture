@@ -217,6 +217,7 @@ class RuboCop::AST::Node < Parser::AST::Node
   def each_descendant(*types, &block); end
   def each_node(*types, &block); end
   def eflipflop_type?; end
+  def empty_else_type?; end
   def empty_source?; end
   def ensure_type?; end
   def equals_asgn?; end

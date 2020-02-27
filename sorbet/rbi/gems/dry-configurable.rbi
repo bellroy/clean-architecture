@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/dry-configurable/all/dry-configurable.rbi
 #
-# dry-configurable-0.11.2
+# dry-configurable-0.11.3
 
 module Dry
 end

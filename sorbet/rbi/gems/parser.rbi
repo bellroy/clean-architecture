@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/parser/all/parser.rbi
 #
-# parser-2.7.0.2
+# parser-2.7.0.3
 
 module Parser
 end
@@ -55,6 +55,7 @@ class Parser::AST::Processor < AST::Processor
   def on_dstr(node); end
   def on_dsym(node); end
   def on_eflipflop(node); end
+  def on_empty_else(node); end
   def on_ensure(node); end
   def on_erange(node); end
   def on_for(node); end
@@ -303,7 +304,7 @@ class Parser::Source::TreeRewriter::Action
   def insertion?; end
   def merge(action); end
   def ordered_replacements; end
-  def place_in_hierachy(action); end
+  def place_in_hierarchy(action); end
   def range; end
   def relationship_with(action); end
   def replacement; end
