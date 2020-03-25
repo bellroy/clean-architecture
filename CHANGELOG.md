@@ -1,3 +1,7 @@
+5.0.0
+
+  * Rename persistence -> gateway to be consistent with the pattern used through our systems
+
 4.0.1
 
   * CleanArchitecture::Serializers::JsonResponseFromResult: Pass the success value to the proc
