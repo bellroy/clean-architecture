@@ -6,14 +6,14 @@ require 'clean_architecture/interfaces/base_parameters'
 module CleanArchitecture
   module Entities
     class UntargetedParameters
-      attr_reader :actor, :extra_parameters_hash, :persistence, :settings
+      attr_reader :actor, :extra_parameters_hash, :gateway, :settings
 
       implements_interface Interfaces::BaseParameters
 
-      def initialize(actor, extra_parameters_hash, persistence, settings)
+      def initialize(actor, extra_parameters_hash, gateway, settings)
         @actor = actor
         @extra_parameters_hash = extra_parameters_hash
-        @persistence = persistence
+        @gateway = gateway
         @settings = settings
       end
     end

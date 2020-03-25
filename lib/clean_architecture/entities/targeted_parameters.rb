@@ -7,16 +7,16 @@ require 'clean_architecture/interfaces/authorization_parameters'
 module CleanArchitecture
   module Entities
     class TargetedParameters
-      attr_reader :actor, :extra_parameters_hash, :persistence, :target, :settings
+      attr_reader :actor, :extra_parameters_hash, :gateway, :target, :settings
 
       implements_interface Interfaces::TargetedParameters
       implements_interface Interfaces::AuthorizationParameters
 
-      def initialize(actor, target, extra_parameters_hash, persistence, settings)
+      def initialize(actor, target, extra_parameters_hash, gateway, settings)
         @actor = actor
         @target = target
         @extra_parameters_hash = extra_parameters_hash
-        @persistence = persistence
+        @gateway = gateway
         @settings = settings
       end
     end

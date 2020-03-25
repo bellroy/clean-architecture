@@ -97,7 +97,7 @@ We satisfy the SRP by following these rules:
 
 We satisfy the OCP, LSP & DIP by following these rules:
 
-- We create a clean boundary between our business logic, our persistence layer and our application-specific classes using interfaces
+- We create a clean boundary between our business logic, our gateway and our application-specific classes using interfaces
 - We use interfaces wherever possible, allowing concrete implementations of those interfaces to be extended without breaking the contract
 - We write unit tests against interfaces, never against concrete implementations (unless interfaces don't exist)
 
@@ -157,7 +157,7 @@ We satisfy the SAP by:
 
 ### Practical suggestions for implementation
 
-* The code that manages your inputs (e.g. a Rails controller) instantiates a persistence layer
+* The code that manages your inputs (e.g. a Rails controller) instantiates a gateway
   object
 
 * The code that manages your inputs (e.g. a Rails controller) instantiates a use case actor
@@ -182,7 +182,7 @@ We satisfy the SAP by:
     use_case_actor,
     TargetActiveRecordClass.find(params[:id]),
     strong_params,
-    persistence,
+    gateway,
     other_settings_hash
   )
 ```
@@ -329,7 +329,7 @@ module MyBusinessDomain
   module UseCases
     class UserUpdatesNickname < CleanArchitecture::UseCases::AbstractUseCase
       contract do
-        option :my_persistence_object
+        option :my_gateway_object
 
         params do
           required(:user_id).filled(:id)
@@ -339,7 +339,7 @@ module MyBusinessDomain
         rule(:nickname).validate(:not_already_taken)
 
         register_macro(:not_already_taken) do
-          unless my_persistence_object.username_is_available?(values[key_name])
+          unless my_gateway_object.username_is_available?(values[key_name])
             key.failure('is already taken')
           end
         end
@@ -350,7 +350,7 @@ module MyBusinessDomain
 
       def result
         valid_params = yield result_of_validating_params
-        context(:my_persistence_object).result_of_updating_nickname(
+        context(:my_gateway_object).result_of_updating_nickname(
           valid_params[:id],
           valid_params[:nickname]
         )
@@ -404,7 +404,7 @@ module MyWebApp
     def nickname_update_form
       @nickname_update_form ||= NicknameUpdateForm.new(
         params: params.permit(:user_id, :nickname),
-        context: { my_persistence_object: MyPersistence.new }
+        context: { my_gateway_object: MyGateway.new }
       )
     end
   end
@@ -436,7 +436,7 @@ module MyWebApp
 
     def user_updates_nickname_parameters
       MyBusinessDomain::UseCases::UserUpdatesNickname.parameters(
-        context: { my_persistence_object: MyPersistence.new },
+        context: { my_gateway_object: MyGateway.new },
         user_id: params[:user_id],
         nickname: params[:nickname]
       )
@@ -451,7 +451,7 @@ Elements of contracts can be shared amongst use cases, this can be very helpful 
 module MyBusinessDomain
   module UseCases
     class SharedContract < CleanArchitecture::UseCases::Contract
-      option :my_persistence_object
+      option :my_gateway_object
 
       register_macro(:not_already_taken?) do
         unless not_already_taken?(values[key_name])
@@ -462,7 +462,7 @@ module MyBusinessDomain
       private
 
       def not_already_taken?(username)
-        my_persistence_object.username_is_available?(values[key_name])
+        my_gateway_object.username_is_available?(values[key_name])
       end
     end
   end
@@ -476,7 +476,7 @@ module MyBusinessDomain
   module UseCases
     class UserUpdatesNickname < CleanArchitecture::UseCases::AbstractUseCase
       contract(SharedContract) do
-        option :my_persistence_object
+        option :my_gateway_object
 
         params do
           required(:user_id).filled(:id)
@@ -517,7 +517,7 @@ end
 
 ### `#context`
 
-Any context variables defined as `option`'s in your use case contract have to be specified whenever creating an instance of the parameter objects for your use case. In practice this means you can't accidentally forget to pass in say a persistence object / repository / factory / etc.
+Any context variables defined as `option`'s in your use case contract have to be specified whenever creating an instance of the parameter objects for your use case. In practice this means you can't accidentally forget to pass in say a gateway object / repository / factory / etc.
 
 These context variables can be used within the use case using the `context` method:
 
@@ -526,7 +526,7 @@ module MyBusinessDomain
   module UseCases
     class UserUpdatesAge < CleanArchitecture::UseCases::AbstractUseCase
       contract do
-        option :required_persistence_object
+        option :required_gateway_object
 
         params do
           required(:user_id).filled(:int)
@@ -539,7 +539,7 @@ module MyBusinessDomain
       def result
         valid_params = yield result_of_validating_params
 
-        context(:required_persistence_object).update_user_age_result(
+        context(:required_gateway_object).update_user_age_result(
           valid_params[:user_id],
           valid_params[:age]
         )
@@ -560,7 +560,7 @@ module MyBusinessDomain
   module UseCases
     class UserUpdatesChristmasWishlist < CleanArchitecture::UseCases::AbstractUseCase
       contract do
-        option :required_persistence_object
+        option :required_gateway_object
 
         params do
           required(:user_id).filled(:int)
@@ -579,7 +579,7 @@ module MyBusinessDomain
           return fail_with_error_message('Uh oh, Santa has already left the North Pole!')
         end
 
-        context(:required_persistence_object).change_most_wanted_gift(user_id, most_wanted_gift)
+        context(:required_gateway_object).change_most_wanted_gift(user_id, most_wanted_gift)
       end
     end
   end

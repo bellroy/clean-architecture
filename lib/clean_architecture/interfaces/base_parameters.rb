@@ -12,7 +12,7 @@ module CleanArchitecture
         raise NotImplementedError
       end
 
-      def persistence
+      def gateway
         raise NotImplementedError
       end
 
