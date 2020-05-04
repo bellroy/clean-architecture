@@ -1,3 +1,11 @@
+5.0.2
+
+  * Require the forwardable module where it is used
+
+5.0.1
+
+  * Remove the version requirement on duckface-interfaces
+
 5.0.0
 
   * Rename persistence -> gateway to be consistent with the pattern used through our systems
