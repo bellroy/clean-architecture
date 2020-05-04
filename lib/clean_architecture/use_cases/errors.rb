@@ -3,6 +3,7 @@
 
 require 'active_model'
 require 'active_support/core_ext/string/inflections'
+require 'forwardable'
 
 module CleanArchitecture
   module UseCases

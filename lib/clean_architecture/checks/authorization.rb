@@ -3,6 +3,7 @@
 
 require 'dry/monads/all'
 require 'clean_architecture/entities/failure_details'
+require 'forwardable'
 
 module CleanArchitecture
   module Checks

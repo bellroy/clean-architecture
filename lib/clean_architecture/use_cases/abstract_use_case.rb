@@ -8,6 +8,7 @@ require 'clean_architecture/use_cases/errors'
 require 'clean_architecture/use_cases/parameters'
 require 'clean_architecture/use_cases/contract'
 require 'clean_architecture/entities/failure_details'
+require 'forwardable'
 
 module CleanArchitecture
   module UseCases

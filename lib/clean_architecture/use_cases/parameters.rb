@@ -3,6 +3,7 @@
 
 require 'dry/monads/result'
 require 'clean_architecture/use_cases/errors'
+require 'forwardable'
 
 module CleanArchitecture
   module UseCases
