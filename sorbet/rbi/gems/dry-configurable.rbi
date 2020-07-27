@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/dry-configurable/all/dry-configurable.rbi
 #
-# dry-configurable-0.11.3
+# dry-configurable-0.11.6
 
 module Dry
 end
@@ -17,6 +17,8 @@ module Dry::Configurable
   include Dry::Core::Constants
 end
 class Dry::Configurable::Error < StandardError
+end
+class Dry::Configurable::AlreadyIncluded < Dry::Configurable::Error
 end
 class Dry::Configurable::FrozenConfig < Dry::Configurable::Error
 end
@@ -49,9 +51,11 @@ class Dry::Configurable::Setting
   def constructor; end
   def default; end
   def evaluate; end
+  def evaluated?; end
   def initialize(name, input: nil, default: nil, **options); end
   def initialize_copy(source); end
   def input; end
+  def input_defined?; end
   def name; end
   def nested(settings); end
   def options; end
@@ -67,7 +71,6 @@ end
 module Anonymous_Dry_Equalizer_15
   def cmp?(comparator, other); end
   def hash; end
-  def inspect; end
 end
 class Dry::Configurable::Setting::Nested < Dry::Configurable::Setting
   def constructor; end

@@ -285,20 +285,6 @@ class Concurrent::MultipleErrors < Concurrent::Error
   def errors; end
   def initialize(errors, message = nil); end
 end
-class Concurrent::Collection::CopyOnWriteObserverSet < Concurrent::Synchronization::LockableObject
-  def add_observer(observer = nil, func = nil, &block); end
-  def clear_observers_and_return_old; end
-  def count_observers; end
-  def delete_observer(observer); end
-  def delete_observers; end
-  def initialize; end
-  def notify_and_delete_observers(*args, &block); end
-  def notify_observers(*args, &block); end
-  def notify_to(observers, *args); end
-  def ns_initialize; end
-  def observers; end
-  def observers=(new_set); end
-end
 class Concurrent::Event < Concurrent::Synchronization::LockableObject
   def initialize; end
   def ns_initialize; end
@@ -345,48 +331,6 @@ module Concurrent::Concern::Obligation
   def wait!(timeout = nil); end
   def wait(timeout = nil); end
   include Concurrent::Concern::Dereferenceable
-end
-class Concurrent::Collection::CopyOnNotifyObserverSet < Concurrent::Synchronization::LockableObject
-  def add_observer(observer = nil, func = nil, &block); end
-  def count_observers; end
-  def delete_observer(observer); end
-  def delete_observers; end
-  def duplicate_and_clear_observers; end
-  def duplicate_observers; end
-  def initialize; end
-  def notify_and_delete_observers(*args, &block); end
-  def notify_observers(*args, &block); end
-  def notify_to(observers, *args); end
-  def ns_initialize; end
-end
-module Concurrent::Concern::Observable
-  def add_observer(observer = nil, func = nil, &block); end
-  def count_observers; end
-  def delete_observer(observer); end
-  def delete_observers; end
-  def observers; end
-  def observers=(arg0); end
-  def with_observer(observer = nil, func = nil, &block); end
-end
-class Concurrent::IVar < Concurrent::Synchronization::LockableObject
-  def add_observer(observer = nil, func = nil, &block); end
-  def check_for_block_or_value!(block_given, value); end
-  def complete(success, value, reason); end
-  def complete_without_notification(success, value, reason); end
-  def fail(reason = nil); end
-  def initialize(value = nil, opts = nil, &block); end
-  def notify_observers(value, reason); end
-  def ns_complete_without_notification(success, value, reason); end
-  def ns_initialize(value, opts); end
-  def safe_execute(task, args = nil); end
-  def set(value = nil); end
-  def try_set(value = nil, &block); end
-  include Concurrent::Concern::Obligation
-  include Concurrent::Concern::Observable
-end
-class Concurrent::SafeTaskExecutor < Concurrent::Synchronization::LockableObject
-  def execute(*args); end
-  def initialize(task, opts = nil); end
 end
 module Concurrent::Concern::Logging
   def log(level, progname, message = nil, &block); end
@@ -547,42 +491,6 @@ class Concurrent::Utility::ProcessorCounter
   def initialize; end
   def physical_processor_count; end
   def processor_count; end
-end
-module Concurrent::Options
-  def self.executor(executor_identifier); end
-  def self.executor_from_options(opts = nil); end
-end
-class Concurrent::PromiseExecutionError < StandardError
-end
-class Concurrent::Promise < Concurrent::IVar
-  def catch(&block); end
-  def complete(success, value, reason); end
-  def execute; end
-  def fail(reason = nil); end
-  def flat_map(&block); end
-  def initialize(opts = nil, &block); end
-  def notify_child(child); end
-  def ns_initialize(value, opts); end
-  def on_error(&block); end
-  def on_fulfill(result); end
-  def on_reject(reason); end
-  def on_success(&block); end
-  def realize(task); end
-  def rescue(&block); end
-  def root?; end
-  def self.aggregate(method, *promises); end
-  def self.all?(*promises); end
-  def self.any?(*promises); end
-  def self.execute(opts = nil, &block); end
-  def self.fulfill(value, opts = nil); end
-  def self.reject(reason, opts = nil); end
-  def self.zip(*promises); end
-  def set(value = nil, &block); end
-  def set_pending; end
-  def set_state!(success, value, reason); end
-  def synchronized_set_state!(success, value, reason); end
-  def then(*args, &block); end
-  def zip(*others); end
 end
 class Concurrent::MutexAtomicBoolean < Concurrent::Synchronization::LockableObject
   def false?; end
@@ -749,6 +657,10 @@ end
 class Concurrent::RubySingleThreadExecutor < Concurrent::RubyThreadPoolExecutor
   def initialize(opts = nil); end
 end
+class Concurrent::SafeTaskExecutor < Concurrent::Synchronization::LockableObject
+  def execute(*args); end
+  def initialize(task, opts = nil); end
+end
 class Concurrent::SerializedExecution < Concurrent::Synchronization::LockableObject
   def call_job(job); end
   def initialize; end
@@ -777,6 +689,62 @@ class Concurrent::SerializedExecutionDelegator < SimpleDelegator
   include Concurrent::SerialExecutorService
 end
 class Concurrent::SingleThreadExecutor < Concurrent::RubySingleThreadExecutor
+end
+class Concurrent::Collection::CopyOnWriteObserverSet < Concurrent::Synchronization::LockableObject
+  def add_observer(observer = nil, func = nil, &block); end
+  def clear_observers_and_return_old; end
+  def count_observers; end
+  def delete_observer(observer); end
+  def delete_observers; end
+  def initialize; end
+  def notify_and_delete_observers(*args, &block); end
+  def notify_observers(*args, &block); end
+  def notify_to(observers, *args); end
+  def ns_initialize; end
+  def observers; end
+  def observers=(new_set); end
+end
+class Concurrent::Collection::CopyOnNotifyObserverSet < Concurrent::Synchronization::LockableObject
+  def add_observer(observer = nil, func = nil, &block); end
+  def count_observers; end
+  def delete_observer(observer); end
+  def delete_observers; end
+  def duplicate_and_clear_observers; end
+  def duplicate_observers; end
+  def initialize; end
+  def notify_and_delete_observers(*args, &block); end
+  def notify_observers(*args, &block); end
+  def notify_to(observers, *args); end
+  def ns_initialize; end
+end
+module Concurrent::Concern::Observable
+  def add_observer(observer = nil, func = nil, &block); end
+  def count_observers; end
+  def delete_observer(observer); end
+  def delete_observers; end
+  def observers; end
+  def observers=(arg0); end
+  def with_observer(observer = nil, func = nil, &block); end
+end
+class Concurrent::IVar < Concurrent::Synchronization::LockableObject
+  def add_observer(observer = nil, func = nil, &block); end
+  def check_for_block_or_value!(block_given, value); end
+  def complete(success, value, reason); end
+  def complete_without_notification(success, value, reason); end
+  def fail(reason = nil); end
+  def initialize(value = nil, opts = nil, &block); end
+  def notify_observers(value, reason); end
+  def ns_complete_without_notification(success, value, reason); end
+  def ns_initialize(value, opts); end
+  def safe_execute(task, args = nil); end
+  def set(value = nil); end
+  def try_set(value = nil, &block); end
+  include Concurrent::Concern::Obligation
+  include Concurrent::Concern::Observable
+end
+module Concurrent::Options
+  def self.executor(executor_identifier); end
+  def self.executor_from_options(opts = nil); end
 end
 class Concurrent::ScheduledTask < Concurrent::IVar
   def <=>(other); end
@@ -1119,6 +1087,38 @@ class Concurrent::MVar < Concurrent::Synchronization::Object
   def wait_for_full(timeout); end
   def wait_while(condition, timeout); end
   include Concurrent::Concern::Dereferenceable
+end
+class Concurrent::PromiseExecutionError < StandardError
+end
+class Concurrent::Promise < Concurrent::IVar
+  def catch(&block); end
+  def complete(success, value, reason); end
+  def execute; end
+  def fail(reason = nil); end
+  def flat_map(&block); end
+  def initialize(opts = nil, &block); end
+  def notify_child(child); end
+  def ns_initialize(value, opts); end
+  def on_error(&block); end
+  def on_fulfill(result); end
+  def on_reject(reason); end
+  def on_success(&block); end
+  def realize(task); end
+  def rescue(&block); end
+  def root?; end
+  def self.aggregate(method, *promises); end
+  def self.all?(*promises); end
+  def self.any?(*promises); end
+  def self.execute(opts = nil, &block); end
+  def self.fulfill(value, opts = nil); end
+  def self.reject(reason, opts = nil); end
+  def self.zip(*promises); end
+  def set(value = nil, &block); end
+  def set_pending; end
+  def set_state!(success, value, reason); end
+  def synchronized_set_state!(success, value, reason); end
+  def then(*args, &block); end
+  def zip(*others); end
 end
 module Concurrent::SettableStruct
   def ==(other); end

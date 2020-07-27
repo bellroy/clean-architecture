@@ -2,7 +2,7 @@
 #   srb rbi todo
 
 # typed: strong
-module ActiveSupport::ActionController::Base; end
+module ::Anonymous_Delegator_106; end
 module T::Private::Methods::MethodHooks; end
 module T::Private::Methods::SingletonMethodHooks; end
 module Types::Strict::Hash; end

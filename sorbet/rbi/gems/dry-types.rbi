@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/dry-types/all/dry-types.rbi
 #
-# dry-types-1.3.1
+# dry-types-1.4.0
 
 module Dry
   def self.Types(*namespaces, default: nil, **aliases); end
@@ -568,7 +568,6 @@ module Dry::Types::Coercions
   def empty_str?(value); end
   def to_date(input, &block); end
   def to_date_time(input, &block); end
-  def to_nil(input, &_block); end
   def to_symbol(input, &block); end
   def to_time(input, &block); end
   include Dry::Core::Constants
@@ -580,11 +579,13 @@ module Dry::Types::Coercions::Params
   def self.to_float(input, &block); end
   def self.to_hash(input, &_block); end
   def self.to_int(input, &block); end
+  def self.to_nil(input, &_block); end
   def self.to_true(input, &_block); end
   extend Dry::Types::Coercions
 end
 module Dry::Types::Coercions::JSON
   def self.to_decimal(input, &block); end
+  def self.to_nil(input, &_block); end
   extend Dry::Types::Coercions
 end
 module Anonymous_Dry_Logic_Rule_Interface_37
