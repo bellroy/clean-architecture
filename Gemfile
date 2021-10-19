@@ -16,6 +16,7 @@ group :development, :test do
   gem 'rubocop-rspec'
   gem 'sorbet'
   gem 'stackprof'
+  gem 'tapioca'
 end
 
 group :test do

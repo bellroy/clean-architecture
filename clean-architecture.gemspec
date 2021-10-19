@@ -28,13 +28,13 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'activemodel', '>= 5'
   spec.add_dependency 'activesupport', '>= 5'
+  spec.add_dependency 'activerecord', '>= 5'
   spec.add_dependency 'dry-matcher'
   spec.add_dependency 'dry-monads'
-  spec.add_dependency 'dry-struct'
-  spec.add_dependency 'dry-types'
-  spec.add_dependency 'dry-validation', '>= 1.0.0'
-  spec.add_dependency 'duckface-interfaces'
+  spec.add_dependency 'dry-monads-sorbet'
+  spec.add_dependency 'sorbet'
   spec.add_dependency 'sorbet-runtime'
+  spec.add_dependency 'sorbet-struct-comparable'
 
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake', '>= 12.0'

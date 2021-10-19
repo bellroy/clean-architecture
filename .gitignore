@@ -1,3 +1,7 @@
 coverage
 tags
 /Gemfile.lock
+
+vendor
+.direnv
+.envrc

@@ -1,15 +1,12 @@
 # typed: false
 # frozen_string_literal: true
 
-require 'clean_architecture/builders/abstract_active_record_entity_builder'
-require 'clean_architecture/types'
-require 'dry-struct'
 require 'sorbet-runtime'
 
 module CleanArchitecture
   module Builders
     describe AbstractActiveRecordEntityBuilder do
-      class ExampleModel
+      class ExampleModel < ActiveRecord::Base
         def age
           26
         end
@@ -41,7 +38,7 @@ module CleanArchitecture
         end
       end
 
-      class ExampleInterestModel
+      class ExampleInterestModel < ActiveRecord::Base
         def initialize(label)
           @label = label
         end
@@ -55,29 +52,16 @@ module CleanArchitecture
         end
       end
 
-      class ExampleInterest < Dry::Struct
-        attribute :label, Types::Strict::String
+      class ExampleInterest < T::Struct
+        include T::Struct::ActsAsComparable
 
-        def initialize(attributes)
-          @attributes = attributes
-        end
+        const :label, String
       end
 
-      class ExampleEntity < Dry::Struct
-        attribute :forename, Types::Strict::String
-        attribute :surname, Types::Strict::String
-        attribute :years_on_planet_earth, Types::Strict::Integer
-        attribute :main_interest, Types.Instance(ExampleInterest)
-        attribute :not_interested_in, Types.Instance(ExampleInterest).optional
-        attribute :other_interests, Types.Array(Types.Instance(ExampleInterest))
-
-        def initialize(attributes)
-          @attributes = attributes
-        end
-      end
-
-      class TStructExampleEntity < T::Struct
+      class ExampleEntity < T::Struct
         extend T::Sig
+
+        include T::Struct::ActsAsComparable
 
         const :forename, String
         const :surname, String
@@ -105,8 +89,8 @@ module CleanArchitecture
         end
       end
 
-      class TStructExampleBuilder < AbstractActiveRecordEntityBuilder
-        acts_as_builder_for_entity TStructExampleEntity
+      class ExampleBuilder < AbstractActiveRecordEntityBuilder
+        acts_as_builder_for_entity ExampleEntity
 
         belongs_to :main_interest, use: ExampleInterestBuilder
         belongs_to :not_interested_in, use: ExampleInterestBuilder
@@ -125,34 +109,34 @@ module CleanArchitecture
       describe '#build' do
         subject(:built_entity) { builder.build }
 
-        specify do
-          expect(built_entity).to be_an_instance_of(ExampleEntity)
-          expect(built_entity.forename).to eq 'Samuel'
-          expect(built_entity.surname).to eq 'Giles'
-          expect(built_entity.years_on_planet_earth).to eq 26
-          expect(built_entity.main_interest).to eq ExampleInterest.new(label: 'Music')
-          expect(built_entity.not_interested_in).to be nil
-          expect(built_entity.other_interests).to eq [
-            ExampleInterest.new(label: 'Travel'),
-            ExampleInterest.new(label: 'Cycling')
-          ]
+        let(:builder) { ExampleBuilder.new(ar_model_instance) }
+
+        before do
+          allow(ExampleModel).to receive(:_has_attribute?).with('type').and_return(false)
+          allow(ExampleModel).to receive(:_default_attributes).and_return({})
+          allow(ExampleModel).to receive(:primary_key).and_return(:id)
+          allow(ExampleModel).to receive(:attribute_names).and_return(
+            %w[forename surname age main_interest not_interested_in other_interests]
+          )
+
+          allow(ExampleInterestModel).to receive(:_has_attribute?).with('type').and_return(false)
+          allow(ExampleInterestModel).to receive(:_default_attributes).and_return({})
+          allow(ExampleInterestModel).to receive(:primary_key).and_return(:id)
+          allow(ExampleInterestModel).to receive(:attribute_names).and_return(%w[label])
         end
 
-        context 'when T::Struct' do
-          let(:builder) { TStructExampleBuilder.new(ar_model_instance) }
-
-          specify do
-            expect(built_entity).to be_an_instance_of(TStructExampleEntity)
-            expect(built_entity.forename).to eq 'Samuel'
-            expect(built_entity.surname).to eq 'Giles'
-            expect(built_entity.years_on_planet_earth).to eq 26
-            expect(built_entity.main_interest).to eq ExampleInterest.new(label: 'Music')
-            expect(built_entity.not_interested_in).to be nil
-            expect(built_entity.other_interests).to eq [
+        specify do
+          expect(built_entity).to eq ExampleEntity.new(
+            forename: 'Samuel',
+            surname: 'Giles',
+            years_on_planet_earth: 26,
+            main_interest: ExampleInterest.new(label: 'Music'),
+            not_interested_in: nil,
+            other_interests: [
               ExampleInterest.new(label: 'Travel'),
               ExampleInterest.new(label: 'Cycling')
             ]
-          end
+          )
         end
       end
     end

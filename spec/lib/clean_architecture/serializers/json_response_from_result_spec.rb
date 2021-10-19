@@ -1,7 +1,6 @@
 # typed: false
 # frozen_string_literal: true
 
-require 'clean_architecture/serializers/json_response_from_result'
 require 'dry/monads/all'
 
 module CleanArchitecture
@@ -62,8 +61,7 @@ module CleanArchitecture
           let(:failure_details) do
             Entities::FailureDetails.new(
               message: 'Something bad happened!',
-              other_properties: {},
-              type: 'error'
+              type: Entities::FailureType::Error
             )
           end
           let(:result) { Dry::Monads::Failure(failure_details) }

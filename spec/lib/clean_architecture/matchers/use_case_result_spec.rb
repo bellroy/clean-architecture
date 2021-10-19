@@ -1,8 +1,6 @@
 # typed: false
 # frozen_string_literal: true
 
-require 'clean_architecture/matchers/use_case_result'
-
 module CleanArchitecture
   module Matchers
     describe UseCaseResult do
@@ -26,8 +24,7 @@ module CleanArchitecture
           specify do
             expect(call).to eq Entities::FailureDetails.new(
               message: 'failure!',
-              other_properties: {},
-              type: 'error'
+              type: Entities::FailureType::Error
             )
           end
         end
@@ -38,8 +35,7 @@ module CleanArchitecture
           specify do
             expect(call).to eq Entities::FailureDetails.new(
               message: 'failure 1, failure 2',
-              other_properties: {},
-              type: 'error'
+              type: Entities::FailureType::Error
             )
           end
         end
@@ -48,19 +44,12 @@ module CleanArchitecture
           let(:failure_details) do
             Entities::FailureDetails.new(
               message: 'failure!',
-              other_properties: { a: :b },
-              type: 'unauthorized'
+              type: Entities::FailureType::Unauthorized
             )
           end
           let(:result) { Dry::Monads::Failure(failure_details) }
 
           it { is_expected.to eq failure_details }
-        end
-
-        context do
-          let(:result) { Dry::Monads::Failure(:no) }
-
-          specify { expect { call }.to raise_error ArgumentError }
         end
       end
     end

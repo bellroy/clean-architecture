@@ -1,34 +1,42 @@
 # typed: false
 # frozen_string_literal: true
 
-require 'clean_architecture/checks/authorization'
 require 'dry/monads/all'
 
 module CleanArchitecture
   module Checks
+    class AlwaysAuthorized < Authorization
+      def authorized?
+        true
+      end
+    end
+
+    class AlwaysUnauthorized < Authorization
+      def authorized?
+        false
+      end
+    end
+
     describe Authorization do
-      let(:authorization) { described_class.new }
+      let(:authorization) { authorization_class.new }
 
       describe '#result' do
         subject(:result) { authorization.result }
 
-        before { expect(authorization).to receive(:authorized?).and_return(authorized?) }
-
         context do
-          let(:authorized?) { true }
+          let(:authorization_class) { AlwaysAuthorized }
 
           it { is_expected.to be_success }
         end
 
         context do
-          let(:authorized?) { false }
+          let(:authorization_class) { AlwaysUnauthorized }
 
           specify do
             expect(result).to be_a Dry::Monads::Failure
             expect(result.failure).to eq Entities::FailureDetails.new(
               message: 'Unauthorized',
-              other_properties: {},
-              type: 'unauthorized'
+              type: Entities::FailureType::Unauthorized
             )
           end
         end

@@ -1,2 +1,6 @@
 --dir
 .
+--ignore
+vendor
+--ignore
+/sorbet/rbi/gems/rb-readline@0.5.5.rbi

@@ -1,3 +1,7 @@
+6.0.0
+
+  * Tear out everything non-essential
+
 5.0.2
 
   * Require the forwardable module where it is used

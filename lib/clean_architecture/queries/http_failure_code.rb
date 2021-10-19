@@ -1,32 +1,20 @@
-# typed: true
+# typed: strict
 # frozen_string_literal: true
 
 module CleanArchitecture
   module Queries
     class HttpFailureCode
-      def initialize(failure_details_type)
-        @failure_details_type = failure_details_type
+      extend T::Sig
+
+      sig { params(failure_type: Entities::FailureType).void }
+      def initialize(failure_type)
+        @failure_type = failure_type
       end
 
+      sig { returns(Symbol) }
       def to_sym
-        code = FAILURE_DETAILS_TYPE_TO_STATUS_CODE[@failure_details_type.to_s.downcase]
-        if code.nil?
-          raise NotImplementedError,
-                "cannot determine failure code for failure details type #{@failure_details_type}"
-        end
-
-        code
+        @failure_type.serialize.to_sym
       end
-
-      private
-
-      FAILURE_DETAILS_TYPE_TO_STATUS_CODE = {
-        'error' => :internal_server_error,
-        'expectation_failed' => :expectation_failed,
-        'not_found' => :not_found,
-        'unauthorized' => :unauthorized,
-        'unprocessable_entity' => :unprocessable_entity
-      }.freeze
     end
   end
 end

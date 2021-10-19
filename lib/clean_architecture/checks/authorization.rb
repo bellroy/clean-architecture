@@ -1,23 +1,25 @@
-# typed: true
+# typed: strict
 # frozen_string_literal: true
 
 require 'dry/monads/all'
 require 'clean_architecture/entities/failure_details'
-require 'forwardable'
 
 module CleanArchitecture
   module Checks
     class Authorization
-      extend Forwardable
+      extend T::Sig
+      extend T::Helpers
 
+      abstract!
+
+      sig { returns(Dry::Monads::Result[Entities::FailureDetails, NilClass]) }
       def result
         if authorized?
-          Dry::Monads::Success(true)
+          Dry::Monads::Success(nil)
         else
           failure_details = Entities::FailureDetails.new(
             message: failure_message,
-            other_properties: {},
-            type: 'unauthorized'
+            type: Entities::FailureType::Unauthorized
           )
           Dry::Monads::Failure(failure_details)
         end
@@ -25,13 +27,13 @@ module CleanArchitecture
 
       protected
 
+      sig { returns(String) }
       def failure_message
         'Unauthorized'
       end
 
-      def authorized?
-        raise NotImplementedError
-      end
+      sig { abstract.returns(T::Boolean) }
+      def authorized?; end
     end
   end
 end

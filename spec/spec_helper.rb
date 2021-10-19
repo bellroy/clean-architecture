@@ -1,13 +1,17 @@
-# typed: strict
+# typed: false
 # frozen_string_literal: true
 
-require 'duckface/rspec'
 require 'pry'
 
 if !ENV['COVERAGE'].nil? || !ENV['METRICS'].nil?
   require 'simplecov'
   SimpleCov.start
 end
+
+require 'sorbet-runtime'
+require 'dry-monads-sorbet'
+require 'sorbet-struct-comparable'
+require 'clean_architecture/all'
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 RSpec.configure do |config|

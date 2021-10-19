@@ -1,15 +1,20 @@
-{ pkgs ? import <nixpkgs> {} }:
-
-with pkgs;
-
+{ sources ? import ./nix/sources.nix }:
 let
-  ruby = pkgs.ruby_2_4;
-  bundler = pkgs.bundler.override { inherit ruby; };
-
-in pkgs.stdenv.mkDerivation {
-  name = "cleanArchitectureEnv";
-  buildInputs = [
+  nixpkgs = import sources.nixpkgs { };
+in
+nixpkgs.mkShell {
+  name = "bellroy-gem-env";
+  buildInputs = with nixpkgs; [
+    bundler
+    libnotify
+    niv
+    pkg-config
     readline
-    ruby.devEnv
-  ];
+    ruby_2_7
+    zlib
+  ]
+  ++ (if stdenv.hostPlatform.isDarwin then [ libiconv darwin.apple_sdk.frameworks.CoreServices ] else [ ]);
+  shellHook = ''
+    bundle config --local path "$PWD/vendor/bundle"
+  '';
 }

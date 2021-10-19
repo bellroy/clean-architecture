@@ -1,13 +1,17 @@
-# typed: true
+# typed: strict
 # frozen_string_literal: true
 
 module CleanArchitecture
   module Queries
     class HttpSuccessCode
+      extend T::Sig
+
+      sig { params(http_method: String).void }
       def initialize(http_method)
         @http_method = http_method
       end
 
+      sig { returns(Symbol) }
       def to_sym
         code = HTTP_METHOD_TO_SUCCESS_CODE[@http_method.to_s.upcase]
         if code.nil?
@@ -19,12 +23,15 @@ module CleanArchitecture
 
       private
 
-      HTTP_METHOD_TO_SUCCESS_CODE = {
-        'GET' => :ok,
-        'POST' => :created,
-        'PUT' => :accepted,
-        'DELETE' => :ok
-      }.freeze
+      HTTP_METHOD_TO_SUCCESS_CODE = T.let(
+        {
+          'GET' => :ok,
+          'POST' => :created,
+          'PUT' => :accepted,
+          'DELETE' => :ok
+        }.freeze,
+        T::Hash[String, Symbol]
+      )
     end
   end
 end
