@@ -19,28 +19,6 @@ module CleanArchitecture
         end
 
         context do
-          let(:result) { Dry::Monads::Failure('failure!') }
-
-          specify do
-            expect(call).to eq Entities::FailureDetails.new(
-              message: 'failure!',
-              type: Entities::FailureType::Error
-            )
-          end
-        end
-
-        context do
-          let(:result) { Dry::Monads::Failure(['failure 1', 'failure 2']) }
-
-          specify do
-            expect(call).to eq Entities::FailureDetails.new(
-              message: 'failure 1, failure 2',
-              type: Entities::FailureType::Error
-            )
-          end
-        end
-
-        context do
           let(:failure_details) do
             Entities::FailureDetails.new(
               message: 'failure!',

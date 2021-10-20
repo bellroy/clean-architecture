@@ -10,7 +10,7 @@ module CleanArchitecture
     class UseCaseResult
       extend T::Sig
 
-      sig { params(result: Dry::Monads::Result[T.any(T::Array[Object], String, Entities::FailureDetails), T.untyped], block: T.untyped).returns(T.untyped) }
+      sig { params(result: Dry::Monads::Result[Entities::FailureDetails, T.untyped], block: T.untyped).returns(T.untyped) }
       def self.call(result, &block)
         new.matcher.call(result, &block)
       end
@@ -34,23 +34,8 @@ module CleanArchitecture
       def failure_case
         Dry::Matcher::Case.new(
           match: ->(value) { value.is_a?(Dry::Monads::Failure) },
-          resolve: ->(value) { resolve_failure_value(value) }
+          resolve: ->(value) { value.failure }
         )
-      end
-
-      sig { params(value: Dry::Monads::Result[T.any(T::Array[Object], String, Entities::FailureDetails), T.untyped]).returns(Entities::FailureDetails) }
-      def resolve_failure_value(value)
-        failure = value.failure
-        case failure
-        when Array
-          Entities::FailureDetails.from_array(failure)
-        when String
-          Entities::FailureDetails.from_string(failure)
-        when Entities::FailureDetails
-          failure
-        else
-          T.absurd(failure)
-        end
       end
     end
   end

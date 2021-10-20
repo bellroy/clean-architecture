@@ -11,7 +11,7 @@ module CleanArchitecture
     class HtmlResponseFromResult
       extend T::Sig
 
-      sig { params(result: Dry::Monads::Result[T.any(T::Array[Object], String, Entities::FailureDetails), T.untyped], http_method: String).void }
+      sig { params(result: Dry::Monads::Result[Entities::FailureDetails, T.untyped], http_method: String).void }
       def initialize(result, http_method)
         @result = result
         @http_method = http_method

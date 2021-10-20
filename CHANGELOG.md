@@ -1,3 +1,7 @@
+6.1.0
+
+  * Stop letting types be forgiving
+
 6.0.0
 
   * Tear out everything non-essential

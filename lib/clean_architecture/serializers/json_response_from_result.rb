@@ -12,7 +12,7 @@ module CleanArchitecture
     class JsonResponseFromResult
       extend T::Sig
 
-      sig { params(result: Dry::Monads::Result[T.any(T::Array[Object], String, Entities::FailureDetails), T.untyped], http_method: String, success_payload_proc: T.proc.params(success_value: T.untyped).returns(T::Hash[T.untyped, T.untyped])).void }
+      sig { params(result: Dry::Monads::Result[Entities::FailureDetails, T.untyped], http_method: String, success_payload_proc: T.proc.params(success_value: T.untyped).returns(T::Hash[T.untyped, T.untyped])).void }
       def initialize(result, http_method, success_payload_proc)
         @result = result
         @http_method = http_method

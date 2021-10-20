@@ -25,7 +25,11 @@ module CleanArchitecture
         end
 
         context do
-          let(:result) { Dry::Monads::Failure('fail!') }
+          let(:result) do
+            Dry::Monads::Failure(
+              Entities::FailureDetails.new(message: 'fail!', type: Entities::FailureType::Error)
+            )
+          end
 
           specify do
             expect(to_h).to eq(
@@ -47,12 +51,19 @@ module CleanArchitecture
         end
 
         context do
-          let(:result) { Dry::Monads::Failure('Unauthorized: get out my house') }
+          let(:result) do
+            Dry::Monads::Failure(
+              Entities::FailureDetails.new(
+                message: 'Unauthorized: get out of my house',
+                type: Entities::FailureType::Unauthorized,
+              )
+            )
+          end
 
           specify do
             expect(to_h).to eq(
-              status: :internal_server_error,
-              json: { errors: ['Unauthorized: get out my house'] }
+              status: :unauthorized,
+              json: { errors: ['Unauthorized: get out of my house'] }
             )
           end
         end

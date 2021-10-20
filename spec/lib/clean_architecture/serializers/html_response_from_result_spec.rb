@@ -20,9 +20,16 @@ module CleanArchitecture
         end
 
         context do
-          let(:result) { Dry::Monads::Failure('something') }
+          let(:result) do
+            Dry::Monads::Failure(
+              Entities::FailureDetails.new(
+                message: 'fail!',
+                type: Entities::FailureType::Error
+              )
+            )
+          end
 
-          it { is_expected.to eq(error: 'something', status: :internal_server_error) }
+          it { is_expected.to eq(error: 'fail!', status: :internal_server_error) }
         end
 
         context do
