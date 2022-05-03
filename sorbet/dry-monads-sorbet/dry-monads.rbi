@@ -421,7 +421,7 @@ module Dry::Monads::Result::Mixin::Constructors
   sig do
     type_parameters(:FailureType, :SuccessType)
       .params(value: T.nilable(T.type_parameter(:FailureType)),
-              block: T.nilable(T.untyped))
+              block: T.untyped)
       .returns(Dry::Monads::Result[T.type_parameter(:FailureType),
                                    T.type_parameter(:out, :SuccessType)])
   end
@@ -430,7 +430,7 @@ module Dry::Monads::Result::Mixin::Constructors
   sig do
     type_parameters(:FailureType, :SuccessType)
       .params(value: T.nilable(T.type_parameter(:SuccessType)),
-              block: T.nilable(T.untyped))
+              block: T.untyped)
       .returns(Dry::Monads::Result[T.type_parameter(:out, :FailureType),
                                    T.type_parameter(:SuccessType)])
   end
